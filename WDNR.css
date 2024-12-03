@@ -3223,8 +3223,7 @@ figcaption {
 
 .caption {
     color: #006747;
-    font-size: 1.125rem;
-    font-weight: 400;
+    font-size: 1.25rem;
 }
 
 .white {
@@ -3239,7 +3238,7 @@ figcaption {
 .caption.all-caps {
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 400
+    font-weight: 500
 }
 
 .next-project-title{
