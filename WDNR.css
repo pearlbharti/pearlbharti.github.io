@@ -87,8 +87,15 @@ section{
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Two equal columns */
-    gap: 40px; /* Space between grids */
+    grid-template-columns: 1.25fr 1fr; /* Two equal columns */
+    gap: 30px; /* Space between grids */
+    justify-content: flex-start;
+}
+
+.wrapper-2 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px; /* Space between grids */
     justify-content: flex-start;
 }
 
@@ -3619,6 +3626,7 @@ figcaption {
 
 .styled-rich-text h4 {
     color: white;
+    margin-bottom: 10px;
     line-height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
     /* margin-bottom: 10px; */
