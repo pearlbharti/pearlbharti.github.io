@@ -65,7 +65,13 @@ section{
     cursor: default;
 }
 
-
+.custom-image {
+    width: 600px;
+    align-items: center;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
  
 
 #menu-icon {
@@ -87,7 +93,7 @@ section{
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1.25fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1.5fr; /* Two equal columns */
     gap: 30px; /* Space between grids */
     justify-content: flex-start;
 }
@@ -3152,7 +3158,7 @@ figcaption {
 
 .section {
     width: 100%;
-    padding: 100px;
+    padding: 80px;
     position: relative;
     overflow: hidden
 }
@@ -5578,8 +5584,8 @@ blockquote::after {
     }
     .section {
         padding-bottom: 72px;
-        padding-left: 20px;
-        padding-right: 20px
+        padding-left: 10px;
+        padding-right: 10px
     }
     .section.blog-hero {
         padding-bottom: 0
