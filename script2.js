@@ -8,6 +8,28 @@ menuIcon.onclick = () => {
 
 }
 
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+  const carousel = document.querySelector('.carousel');
+  const slides = document.querySelectorAll('.carousel-image');
+  const totalSlides = slides.length;
+
+  // Update current slide index
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+  // Move the carousel
+  const offset = -currentSlide * 100; // Move to the respective slide
+  carousel.style.transform = `translateX(${offset}%)`;
+}
+
+// Automatic sliding (optional)
+setInterval(() => {
+  moveSlide(1);
+}, 3000); // Change image every 3 seconds
+
+
 /*==================== scroll sections active link ====================*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
