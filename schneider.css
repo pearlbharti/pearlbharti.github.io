@@ -4809,10 +4809,10 @@ figcaption {
 }
 
 .fave-app-revamp-problem-grid {
-    max-width: 70%;
+    max-width: 98%;
     grid-column-gap: 38px;
     grid-row-gap: 32px;
-    grid-template-columns: .75fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     margin-left: auto;
     margin-right: auto

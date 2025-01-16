@@ -175,39 +175,39 @@ var numProjTotal = 6;
 
 var projects = {
     "proj0": {
-        "title": "Wisconsin Department of Natural Resources",
-        "projName": "Website Usability Study",
-        "desc": "Usability test on the Wisconsin DNR website to uncover navigation issues and suggestiions for enhancing user access to essential park and permit details.",
-        "link": "WDNR.html",
-        "picture": "assets/cms-prev.jpg",
-    },
-    "proj1": {
         "title": "Schneider National",
         "projName": "Freight Search Engine Redesign",
         "desc": "Redesigning & developing Schneider's freight search engine to streamline the search process, improve usability with multi-capacity selection, ensure above-the-fold search options, & enable mileage-based results for enhanced user experience.",
         "link": "schneider.html",
-        "picture": "https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Schneider-project/schneider hero.mp4",
+        "picture": "https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Schneider-project/schn.png",
     },
-    "proj2": {
+    "proj1": {
         "title": "Rec Well, UW-Madison ",
         "projName": "Critical break-points redesign",
         "desc": "User research study and initial redesign proposal for Recreation and Wellbeing at UW-Madison, focused on identifying pain points and recommending improvements in key areas of the website. Implementation planned for the next fiscal year.",
         "link":"recwell.html",
         "picture": "recwell.png",
     },
-    "proj3": {
+    "proj2": {
         "title": "BoxMate",
         "projName": "Website Revamp ",
         "desc": "Designing an web application for a start-up to simplify and streamline the payments page and booking a storage location as well as added features based on user insights.",
         "link": "https://www.figma.com/proto/qJ39h5c6wjfvSaILhQFI69/Boxmate-Redesign?page-id=0%3A1&node-id=137-140&node-type=frame&viewport=74%2C504%2C0.03&t=oXk8W7HdXRDJU6ja-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=158%3A204",
         "picture": "assets/smarttagger-prev.jpg",
     },
-    "proj4": {
+    "proj3": {
         "title": "Upshift Swap Shop",
         "projName": "eco store's design",
         "desc": "Designing an app for Madison's sole sustainable swap shop to minimize garment waste aimed at incentivizing users with loyalty points, offer customizable and affordable gifting hampers, enable online shopping, and establishing a distinctive brand identity and voice.",
         "link": "Upshift.html",
         "picture": "assets/upshift.jpg",
+    },
+    "proj4": {
+        "title": "Wisconsin Department of Natural Resources",
+        "projName": "Website Usability Study",
+        "desc": "Usability test on the Wisconsin DNR website to uncover navigation issues and suggestiions for enhancing user access to essential park and permit details.",
+        "link": "WDNR.html",
+        "picture": "assets/cms-prev.jpg",
     },
     "proj5": {
         "title": "Spotify",
@@ -277,3 +277,16 @@ for (let x = 0; x < numProjShown; x++) {
 
 var moreProjects = document.querySelector("#moreProjects");
 moreProjects.addEventListener('click', showHide);
+
+// Select elements
+const connectSection = document.querySelector('.footer-header');
+const connectText = document.querySelector('.connect-text');
+
+// Add hover event listeners
+connectSection.addEventListener('mouseover', () => {
+    connectText.textContent = "example@example.com"; // Replace with your email
+});
+
+connectSection.addEventListener('mouseout', () => {
+    connectText.textContent = "Let's connect?";
+});

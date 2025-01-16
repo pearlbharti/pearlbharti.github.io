@@ -7,7 +7,7 @@ body {
     background-color: #000000;
     font-family: 'europa', sans-serif;
     color: white;
-    /* background-image: url("dark.png"); */
+    /* background-image: url(https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Recwell-project/noise.png); */
     background-size: 850px;
     background-repeat: repeat;
     letter-spacing: 0.1px;
@@ -390,11 +390,6 @@ nav.scrolled {
     width: 15%;
 }
 
-.profilepic {
-    width: 100%;
-    border-radius: 16px;
-    margin-bottom: 10px;
-}
 
 #about-panels {
     max-width: 100vw;
@@ -402,7 +397,7 @@ nav.scrolled {
     min-height: 380px;
 }
 
-.panel-1 {
+/* .panel-1 {
     background-image: url();
     width: 25%;
     height: 100%;
@@ -416,14 +411,77 @@ nav.scrolled {
     height: 100%;
     width: 25%;
     background-color: #ffffff;
+    float: left; */
+
+.panel {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 1);
     float: left;
 }
 
-.panel-3 {
-    width: 50%;
-    height: 100%;
-    background-color: #0E0E0E;
-    float: left;
+/* Faint Lines */
+.faint-line {
+    width: 95%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1); /* Faint white line */
+    margin: 0 2rem; 
+    
+}
+  
+  /* Connect Section Styling */
+.connect-section-wrapper {
+    padding-top: 6rem;
+    text-align: left;
+    width: 100%;
+   
+}
+  
+.connect-section {
+    display: flex;
+    gap: 40rem;
+}
+  
+.connect-text {
+    font-size: 5rem;
+    margin: 1rem 4rem;
+    color: #fff;
+    justify-content: left;
+    align-items: left;
+}
+  
+  /* Button Styling */
+.connect-button {
+    background-color: #303030; /* Dark gray background for button */
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+  }
+  
+.connect-button .arrow {
+    font-size: 3rem; 
+    color: #fff; /* White arrow */
+  }
+  
+  /* Hover Effects */
+
+.footer-header:hover .connect-text {
+    color: #E4D9FF; /* Change text color on hover */
+    content: "example@example.com"; /* Text changes dynamically via JavaScript */
+}
+
+.footer-header:hover .connect-button {
+    background-color: #7D3C98; /* Purple button on hover */
+}
+
+/* Smooth Transition for Button Hover */
+.connect-button:hover i {
+    transform: scale(1.2); /* Scale arrow slightly */
 }
 
 .panel-content {
@@ -518,10 +576,29 @@ button.resume:hover {
 
 .ui.container.footer {
     /*margin-top:50px;*/
-    background-color: black;
+    background-color: rgba(15, 15, 15, 1);
     width: 100%;
     padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
     text-align: right;
+}
+
+.ui.container.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 12px;
+}
+
+.ui.container.footer .icons {
+    display: flex; /* Arrange icons in a row */
+    gap: 10px; /* Add space between icons */
+}
+
+.ui.container.footer .icons a {
+    color: white; /* White icon color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust icon size */
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 .footerIcon {
