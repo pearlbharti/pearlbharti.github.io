@@ -89,7 +89,7 @@ nav .nav-section {
     padding: 5px 20px;
     display: flex;
     gap: 1rem;
-    border-bottom: 1px solid rgba(102, 102, 102, 0.3);
+    border-bottom: 1px solid rgba(39, 39, 39, 0.3);
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -561,7 +561,7 @@ span{
 .text-hero.project-title {
     background-image: linear-gradient(to bottom, #f2f2f2 50%, transparent);
     letter-spacing: -1px;
-    text-shadow: 0 5px 15px #51010133, 0 -5px 15px #ff5a0026, 0 -5px 25px #ffffff40;
+    /* text-shadow: 0 5px 15px #51010133, 0 -5px 15px #ff5a0026, 0 -5px 25px #ffffff40; */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -607,13 +607,101 @@ element.style {
 
 .project-overview-noise {
     z-index: 2;
-    opacity: .2;
+    opacity: .5;
     mix-blend-mode: overlay;
     background-image: url(https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Recwell-project/noise.png);
     background-size: 240px;
     position: absolute;
     inset: 0%;
 }
+
+
+.title-information-container {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    flex-flow: column;
+    width: 100%;
+    padding: 2rem 5rem 2.5rem;
+    display: flex;
+    line-height: 125%;
+    font-family: Figtree, sans-serif;
+    color: white;
+;
+}
+
+.title-columns {
+    font-size: 2rem;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template: "Area Area Area Area Area.Area-2 Area-2 Area-2 Area-2 Area-2 Area-2" / minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr) minmax(32px, 1fr);
+    grid-auto-columns: 1fr;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    display: grid
+;
+}
+
+#w-node-_81c0fbc5-d50e-9b48-62b3-f3671456dec5-f1f13735 {
+    grid-area: Area;
+}
+.w-layout-vflex {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex
+;
+}
+
+.project-subtitle {
+    grid-column-gap: var(--16);
+    font-size: 1rem;
+    grid-row-gap: var(--16);
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    color: white
+;
+}
+
+.tag {
+    padding: .375rem var(--12);
+    border-radius: var(--4);
+    /* background-color: #191a1d1a; */
+    display: inline-block;
+    font-size: 1rem;
+}
+
+
+.text-charcoal-60 {
+    color: var(--charcoal-60);
+}
+
+#w-node-_08d1b835-a3a1-904d-92f9-ba83bc7202e1-f1f13735 {
+    grid-area: Area-2;
+}
+
+.project-info {
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    font-size: 1rem;
+}
+
+.w-layout-vflex {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex
+;
+}
+
+.project-info-text {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+
+
 
 @media screen and (max-width: 479px) {
     .project-fade {

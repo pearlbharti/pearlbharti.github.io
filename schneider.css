@@ -2877,7 +2877,7 @@ figcaption {
 
 .container {
     z-index: 1;
-    width: 95%;
+    width: 80%;
     height: 80%;
     max-width: 1300px;
     flex-direction: column;
@@ -3079,7 +3079,7 @@ figcaption {
 }
 
 .section.pt-120 {
-    padding-top: 47px
+    padding-top: 0px;
 }
 
 .section.pt-120.pb-0 {
@@ -3504,12 +3504,22 @@ figcaption {
 
 }
 
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Two equal columns */
+    gap: 40px; /* Space between grids */
+    justify-content: flex-start;
+}
+
+
 
 .styled-rich-text p {
-    color: #f2f2f299;
-    font-size: 16px;
+    margin-top: 5px;
+    color: #ffffffc5;
+    font-size: 1.7rem;
     line-height: 150%;
-    font-weight: 100;
+    font-weight: 350;
+    margin-bottom: .8rem;
 }
 
 .styled-rich-text ol {
@@ -4809,10 +4819,10 @@ figcaption {
 }
 
 .fave-app-revamp-problem-grid {
-    max-width: 98%;
-    grid-column-gap: 38px;
-    grid-row-gap: 32px;
-    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+    grid-column-gap: 35px;
+    grid-row-gap: 80px;
+    grid-template-columns: 0.8fr 1.5fr;
     align-items: center;
     margin-left: auto;
     margin-right: auto
