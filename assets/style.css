@@ -80,16 +80,13 @@ button:focus {
     /* height: 100vh; */
     position: relative;
     text-align: center;
+    /* background-image: url("assets\noise.png"); */
 }
 
 .header-text {
     opacity: 1;
     padding-top: 40vh;
-    animation-delay: 2.8s;
-    animation-name: fade-in;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
+    
 }
 
 @keyframes fade-in {
@@ -248,19 +245,18 @@ a:hover {
 nav {
     display: flex;
     width: 100%;
+    opacity: 1;
     position: fixed; 
     top: 0;
     z-index: 1000; /* Ensure it's on top */
-    backdrop-filter: blur(10px); 
-    /* transition: background-color 0.3s ease-in-out;
-    -webkit-backdrop-filter: blur(10px); Safari support */
+    backdrop-filter: blur(5px); 
+  
     font-size: 15px;
-    /* background: rgba(0, 0, 0, 0.477); */
-
-    background-color: hsla(0, 0%, 0%, 0.8);
-    box-shadow: 0 2px 20px 0 rgba(126, 126, 126, 0.1);
+   
+    background-color: rgba(0, 0, 0, 0);
+    /* box-shadow: 0 2px 20px 0 rgba(126, 126, 126, 0.1); */
     -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+
 
     /* background: transparent; Optional: Add a solid background */
 }
@@ -268,21 +264,22 @@ nav {
 .nav-style {
     color: #ffffffce; /* Text color */
     text-decoration: none; /* Remove underline */
-    font-size: 1rem; /* Font size */
+    font-size: 1.1rem; /* Font size */
     font-weight: 100;
     
 }
   
 .nav-style:hover {
    color: #ae93e9; /* Text color on hover */
+   text-shadow: 0 0 10px #e4d9ff, 0 0 20px #e4d9ff, 0 0 30px #e4d9ff;
    
 }
 
 nav .nav-section {
-    padding: 5px 20px;
+    padding: 1rem  1.8rem;
     display: flex;
     gap: 1rem;
-    border-bottom: 1px solid rgba(102, 102, 102, 0.3);
+    /* border-bottom: 1px solid rgba(39, 39, 39, 0.3); */
     align-items: center;
     justify-content: center;
     width: 100%;
