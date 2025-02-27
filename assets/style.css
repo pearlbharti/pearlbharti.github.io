@@ -209,7 +209,8 @@ button:focus {
 }
 
 .ui.header.jumbo h1 {
-    padding-top: 100px;
+    padding-top: 15rem;
+    padding-bottom: 7rem;
     color: white;
     font-size: 32px;
     letter-spacing: 1px;
@@ -1033,8 +1034,8 @@ svg {
 /* Case Study Page */
 
 .studyCard {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 60px;
+    margin-bottom: 120px;
 }
 
 #case-space {
