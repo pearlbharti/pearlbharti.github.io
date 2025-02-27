@@ -556,10 +556,10 @@ dfn {
     font-style: italic
 }
 
-h1 {
+/* h1 {
     margin: .67em 0;
     font-size: 2em
-}
+} */
 
 mark {
     color: #000;
@@ -920,12 +920,12 @@ h6 {
     margin-bottom: 10px;
     font-weight: 500
 } */
-
+/* 
 h1 {
     margin-top: 20px;
     font-size: 2rem;
     line-height: 44px
-}
+} */
 
 /* h2 {
     margin-top: 20px;
@@ -937,7 +937,8 @@ h1 {
 h4 {
     margin-top: 10px;
     font-size: 18px;
-    line-height: 24px
+    line-height: 24px;
+    color: whitesmoke;
 }
 
 h5 {
@@ -2476,6 +2477,42 @@ textarea.w-select {
     display: grid
 }
 
+
+/* Place this in your stylesheet or inside a <style> tag in the <head> */
+
+.insights-list {
+    list-style-type: none;      /* Removes default bullets */
+    margin: 0;                 /* Reset default margins if needed */
+    padding: 0;                /* Reset default padding if needed */
+  }
+  
+  .insights-list li {
+    margin-bottom: 1rem;       /* Space between each insight */
+    padding-left: 1.5rem;      /* Indent to make room for custom bullet */
+    position: relative;
+  }
+  
+  .insights-list li::before {
+    content: "•";              /* Custom bullet symbol */
+    position: absolute;
+    left: 0;
+    color: #acdbfb;            /* Bullet color (adjust to your palette) */
+    font-weight: bold;
+  }
+  
+  .insight-title {
+    font-weight: bold;    
+    color: #ffffff;     /* Highlight the key point */
+  }
+  
+  .user-quote {
+    display: block;            /* Forces quote onto a new line */
+    margin-top: 0.5rem;        /* Space above quote */
+    font-style: italic;        /* Italic styling for quotes */
+    color: #D0FF78;               /* Adjust color as needed */
+  }
+  
+
 /* :root {
     --gray-1: #ffffff;
     --gray-2: #ffffff;
@@ -2524,6 +2561,54 @@ textarea.w-select {
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
     display: grid
+}
+
+.cs-image-new {
+    width: 90%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 700px; /* Optional: Limit max size */
+    display: block; /* Ensures centering works */
+    margin: 24px auto; /* Centers horizontally */
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.cs-image-2{
+    margin-top: 5rem;
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1000px; /* Optional: Limit max size */
+    display: block; /* Ensures centering works */
+    overflow: hidden;
+}
+
+
+.cs-caption {
+    text-align: center; /* Centers the caption */
+    font-size: 15px;
+    color: #666;
+    margin-top: 8px; /* Creates space between the image and caption */
+}
+
+/* .w-layout-grid-2 {
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1.5fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid
+} */
+
+.w-layout-grid-2 {
+    
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    align-items: center;
 }
 
 .w-users-userformpagewrap {
@@ -2883,7 +2968,7 @@ figcaption {
 
 .container {
     z-index: 1;
-    width: 95%;
+    width: 80%;
     height: 80%;
     max-width: 1300px;
     flex-direction: column;
@@ -2978,13 +3063,15 @@ figcaption {
 
 
 .frosty-menu {
-    background-color: rgba(179, 179, 179, .1);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     flex-direction: row;
     align-items: center;
     margin-top: 6px;
     padding: 5px 8px 6px;
-    display: flex
+    display: flex;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
 .card-xl {
@@ -3486,8 +3573,157 @@ figcaption {
     line-height: 180%
 }
 
+
+
+.container-insights {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    background-color: #102010;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #88ff88;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.circle h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.circle p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+.container-card-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%; /* Full width of the parent */
+    align-items: center; /* Centers the grid items vertically */
+    justify-items: end; /* Aligns the first column (left cards) to the right */
+}
+
+.card-secondary {
+    background: linear-gradient(124deg, rgba(71, 71, 71, 0.241) 0%, #1c1c1c26 50%, rgb(15, 15, 15) 100%);   
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgb(58, 58, 58); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(33, 33, 33, 0.3);
+    width: 400px; /* Ensure uniform width */
+    height: 200px;
+}
+
+.container-card-secondary .card-secondary:nth-child(2) {
+    justify-self: start; /* Aligns the second column (right cards) to the left */
+}
+.container-card-secondary .card-secondary:nth-child(4) {
+    justify-self: start; /* Aligns the second column (right cards) to the left */
+}
+
+.card-secondary h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #D0FF78;
+    font-weight: 400;
+}
+
+.card-secondary h2 {
+    margin: 10px 0 10px;
+    line-height: 150%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.card-secondary p {
+    margin: 0;
+    font-size: 16px;
+    color: #b0b0b0;
+    line-height: 150%;
+}
+
+
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.dialog-box {
+    margin-top: 20px;
+    background-color: #a3a9bb22;
+    border-radius: 12px;
+    padding: 15px 20px;
+    width: 550px;
+    height: 150px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    position: relative;
+    border: 1px solid rgba(121, 121, 121, 0.455); /* Default border is black */
+    background-clip: padding-box; /* Ensures background doesn't overlap border */
+    animation: glowing-border 3s linear infinite; /* Glowing border animation */
+}
+
+
+.dialog-header {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.dialog-number {
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+
+.dialog-text {
+    font-size: 16px;
+    color: #b3b3b3;
+    margin: 5px 0 5px 0;
+    line-height: 120%;
+}
+
+/* Align to the left */
+.left {
+    align-self: flex-start;
+}
+
+/* Align to the right */
+.right {
+    align-self: flex-end;
+}
+
+
+
 .styled-rich-text a {
-    text-decoration: underline
+    text-decoration: underline;
+    font-size: 12px; 
+    color: #56568e;
 }
 
 .styled-rich-text h1 {
@@ -3504,22 +3740,25 @@ figcaption {
 }
 
 .styled-rich-text h3 {
-    color: white;
-    line-height: 125%;
-    font-family: Neue Montreal, sans-serif;
+    color: #f2f2f2;
+    line-height: 150%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
     /* margin-bottom: 10px; */
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: none;
 
 }
 
 
 .styled-rich-text p {
-    color: #fafafa;
+    color: #f6f6f6b3;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
-    font-size: 14px;
-    line-height: 150%;
-    font-weight: 100;
+    font-size: 1.8rem;
+    line-height: 140%;
+    font-weight: 150;
+    margin-bottom: 2rem;
 }
 
 .styled-rich-text ol {
@@ -5420,12 +5659,12 @@ blockquote::after {
     }
     .frosty-menu {
         height: auto;
-        background-color: #fdfcf9;
+        background-color: #000000;
         border-radius: 0 0 32px 32px;
         margin-top: 0;
         padding-top: 20px;
         padding-bottom: 20px;
-        box-shadow: 0 16px 12px rgba(0, 0, 0, .08)
+        /* box-shadow: 0 16px 12px rgba(0, 0, 0, .08) */
     }
     .menu-button {
         width: 44px;

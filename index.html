@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
+
 
 <head>
     <meta charset="utf-8">
@@ -23,6 +19,10 @@
 </head>
 
 <body>
+  <div id="blob"></div>
+  <div id="blur"></div>
+  
+  
     <!-- <navbar /> -->
     <nav data-toggled="false" data-transitionable="false">
         <div id="nav-logo-section" class="nav-section">
@@ -53,7 +53,7 @@
             </a>
           </div>        
           <div id="nav-contact-section" class="nav-section">
-            <a href="#" class="nav-style">resume</a>
+            <button class="resume-btn" onclick="openResume()">resume</button>
           </div>
         </div>
         <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
@@ -65,20 +65,39 @@
     
 
    
-    <div class="header-content" id="KoiFinal">
-      <div class="header-text">
-        <div id="aboutMe" class="subheader">
-          Hello, I'm  <div class="ui header headertext">
-            <h1>Pearl</h1>
-        </div>
+    <div class="header-content">
+      <!-- <div class="header-text"> -->
+        <!-- <div id="aboutMe" class="subheader"> -->
+          <h1 id ="intro-text">
+            Pearl is a
+            <span class="magic">
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                </svg>
+              </span>
+              <span class="magic-text">User Experience Designer</span>
+            </span>
+            who loves creating inclusive, clean, and human-centered design
+          </h1>
 
-        </div>
+      <!-- </div> -->
            
-            <div id="aboutMe" class="subheader">
+            <!-- <div id="aboutMe" class="subheader">
               A User Experience Designer and Front-End Developer. I enjoy creating inclusive, clean, and human-centered design.
 
-            </div>
-        </div>
+            </div> -->
+  
     </div>
 
     <div class="ui fluid container top studies" id="case-studies">
@@ -95,30 +114,76 @@
      
 
     <div id="about-panels">
-        <div class="panel">
-            <div class="connect-section-wrapper">
-                <div class="faint-line"></div>
-                <div class="connect-section">
-                    <p class="connect-text">Let's keep in touch?</p>
-                    <button class="connect-button">
+      <!-- Bubble Background -->
+      <!-- <div class="gradient-bg">
+          <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                  <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                      <feColorMatrix in="blur" mode="matrix" 
+                          values="1 0 0 0 0  
+                                  0 1 0 0 0  
+                                  0 0 1 0 0  
+                                  0 0 0 18 -8" 
+                          result="goo" />
+                      <feBlend in="SourceGraphic" in2="goo" />
+                  </filter>
+              </defs>
+          </svg>
+          <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+              <div class="interactive"></div>
+          </div>
+          
+      </div> -->
+      <!-- Footer Content -->
+      <div class="panel">
+        <div class="connect-section-wrapper">
+            <div class="faint-line"></div>
+            <div class="connect-section">
+                <p class="connect-text">Let's keep in touch?</p>
+                <button class="connect-button">
                     <span class="arrow">&rarr;</span>
-                    </button>
-                </div>
-                <div class="faint-line"></div>
+                </button>
             </div>
+            <div class="faint-line"></div>
+            
+            <div class="footer-menu">
+              <div class="footer-menu-section">
+                  <h3 class="footer-title">DESIGN WORK</h3>
+                  <ul class="footer-list">
+                      <li>EV Kiosk Parking System</li>
+                      <li>Energy Allocation Dashboard</li>
+                      <li>Civic Engagement</li>
+                      <li>SuperWorld</li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h3 class="footer-title">GET IN TOUCH</h3>
+                  <ul class="footer-list">
+                      <li><a href="#">Linkedin</a></li>
+                      <li><a href="mailto:pearl05bharti@gmail.com">pearl05bharti@gmail.com</a></li>
+                      <li><a href="#">Resume</a></li>
+                  </ul>
+              </div>
             </div>
-    </div>
-
-
-    <div class="ui container footer">
-        <p> Made by Pearl © Copyright 2025. All Rights Reserved.</p>
-        <div class="icons">
-            <a href="mailto:pbharti@wisc.edu"><i class="fas fa-envelope footerIcon"></i></a>
-            <a href="https://www.linkedin.com/in/pearl-b-a702491a9/"><i class="fab fa-linkedin footerIcon"></i></a>
-            <a href="https://medium.com/@pbharti_59193"><i class="fab fa-medium footerIcon"></i></a>
         </div>
-        
+        <div class="ui container footer">
+          <p> Made by Pearl © Copyright 2025. All Rights Reserved.</p>
+          <div class="icons">
+              <a href="mailto:pbharti@wisc.edu"><i class="fas fa-envelope footerIcon"></i></a>
+              <a href="https://www.linkedin.com/in/pearl-b-a702491a9/"><i class="fab fa-linkedin footerIcon"></i></a>
+              <a href="https://medium.com/@pbharti_59193"><i class="fab fa-medium footerIcon"></i></a>
+          </div>
+        </div>
     </div>
+      
+  </div>
+  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js" async defer></script>
     <script src="assets/script.js"></script>

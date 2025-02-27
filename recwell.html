@@ -63,20 +63,11 @@
 </head>
 
 <body class="body">
-    <div class="html-embed w-embed">
-        <style>
-            .frosty-menu {
-                -webkit-backdrop-filter: blur(18px);
-                backdrop-filter: blur(18px);
-            }
-        </style>
-    </div>
     
     <!-- header design -->
     <nav data-toggled="false" data-transitionable="false">
         <div id="nav-logo-section" class="nav-section">
-            <a href="#">
-              <!-- Insert your SVG here with half size -->
+            <a href="index.html">
               <svg width="24" height="30.5" viewBox="0 0 48 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="35.5" cy="58.5" r="2.5" fill="#D9D9D9"/>
                 <path d="M23.5039 3.15353C34.3713 1.77892 46.9561 9.82562 44.7448 19.6485C42.8219 28.1901 23.5039 30.187 23.5039 30.187M23.5039 3.15353C23.5039 13.7108 23.5039 30.187 23.5039 30.187M23.5039 3.15353C13.6244 2.2372 1.06372 10.0986 3.2509 19.6485C5.13537 27.8768 23.5039 30.187 23.5039 30.187M23.5039 30.187C23.5039 30.187 24.9858 54.0132 23.5039 57.2205C22.0219 60.4278 3.71252 53.2646 3.2509 44.391C2.77298 35.2043 23.5039 30.187 23.5039 30.187Z" stroke="white" stroke-width="5"/>
@@ -84,13 +75,12 @@
               </svg>
             </a>
         </div>
-
           
           
         <div id="nav-mobile-section">
           <div id="nav-link-section" class="nav-section">
-            <a href="index.html" class="nav-style">home</a>
-            <a href="about.html" class="nav-style">about</a>
+            <a href="index.html" class="nav-style">work</a>
+            <a href="#" class="nav-style">about</a>
           </div>
           <div id="nav-social-section" class="nav-section">
             <a href="https://medium.com/@pbharti_59193" class="nav-style">
@@ -99,12 +89,12 @@
             <a href="mailto:pbharti@wisc.edu" class="nav-style">
               <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.linkedin.com" target="_blank" class="nav-style">
+            <a href="https://www.linkedin.com/in/pearl-b-a702491a9/" target="_blank" class="nav-style">
               <i class="fab fa-linkedin"></i>
             </a>
           </div>        
           <div id="nav-contact-section" class="nav-section">
-            <a href="#" class="nav-style">resume</a>
+            <button class="resume-btn" onclick="openResume()">resume</button>
           </div>
         </div>
         <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
@@ -112,83 +102,66 @@
           <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
+    
 
 
     <div class="section-banner recwell">
         <div class="container-banner">
-            <div class="project-title-hero-wrapper">
-                <div class="title-wrapper">
-                    <div class="project-title-date-wrapper">
-                        <div class="text-hero project-title">Rec Well, UW Madison</div>
-                        <div class="text-projectpage-year">Redesigning key touchpoints</div>
+             <!-- images -->
+            <div class="section-hero-1" >
+                
+                    <p class="label-hero">Recreation and Wellbeing Redesign</p>
+                    <h1 class="title-hero">Enhancing student well-being through design</h1>
+                    <div class="meta-hero">
+                        <span class="tag-hero">Case Study</span>
+                        <span class="read-time-hero">7 min read</span>
                     </div>
-                </div>
-                <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" class="project-banner-image-wrapper">
-                    <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner.png" loading="eager" srcset="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-500.png 500w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-800.png 800w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-1080.png 1080w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-1600.png 1600w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-2000.png 2000w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner.png 2560w" sizes="(max-width: 479px) 99vw, (max-width: 767px) 90vw, (max-width: 991px) 89vw, (max-width: 1439px) 882px, (max-width: 1919px) 1044px, 1440px" alt="" class="image-project-banner">
+            </div>
+            <div class="section-hero-2" >
+                <div class="info-container">
+                    <div class="info-column">
+                        <p class="info-label">Role</p>
+                        <p class="info-content">UI/UX Design <br> Intern</p>
+                    </div>
+                    <div class="info-column">
+                        <p class="info-label">Timeline</p>
+                        <p class="info-content">2024 ( June - July )</p>
+                        
+                    </div>
+                    <div class="info-column">
+                        <p class="info-label">Tools</p>
+                        <p class="info-content">Figma</p>
+                        <p class="info-content">FigJam</p>
+                        <p class="info-content">Slack</p>
+                        
+                    </div>
+                   
                 </div>
             </div>
+            <div class="section-hero-3">
+                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift hero image.png" loading="eager" sizes="(max-width: 479px) 99vw, (max-width: 767px) 90vw, (max-width: 991px) 89vw, (max-width: 1439px) 882px, (max-width: 1919px) 1044px, 1440px" alt="" class="image-project-banner">
+              
+            </div>
+            <div class="section-hero-4">
+                <div class="content-container">
+                    <div class="process-highlight">Process Highlights</div>
+                    <div class="main-title">Design challenge and responsibilities overview</div>
+            
+                    <div class="divider"></div>
+                    <div class="challenge-title">Challenge</div>
+                    <p class="challenge-text">Redesign Rec Well’s digital presence to centralize key facilities and program details, resolving scattered navigation issues</p>
+            
+                    <div class="divider"></div>
+                    <div class="opportunity-title">Opportunity</div>
+                    <p class="opportunity-text">Refine breakpoints, leverage user insights, and collaborate with leadership to create a cohesive online hub that elevates well-being and campus engagement</p>
+                </div>
+            </div>
+
         </div>
         <div class="project-overview-noise"></div>
         <div class="project-fade"></div>
-    </div>     
-  
-    <div class="section pt-120 pb-0">
-        
-        <div class="mw-650 w-container">
-            <!-- <h1> Schneider Freight Search</h1> -->
+    </div>    
 
-            <div id="introduction" class="cs-offset-section">
-                <div class="mw-650">
-                    <!-- <div class="styled-rich-text w-richtext">
-                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aliquid cupiditate impedit? Aliquam nam blanditiis id cum temporibus nobis voluptatibus ipsam dignissimos? Cumque est saepe a possimus cum dolores quibusdam.</p>
-                    </div> -->
-                    
-                    
-                </div>
-            </div>
-
-            <div class="w-layout-grid cs-overview">
-                <div>
-                    <div class="caption all-caps">Timeline</div>
-                    <p></p>
-                    <p class="project-overview">May 2024 - Aug 2024</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">TEAM</div>
-                    <p></p>
-                    <p class="project-overview">Pearl Bharti<br> Phia Yang<br> Roopchand R. V</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">MY ROLE</div>
-                    <p></p>
-                    <p class="project-overview">UX Lead (Intern) <br>
-                        Project Manager</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">Domain</div>
-                    <p></p>
-                    <p class="project-overview">User Experience Research<br>
-
-                        User Experience Design<br>
-                        
-                        User Interface Design<br>
-                        
-                        Interaction Design<br>
-                        
-                        Wireframing<br>
-                        
-                        Prototyping</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">TOOLS</div>
-                    <p></p>
-                    <p class="project-overview">Figma <br>FigJam  <br>Miro  <br> Qualtrics</p>
-                </div>
-                
-            
-            </div>
-        </div>
-    </div>
 
     <div data-w-id="603cee30-d84e-95e7-9034-f12671e2bd0e" class="section pt-0">
         <!--  -->
@@ -538,32 +511,19 @@
                     <br>
                     <br>
 
-
-                    <div class ="icon-points-wrapper-2">
-                        <div class="inline-card-2">
-                            <div class="inline-point-text">
-                                <div class="text-callout card-heading">Enable students to view real-time building usage and available equipments with minimal friction.</div>
-                            </div>
+                    <div class="container-card-secondary">
+                        <div class="card-secondary">
+                            <p>Enable students to view real-time building usage and available equipments with minimal friction.</p>
                         </div>
-
-                        <div class="inline-card-2">
-                            <div class="inline-point-text">
-                                <div class="text-callout card-heading">Implement safeguards and clear error messaging to prevent accidental data loss during form submissions or bookings.</div>
-                            </div>
+                        <div class="card-secondary">
+                            <p>Implement safeguards and clear error messaging to prevent accidental data loss during form submissions or bookings. </p>
                         </div>
-
-                        <div class="inline-card-2">
-                            <div class="inline-point-text">
-                                <div class="text-callout card-heading">Simplify the platform's structure to help users quickly locate programs, schedules, and facility information</div>
-                            </div>
+                        <div class="card-secondary">
+                            <p>Simplify the platform's structure to help users quickly locate programs, schedules, and facility information </p>
                         </div>
-
-                        <div class="inline-card-2">
-                            <div class="inline-point-text">
-                                <div class="text-callout card-heading">Ensure the platform is mobile-friendly and meets accessibility standards for diverse user needs.</div>
-                            </div>
+                        <div class="card-secondary">
+                            <p>Ensure the platform is mobile-friendly and meets accessibility standards for diverse user needs.</p>
                         </div>
-
                     </div>
 
                     

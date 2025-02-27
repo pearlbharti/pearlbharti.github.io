@@ -68,8 +68,7 @@
     <!-- header design -->
     <nav data-toggled="false" data-transitionable="false">
         <div id="nav-logo-section" class="nav-section">
-            <a href="#">
-              <!-- Insert your SVG here with half size -->
+            <a href="index.html">
               <svg width="24" height="30.5" viewBox="0 0 48 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="35.5" cy="58.5" r="2.5" fill="#D9D9D9"/>
                 <path d="M23.5039 3.15353C34.3713 1.77892 46.9561 9.82562 44.7448 19.6485C42.8219 28.1901 23.5039 30.187 23.5039 30.187M23.5039 3.15353C23.5039 13.7108 23.5039 30.187 23.5039 30.187M23.5039 3.15353C13.6244 2.2372 1.06372 10.0986 3.2509 19.6485C5.13537 27.8768 23.5039 30.187 23.5039 30.187M23.5039 30.187C23.5039 30.187 24.9858 54.0132 23.5039 57.2205C22.0219 60.4278 3.71252 53.2646 3.2509 44.391C2.77298 35.2043 23.5039 30.187 23.5039 30.187Z" stroke="white" stroke-width="5"/>
@@ -77,13 +76,12 @@
               </svg>
             </a>
         </div>
-
           
           
         <div id="nav-mobile-section">
           <div id="nav-link-section" class="nav-section">
-            <a href="index.html" class="nav-style">home</a>
-            <a href="about.html" class="nav-style">about</a>
+            <a href="index.html" class="nav-style">work</a>
+            <a href="#" class="nav-style">about</a>
           </div>
           <div id="nav-social-section" class="nav-section">
             <a href="https://medium.com/@pbharti_59193" class="nav-style">
@@ -92,12 +90,12 @@
             <a href="mailto:pbharti@wisc.edu" class="nav-style">
               <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.linkedin.com" target="_blank" class="nav-style">
+            <a href="https://www.linkedin.com/in/pearl-b-a702491a9/" target="_blank" class="nav-style">
               <i class="fab fa-linkedin"></i>
             </a>
           </div>        
           <div id="nav-contact-section" class="nav-section">
-            <a href="#" class="nav-style">resume</a>
+            <button class="resume-btn" onclick="openResume()">resume</button>
           </div>
         </div>
         <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
@@ -107,168 +105,74 @@
     </nav>
 
     <div class="section-banner schneider">
-
-        <!-- <div class="title-information-container">
-            <h4 id="top">Eatcue</h4>
-            <div class="w-layout-grid title-columns">
-                <div id="w-node-_81c0fbc5-d50e-9b48-62b3-f3671456dec5-f1f13735" class="w-layout-vflex title-information">
-                    <h1>Happy decisions for your wallet and food</h1>
-                    <div class="w-layout-hflex project-subtitle">
-                        <div class="tag">
-                            <div>
-                                Case Study
-                            </div>
-                        </div>
-                        <div class="time-wrapper">
-                            <div class="text-charcoal-60">
-                                <span id="readTime">7</span> min read
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="w-node-_08d1b835-a3a1-904d-92f9-ba83bc7202e1-f1f13735" class="w-layout-hflex project-info-container">
-                    <div class="w-layout-vflex project-info">
-                        <h4 class="text-charcoal-60">Role</h4>
-                        <h3 class="project-info-text">Full-Stack Designer</h3>
-                    </div>
-                    <div class="w-layout-vflex project-info">
-                        <h4 class="text-charcoal-60">Timeline</h4>
-                        <h3 class="project-info-text">2023 (Mar - May)<br>2023 (Dec - Jan)</h3>
-                    </div>
-                    <div class="w-layout-vflex project-info">
-                        <h4 class="text-charcoal-60">Skills</h4>
-                        <h3 class="project-info-text">Product Design<br></h3>
-                        <h3 class="project-info-text">Interaction Design<br></h3>
-                        <h3 class="project-info-text">Prototyping<br></h3>
-                    
-                    </div>
-                </div>
-            </div>
-        </div>  -->
-    
         <div class="container-banner">
-            <div class="project-title-hero-wrapper">
-                <div class="title-wrapper">
-                    <div class="project-title-date-wrapper">
-                        <div class="text-hero project-title">Schneider National</div>
-                        <div class="text-projectpage-year">Redesigning key touchpoints</div>
-                    </div>
+            <!-- images -->
+           <div class="section-hero-1" >
+               
+                   <p class="label-hero">SCHNEIDER NATIONAL</p>
+                   <h1 class="title-hero">Enhancing student well-being through design</h1>
+                   <div class="meta-hero">
+                       <span class="tag-hero">Case Study</span>
+                       <span class="read-time-hero">10 min read</span>
+                   </div>
+           </div>
+           <div class="section-hero-2" >
+               <div class="info-container">
+                   <div class="info-column">
+                       <p class="info-label">Role</p>
+                       <p class="info-content">UI/UX Designer <br> Frontend Developer</p>
+                   </div>
+                   <div class="info-column">
+                    <p class="info-label">Team</p>
+                    <p class="info-content">Pearl Bharti <br> Zaid Albazian<br>Zalissa Kofando<br>Nikita Aggarwal</p>
                 </div>
-                <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" class="project-banner-image-wrapper">
-                    <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner.png" loading="eager" srcset="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-500.png 500w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-800.png 800w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-1080.png 1080w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-1600.png 1600w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-2000.png 2000w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner.png 2560w" sizes="(max-width: 479px) 99vw, (max-width: 767px) 90vw, (max-width: 991px) 89vw, (max-width: 1439px) 882px, (max-width: 1919px) 1044px, 1440px" alt="" class="image-project-banner">
-                </div>
+                   <div class="info-column">
+                       <p class="info-label">Timeline</p>
+                       <p class="info-content">2024 ( Sept - Dec )</p>
+                       
+                   </div>
+                   <div class="info-column">
+                       <p class="info-label">Tools</p>
+                       <p class="info-content">Figma</p>
+                       <p class="info-content">ReactJS</p>
+                       <p class="info-content">Slack</p>
+                       <p class="info-content">Miro</p>
+                       <p class="info-content">Jira</p>
+                       
+                   </div>
+                  
+               </div>
+           </div>
+           <div class="section-hero-3">
+            <div class="video-container">
+                <video width="600" loop autoplay class="video-style">
+                  <source src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Schneider-project/schneider hero video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            </div>         
             </div>
-        </div>
+           <div class="section-hero-4">
+               <div class="content-container">
+                   <div class="process-highlight">Process Highlights</div>
+                   <div class="main-title">Design challenge and responsibilities overview</div>
+           
+                   <div class="divider"></div>
+                   <div class="challenge-title">Challenge</div>
+                   <p class="challenge-text">Redesign Rec Well’s digital presence to centralize key facilities and program details, resolving scattered navigation issues</p>
+           
+                   <div class="divider"></div>
+                   <div class="opportunity-title">Opportunity</div>
+                   <p class="opportunity-text">Refine breakpoints, leverage user insights, and collaborate with leadership to create a cohesive online hub that elevates well-being and campus engagement</p>
+               </div>
+           </div>
+
+       </div>
 
 
         <div class="project-overview-noise"></div>
-        <div class="project-fade"></div>
+        <!-- <div class="project-fade"></div> -->
     </div>  
 
-
-    <!-- <div class="title-information-container">
-        <h4 id="top">Eatcue</h4>
-        <div class="w-layout-grid title-columns">
-            <div id="w-node-_81c0fbc5-d50e-9b48-62b3-f3671456dec5-f1f13735" class="w-layout-vflex title-information">
-                <h1>Happy decisions for your wallet and food</h1>
-                <div class="w-layout-hflex project-subtitle">
-                    <div class="tag">
-                        <div>
-                            Case Study
-                        </div>
-                    </div>
-                    <div class="time-wrapper">
-                        <div class="text-charcoal-60">
-                            <span id="readTime">7</span> min read
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="w-node-_08d1b835-a3a1-904d-92f9-ba83bc7202e1-f1f13735" class="w-layout-hflex project-info-container">
-                <div class="w-layout-vflex project-info">
-                    <h4 class="text-charcoal-60">Role</h4>
-                    <h3 class="project-info-text">Full-Stack Designer</h3>
-                </div>
-                <div class="w-layout-vflex project-info">
-                    <h4 class="text-charcoal-60">Timeline</h4>
-                    <h3 class="project-info-text">2023 (Mar - May)<br>2023 (Dec - Jan)</h3>
-                </div>
-                <div class="w-layout-vflex project-info">
-                    <h4 class="text-charcoal-60">Skills</h4>
-                    <h3 class="project-info-text">Product Design<br></h3>
-                    <h3 class="project-info-text">Interaction Design<br></h3>
-                    <h3 class="project-info-text">Prototyping<br></h3>
-                
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-
-      
-  
-    <!-- <div class="section pt-120 pb-0">
-        
-        <div class="mw-650 w-container">
-
-            <div id="introduction" class="cs-offset-section">
-                <div class="mw-650">
-                    <div class="styled-rich-text w-richtext">
-                        <p> 
-                           As the Product Owner and UI/UX Designer, my team is collaborating closely with 
-                            Schneider National to enhance their freight search platform. 
-                            I am leading the project, identifying user pain points and implementing 
-                            solutions like multi-capacity selection, desired length of haul selection, ease for truck weight compliance, mobile optimization, and intuitive, 
-                            above-the-fold search features. Once completed, I will present these improvements 
-                            at Schneider’s headquarters in Green Bay, WI along with my team, showcasing how these design changes add 
-                            flexibility, relevance, and ease of use to support Schneider’s operational 
-                            efficiency goals.
-
-
-
-
-
-
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-layout-grid cs-overview">
-                <div>
-                    <div class="caption all-caps">Timeline</div>
-                    <p></p>
-                    <p class="project-overview">Sept 2024 - Present</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">TEAM</div>
-                    <p></p>
-                    <p class="project-overview">Pearl Bharti<br> Zaid Albazian <br> Nikita Agarwal<br> Zalissa Kafando</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">MY ROLE</div>
-                    <p></p>
-                    <p class="project-overview">Product Owner <br> Full-Stack Designer</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">Domain</div>
-                    <p></p>
-                    <p class="project-overview">User Experience Research <br> User Experience Design <br> Frontend Development <br>User Interface Design
-                        
-                        <br> Interaction Design</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">TOOLS</div>
-                    <p></p>
-                    <p class="project-overview">Figma <br> Miro<br> ReactJs <br> Slack <br> Jira</p>
-                </div>
-                
-            
-            </div>
-        </div>
-    </div> -->
 
     <div data-w-id="603cee30-d84e-95e7-9034-f12671e2bd0e" class="section pt-0">
         <!--  -->
@@ -481,16 +385,15 @@
         
             <div id="ux-process" class="cs-offset-section">
                 <div class="mw-650">
-                    <div class="caption all-caps"> Current Stage in Enhancing Schneider's Freight Search Platform</div>
+                    <!-- <div class="caption all-caps"> The Process</div> -->
                     <div class="styled-rich-text w-richtext">
-                        <p>At this stage, we have completed the development of the desktop version using ReactJS and are prototyping the mobile app to ensure a seamless user experience across platforms. We are also actively conducting usability tests on the web version, gathering feedback to refine the design. 
-                        </p>
+                        <h2>The Process</h2>
 
                     </div>
                 </div>
             </div>
             
-            <!-- <div id="interviews" class="cs-offset-section">
+            <div id="interviews" class="cs-offset-section">
                 <div class="mw-650">
                     <div class="caption all-caps">RESEARCH</div>
                     <h2>User Interviews</h2>
@@ -599,7 +502,7 @@
                         <p>Spotify faces robust competition from industry heavyweights such as Apple Music, Amazon Music, YouTube Music, Tencent Music, and Pandora.</p>        
                     </div>
                     <img src="images\researchmethods.png" loading="lazy" alt="" class="cs-image" />
-                </div> -->
+                </div>
 
 
             </div>

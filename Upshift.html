@@ -56,32 +56,18 @@
     <link href="assets\landingicon.png" rel="shortcut icon" type="image/x-icon" />
     <link href="assets\landingicon.png" rel="apple-touch-icon" />
 
-    <style>
-        .frosty {
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-        }
-    </style>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <!-- custom css -->
     <link rel="stylesheet" href="style3.css" />
 </head>
 
 <body class="body">
-    <div class="html-embed w-embed">
-        <style>
-            .frosty-menu {
-                -webkit-backdrop-filter: blur(18px);
-                backdrop-filter: blur(18px);
-            }
-        </style>
-    </div>
+    <!-- <div class="html-embed w-embed"></div> -->
     
     <!-- header design -->
     <nav data-toggled="false" data-transitionable="false">
         <div id="nav-logo-section" class="nav-section">
-            <a href="#">
-              <!-- Insert your SVG here with half size -->
+            <a href="index.html">
               <svg width="24" height="30.5" viewBox="0 0 48 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="35.5" cy="58.5" r="2.5" fill="#D9D9D9"/>
                 <path d="M23.5039 3.15353C34.3713 1.77892 46.9561 9.82562 44.7448 19.6485C42.8219 28.1901 23.5039 30.187 23.5039 30.187M23.5039 3.15353C23.5039 13.7108 23.5039 30.187 23.5039 30.187M23.5039 3.15353C13.6244 2.2372 1.06372 10.0986 3.2509 19.6485C5.13537 27.8768 23.5039 30.187 23.5039 30.187M23.5039 30.187C23.5039 30.187 24.9858 54.0132 23.5039 57.2205C22.0219 60.4278 3.71252 53.2646 3.2509 44.391C2.77298 35.2043 23.5039 30.187 23.5039 30.187Z" stroke="white" stroke-width="5"/>
@@ -93,8 +79,8 @@
           
         <div id="nav-mobile-section">
           <div id="nav-link-section" class="nav-section">
-            <a href="index.html" class="nav-style">home</a>
-            <a href="about.html" class="nav-style">about</a>
+            <a href="index.html" class="nav-style">work</a>
+            <a href="#" class="nav-style">about</a>
           </div>
           <div id="nav-social-section" class="nav-section">
             <a href="https://medium.com/@pbharti_59193" class="nav-style">
@@ -103,12 +89,12 @@
             <a href="mailto:pbharti@wisc.edu" class="nav-style">
               <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.linkedin.com" target="_blank" class="nav-style">
+            <a href="https://www.linkedin.com/in/pearl-b-a702491a9/" target="_blank" class="nav-style">
               <i class="fab fa-linkedin"></i>
             </a>
           </div>        
           <div id="nav-contact-section" class="nav-section">
-            <a href="#" class="nav-style">resume</a>
+            <button class="resume-btn" onclick="openResume()">resume</button>
           </div>
         </div>
         <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
@@ -120,7 +106,59 @@
 
     <div class="section-banner upshift">
         <div class="container-banner">
-            <div class="project-title-hero-wrapper">
+             <!-- images -->
+            <div class="section-hero-1" >
+                
+                    <p class="label-hero">Upshift</p>
+                    <h1 class="title-hero">Making sustainable thrifting effortless and exciting</h1>
+                    <div class="meta-hero">
+                        <span class="tag-hero">Case Study</span>
+                        <span class="read-time-hero">7 min read</span>
+                    </div>
+            </div>
+            <div class="section-hero-2" >
+                <div class="info-container">
+                    <div class="info-column">
+                        <p class="info-label">Role</p>
+                        <p class="info-content">Full-Stack<br> Designer</p>
+                    </div>
+                    <div class="info-column">
+                        <p class="info-label">Timeline</p>
+                        <p class="info-content">2024 (Jan - May)</p>
+                        <p class="info-content">2025 (Jan - Feb)</p>
+                    </div>
+                    <div class="info-column">
+                        <p class="info-label">Tools</p>
+                        <p class="info-content">Figma</p>
+                        <p class="info-content">FigJam</p>
+                        <p class="info-content">Miro</p>
+                        <p class="info-content">Adobe Express</p>
+                        <p class="info-content"></p>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="section-hero-3">
+                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift hero image.png" loading="eager" sizes="(max-width: 479px) 99vw, (max-width: 767px) 90vw, (max-width: 991px) 89vw, (max-width: 1439px) 882px, (max-width: 1919px) 1044px, 1440px" alt="" class="image-project-banner">
+              
+            </div>
+            <div class="section-hero-4">
+                <div class="content-container">
+                    <div class="process-highlight">Process Highlights</div>
+                    <div class="main-title">Design challenge and responsibilities overview</div>
+            
+                    <div class="divider"></div>
+                    <div class="challenge-title">Challenge</div>
+                    <p class="challenge-text">Design an app connecting digital devices with real-life experiences and social interactions.</p>
+            
+                    <div class="divider"></div>
+                    <div class="opportunity-title">Opportunity</div>
+                    <p class="opportunity-text">Create a unique app, linking multiple brands to enhance user engagement and achieve business goals.</p>
+                </div>
+            </div>
+
+
+            <!-- <div class="project-title-hero-wrapper">
                 <div class="title-wrapper">
                     <div class="project-title-date-wrapper">
                         <div class="text-hero project-title">Upshift Swap Shop</div>
@@ -130,48 +168,13 @@
                 <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" class="project-banner-image-wrapper">
                     <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner.png" loading="eager" srcset="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-500.png 500w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-800.png 800w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-1080.png 1080w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-1600.png 1600w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner-p-2000.png 2000w, https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64449ac9619574fd5245c33a_stadiabt-banner.png 2560w" sizes="(max-width: 479px) 99vw, (max-width: 767px) 90vw, (max-width: 991px) 89vw, (max-width: 1439px) 882px, (max-width: 1919px) 1044px, 1440px" alt="" class="image-project-banner">
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="project-overview-noise"></div>
         <div class="project-fade"></div>
     </div>  
       
-  
-    <div class="section pt-120 pb-0">
-        <!-- <div class="container"><img src="images\hero.png" loading="lazy" "
-                sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw" alt="Upshift Swap Shop" class="cs-cover-image" /></div>
-        <div class="mw-650 w-container"> -->
-            <!-- <h1> Revolutionizing Retail: Redesigning Thrift Store's UX for Sustainable Impact</h1> -->
-            <div class="w-layout-grid cs-overview">
-                <div>
-                    <div class="caption all-caps">Timeline</div>
-                    <p></p>
-                    <p class="project-overview">Jan 2024 - May 2024</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">TEAM</div>
-                    <p></p>
-                    <p class="project-overview">Pearl Bharti</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">SKILLS</div>
-                    <p></p>
-                    <p class="project-overview">Brainstorming <br> Storyboarding <br> Task Flows <br> Wireframes <br> Design Systems <br> Paper Prototype <br> Heuristic Evaluation <br> Interactive Mockups</p>
-                </div>
-                <div>
-                    <div class="caption all-caps">TOOLS</div>
-                    <p></p>
-                    <p class="project-overview">Figma <br> Miro</p>
-                </div>
-                
-                <div>
-                    <div class="caption all-caps">MY ROLE</div>
-                    <p></p>
-                    <p class="project-overview">UX Designer</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div data-w-id="603cee30-d84e-95e7-9034-f12671e2bd0e" class="section pt-0">
         <div data-w-id="3d5bdc31-b4a6-ba0b-3fae-b433c14831e7" class="cs-sticky-sidebar">
@@ -221,191 +224,495 @@
                 <div class="mw-650">
                     <div class="caption all-caps">Introduction</div>
                     <div class="styled-rich-text w-richtext">
-                        <p>Arriving in the US from warm India, I wasn't ready for Wisconsin's cold. As a student, I needed affordable warmth without supporting fast fashion. Upshift, Madison's swap shop, became my go-to. Their focus on sustainability and community inspired me to redesign their website, eager to help their cause thrive</p>
+                        <h3>Background</h3>
+                        <p>
+                            This project was completed as part of the User Experience Design (LIS 612) course in the Information Science program at the University of Wisconsin–Madison. As part of the assignment, we could choose any theme from UW–Madison’s RISE Initiative, and I chose RISE-EARTH, focusing on sustainability and environmental impact. I enjoyed exploring how UX design can contribute to a more sustainable future.</p>
                     </div>
                     <br>
                     <br>
                     <br>
-                    <div class="caption all-caps">My Role</div>
+                    <div class="caption all-caps">PROBLEM</div>
+                    
                     <div class="styled-rich-text w-richtext">
-                        <p>I have been the UX designer for this project. Starting at my preliminary research, brainstorming and all the design steps. With wonderful guidance from my Professor <a href="https://www.linkedin.com/in/adamrule/" target="_blank">Adam Rule</a>, I have been able to enhance the User Experience of the website. </p>
+                        <h3> The Alarming Environmental Cost of Fast Fashion</h3>
+                        <p>
+                            Global warming is accelerating due to human activities, with the fashion industry 
+                            contributing around <strong>10% of global carbon emissions </strong> —more than <strong>international flights and 
+                                maritime shipping combined</strong> . Garment waste is a major factor, with over 92 million tons 
+                            generated annually, much of it ending up in landfills. While individuals can help reduce 
+                            their environmental footprint by embracing sustainable fashion—such as buying secondhand, 
+                            choosing durable items, and supporting eco-friendly brands—barriers like <strong>stigma</strong>, <strong>convenience</strong>, 
+                            and <strong> limited awareness </strong> prevent many from making these changes.
+                        </p>
                     </div>
                 </div>
             </div>
 
 
-            <div id="problem" class="cs-offset-section">
+            <div id="solution" class="cs-offset-section">
                 <div class="mw-650">
-                    <div class="caption all-caps">Problem</div>
+                    <div class="caption all-caps">SOLUTION</div>
                     <div class="styled-rich-text w-richtext">
-                        <p>Getting hold of sustainable yet affordable items is not easy in this day and economy. It is a rarity to find affordable yet high quality items online. Upshift Swap Shop is a one stop shop for it. Although, it poses the issue of a low impact online presence.</p>
-                        <p>‍<br/></p>
+                        <h3>Turning thrifting into a seamless, trendy, and impactful choice</h3>
+                        <p>Upshift's sustainable mission inspired me to reimagine their app after it became my go-to for affordable warmth in Wisconsin's cold. Post learning about Upshift, Madison-WI's only swap shop.<br>
+                            <br>
+                            <br>
+                            
+                            
+                            <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift solution intro.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-_31a7f19c-f0ec-c932-20de-1ac1f55b4434-edfc6cf5" />
+
+                            
+                        </p>
+                        <br>
+                            
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        ‍<br>
                     </div>
                 </div>
-                <div class="w-layout-grid fave-app-revamp-problem-grid">
+                <div class="w-layout-grid-2">
                     <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Spotify - Project/spotify problem 1.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-_31a7f19c-f0ec-c932-20de-1ac1f55b4434-edfc6cf5" />
                     
-                        <div class="styled-rich-text w-richtext">
-                            <div class="caption">PROBLEM #1</div>
-                            
-                                <h3>Sparse Visuals</h3>
-                                <p>The website <strong>lacks</strong> visually appealing elements such as <strong>high-quality product images</strong>, a <strong>vibrant color palette</strong> or <strong>engaging graphics</strong>, detracting from the overall fun and excitement of the thrifting experience.</p>
-                        <div class="caption mt-16">EXAMPLE</div>
-                        <p>The website looks lackluster with a grey and white palette and overuse of text.</p>
+                    <div class="styled-rich-text w-richtext">
+                        <div class="caption">SOLUTION #1</div>
+                            <h3>Smart & Hassle-Free Thrifting</h3>
+                                <p>
+                                    Items are sorted by style, trend, and size for easy browsing. Users can buy personalized thrifted gift bundles. Each item has clear descriptions, condition details, and sustainability impact.
+                                </p>
+                        
                     </div>
                 </div>
-                <div class="w-layout-grid fave-app-revamp-problem-grid">
+                <div class="w-layout-grid">
                     <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Spotify - Project/spotify problem 2.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-b884bf5c-b4f1-9a01-cbd2-950fc17e77a9-edfc6cf5"/>
                     <div class="styled-rich-text w-richtext">
-                            <div class="caption">PROBLEM #2</div>
+                            <div class="caption">SOLUTION #2</div>
                             
-                                <h3>Limited shopping options</h3>
-                                <p>The website does not provide an option for users to do much apart from gaining information. The option of viewing or buying items online is impossible due to low interactability of website. </p>
+                                <h3>Making Secondhand Shopping More Appealing</h3>
+                                <p>The app offers outfit ideas to style thrifted clothes. 
+                                    Unique pieces come with background stories. A smooth shopping experience makes thrifting easy and fun. </p>
                         
-                        <div class="caption mt-16">EXAMPLE</div>
-                        
-                        <p>You can view information to swap in store but nothing pertaining to being able to see items available at the moment or a way to buy them remotely.</p>
-                    </div>
+                            </div>
                 </div>
 
-                <div class="w-layout-grid fave-app-revamp-problem-grid">
+                <div class="w-layout-grid-2">
                     <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Spotify - Project/spotify problem 3.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-b884bf5c-b4f1-9a01-cbd2-950fc17e77a9-edfc6cf5" />
                     <div class="styled-rich-text w-richtext">
-                        <div class="caption">PROBLEM #3</div>
-                            <h3>Lacks a pull factor</h3>
+                        <div class="caption">SOLUTION #3</div>
+                            <h3>Encouraging Sustainable Choices with Rewards</h3>
                         
-                        <p>The features, copywriting and visual elements do not speak to the brand. They lack a pull-factor to attract customers</p>
+                        <p>Gaia, the in-app mascot, teaches users about sustainable fashion. Users earn points and discounts for eco-friendly shopping.</p>
                 </div>
                 </div>
+
                 <div class="mw-650">
                     <div class="styled-rich-text w-richtext">
-                        <p>‍</p>
-                        <h3>Defining the problem<br/></h3>
+                        <div class="caption">THE PROCESS</div>
+                        <h3>UX Roadmap</h3>
                     </div>
                 </div>
-                <div class="mw-650"><img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/how might we upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, 650px" alt="problem statement" class="cs-image" /></div>
+                <div class="mw-650"><img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift_process.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, 650px" alt="problem statement" class="cs-image" /></div>
             </div>
 
 
 
-            <div id="impact" class="cs-offset-section">
+            <div id="research" class="cs-offset-section">
                 <div class="mw-650">
-                    <div class="caption all-caps">Brainstorming</div>
+                    <div class="caption all-caps">RESEARCH</div>
                     <div class="styled-rich-text w-richtext">
-                        <p> After researching upon Upshift's contemporaries and creating a moodboard of visual and potential features for inspiration. I did a 2 hour long thorough brainstorming of ideas  to make it more fun while keeping it budget-friendly, without barring the "wild ideas".<br/></p>
+                        <h3>Competitor Analysis<br/></h3>
+                        <p> 
+                             To bridge the gap between intention and action and to inform my design decisions better by understanding the gap in the market, I conducted  Competitor Analysis.
+                        </p>
+                    </div>
+                </div><img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift competitor analysis.png" loading="lazy" class="cs-image-new" />
+                <p class="cs-caption">Positioning matrix used to  present data from my research on competitors.</p>
+                
+                <br>
+            </div>
+
+            <div id="research" class="cs-offset-section">
+                <div class="mw-650">
+                    <div class="caption all-caps">RESEARCH</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>Desk Research</h3>
+                        <p> 
+                            While sustainability-focused shopping is growing, the perceived inconvenience and 
+                            social stigma of second-hand clothing remain major barriers. Many consumers want to 
+                            shop sustainably but find it difficult due to quality concerns, lack of trust, and the 
+                            effort required to find desirable items.<br>            
+                            <a href="https://ehjournal.biomedcentral.com/articles/10.1186/s12940-018-0433-7?">"The Global Environmental Injustice of Fast Fashion" (Environmental Health Journal, 2018)</a>
+                            <br><a href="https://nordopen.nord.no/nord-xmlui/bitstream/handle/11250/3065288/Sweety.pdf">"Antecedents of Consumers’ Intention to Purchase Secondhand Clothing: An Empirical Study" (Nord Open Research, 2022)</a>
+                            
+                        </p>
+                    </div>
+                </div>
+                <br>
+
+                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift_desk_research.png" loading="lazy" class="cs-image-new" />
+                <p class="cs-caption">Compilation of all the insights from my desk research</p>
+
+                
+
+
+                
+            </div>
+
+            <div id="research" class="cs-offset-section">
+                <div class="mw-650">
+                    <div class="caption all-caps">RESEARCH</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>White Paper Research<br/></h3>
+                        <p> 
+                            Although, desk research provided macro-level insights on fast fashion’s impact and barriers to sustainable fashion, highlighting gaps in consumer behavior.
+                            I conducted Secondary research  to validate these findings, uncovering psychological barriers, peer influence, and the need for trust and convenience in second-hand fashion adoption.
+                        </p>
+                    </div>
+                </div>
+                
+                <br>
+                <br>
+                <br>
+                <div class="container-card-secondary">
+                    <div class="card-secondary">
+                        <h1>62%</h1>
+                        <h2>Preference vs. Action Gap</h2>
+                        <p>Gen Z prefers sustainable brands, but only a fraction consistently shop second-hand.     <br><i>(Deloitte 2023)</i> </p>
+                    </div>
+                    <div class="card-secondary">
+                        <h1>40% </h1>
+                        <h2>Peer Influence on Thrifting</h2>
+                        <p>Consumers are more likely to thrift if their friends do, emphasizing the impact of social behavior.<i>(ThredUp 2023 Resale Report)</i> </p>
+                    </div>
+                    <div class="card-secondary">
+                        <h1>58%</h1>
+                        <h2>Convenience Over Sustainability</h2>
+                        <p>Most shoppers prioritize ease of purchase over sustainability, making accessibility a major barrier.<i> (McKinsey & Company)</i> </p>
+                    </div>
+                    <div class="card-secondary">
+                        <h1>16%</h1>
+                        <h2>Slow Adoption of Second-Hand Fashion</h2>
+                        <p>Despite rising interest in sustainability, only a small percentage of people regularly buy second-hand. <i>(Statista 2023)</i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="research" class="cs-offset-section">
+                <div class="mw-650">
+                    <div class="caption all-caps">RESEARCH</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>Affinity Mapping<br/></h3>
+                        <p> 
+                            I conducted interviews and surveys with my peers at UW Madison to explore the 
+                            decision-making in secondhand shopping, sustainability goals, spending habits, 
+                            and purchase motivations. I then distilled the data along with the rest to inform brainstorming for affinity mapping
+                        </p>
                     </div>
                 </div><img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/brainstorming upshift.png" loading="lazy" class="cs-image" />
                 
                 <br>
-                <div class="mw-650">
-                    <div class="styled-rich-text w-richtext">
-                        <p>After exploring a variety of brainstormed ideas, such as <strong>gamification</strong>, <strong>alerts</strong> and <strong>gifting hampers</strong> , I honed in on three themes that lay closer to the <strong> Ideo's Desirability, Feasibility and Viability theory</strong>.</p>
-                        <ul>
-                            <li><strong>Gamification of item swapping:</strong>To increase customer loyalty by giving points that they can use in store/online or have different badges for each level they reach and  a special surprise on achieving it.</li>
-                            <li><strong>Alerting customers about new collection:</strong> To excite them and keep them in loop with the store in real time hence increasing a sense of personalization.</li>
-                            <li><strong>Having gift hampers at low costs:</strong> To give customers an occasion to thrift for, they would be able to make customized gift hampers and be able to give high quality yet affordable gifts to their loved ones, online.</li>
-                            
-                          </ul>
-                    </div>
-                </div>
             </div>
-            <div id="storyboard" class="cs-offset-section">
+
+            <div id="research" class="cs-offset-section">
                 <div class="mw-650">
-                    <div class="caption all-caps">Story Board</div>
-                    <div class="styled-rich-text w-richtext">
-                        <p>To visualize and <strong>capture the emotions</strong>  of a way in which the solutions would bring about any change to the user, I created a storyboard. </p>
-                        <p>I grasped real world scenarios after getting inspired from my friends and fellow shoppers on a budget.</p>
-                    </div>
-                </div>
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/storyboard upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw" alt="" class="cs-image" />
+                        <div class="styled-rich-text w-richtext">
+                            <div class="caption all-caps">RESEARCH</div>
+                            <h3>What I concluded...</h3>
+                    
+                            <p>After multiple rounds of research and market analysis, key barriers to secondhand shopping—convenience, stigma, and engagement—became clear.</p>
+                        
+                        </div>
+                </div> 
                 
-            </div>
-            <div id="taskflows" class="cs-offset-section">
-                <div class="mw-650">
-                    <div class="caption all-caps">Task Flows</div>
-                    <div class="styled-rich-text w-richtext">
-                        <p>With a very raw design idea in my mind, I proceeded to map out my initial idea of task flows to give it a physical form. The initial form was heavily infuenced by websites and had a plan very similar to many retail sites.</p>
-                        <p>I mapped up <strong>5 task flow</strong> for starters.</p>
-                        <div class="caption">
-                            <a href="https://www.figma.com/file/WBHTJxsRX8CFGhx7d2i3su/Assignment-4?type=whiteboard&node-id=9%3A79&t=pqkildZElD2LZOZt-1" target="_blank"><p> <strong>Link to Task Flows</strong></u> </p></a>
-    
+                <br>
+                <div class="dialog-container">
+                    <div class="dialog-box left">
+                        <div class="dialog-number">#1</div>
+                        <div class="dialog-header">Convenience Drives Adoption </div>
+                        <div class="dialog-text">
+                            Users hesitate to thrift due to overwhelming inventory and lack of organization. 
+                            A streamlined browsing experience with curated selections and smart filters can improve engagement.
+
+
                         </div>
                     </div>
-                    
-                </div><img src="images/tf1.png" loading="lazy" alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/1- task flow upshift.png" loading="lazy" alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/2- task flow upshift.png" loading="lazy" alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/3- task flow upshift.png" loading="lazy" alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/4- task flow upshift.png" loading="lazy" alt="" class="cs-image"/>
-               
+                    <div class="dialog-box right">
+                        <div class="dialog-number">#2</div>
+                        <div class="dialog-header">Stigma Still Exists </div>
+                        <div class="dialog-text">
+                            Despite sustainability awareness, many associate secondhand shopping with lower quality. Providing product history, styling inspiration, and a guided experience (like Gaia) can reshape perceptions
+                        </div>
+                    </div>
+                    <div class="dialog-box left">
+                        <div class="dialog-number">#3</div>
+                        
+                        <div class="dialog-header"> Gamification Boosts Engagement</div>
+                        <div class="dialog-text">
+                            Rewarding users with impact tracking and incentives can reinforce sustainable habits, 
+                            making thrifting feel both impactful and enjoyable.       
+                        </div>
+                </div>
+                
             </div>
-            <div id="screendsgn" class="cs-offset-section">
+
+
+            <div id="research" class="cs-offset-section"></div>
+
                 <div class="mw-650">
-                    <div class="caption all-caps">Screen Design</div>
                     <div class="styled-rich-text w-richtext">
+                        <div class="caption all-caps">RESEARCH</div>
+                        <h3>Defining the problem<br/></h3>
+                        <p>
+                            By analyzing the landscape, I refined my HMW to 
+                            focus on user behavior—bridging intent and action by 
+                            making sustainable shopping more accessible, desirable and rewarding.
+                        </p>
+                    </div>
+                    <div class="mw-650"><img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/how might we_ Upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, 650px" alt="problem statement" class="cs-image" /></div>
+      
+                </div>
+
+            </div>
+
+            <div id="synthesis" class="cs-offset-section">
+                <div class="mw-650">
+                    <div class="caption all-caps">SYNTHESIS</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>Storyboarding</h3>
+                        
+
+                        <div class="w-layout-grid-2">
+                            <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift storyboard.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-b884bf5c-b4f1-9a01-cbd2-950fc17e77a9-edfc6cf5" />
+                            <div class="styled-rich-text w-richtext">
+                                    <p><br>
+                                        <br>
+                                        <br>
+                                        
+                                <br>
+                                <br>
+                                <br>To visualize and <strong>capture the emotions</strong>  of a way in which the solutions would bring about any change to the user, I created a storyboard. 
+                                        I grasped real world scenarios after getting inspired from my friends and fellow shoppers on a budget.</p>
+                            </div>
+                        </div>
+
+
+
+
+
+                        
+                    </div>
+                </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+
+                <div class="mw-650">
+                    <div class="caption all-caps">SYNTHESIS</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>User Persona</h3>
+                        <p>I created Josh's persona to capture the real motivations, 
+                            frustrations, and behaviors of secondhand shoppers, 
+                            ensuring the persona addresses their needs effectively.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift_user_persona.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, 650px" alt="problem statement" class="cs-image-new" />
+
+                        
+           
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br> 
+            
+            <div id="taskflows" class="cs-offset-section">
+
+                <!-- Redesign Goals -->
+                <div class="mw-650">
+                    <div class="caption all-caps">Ideation</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>Redesign Goals</h3>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Moodboard -->
+
+                
+                
+                
+                <div class="mw-650">
+                    <div class="caption all-caps">Ideation</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>A Moodboard for Playful & Conscious Sustainability</h3>
+                        <p>I focused on warm, earthy tones and organic textures to create a sense of nostalgia, comfort, 
+                            and authenticity—key emotions that make secondhand shopping feel like an experience rather than 
+                            a transaction.</p>
+
+                        <div class="w-layout-grid-2">
+                            <div class="styled-rich-text w-richtext">
+                                <p>The mix of modern typography, and vintage-inspired visuals 
+                                    reinforces the idea that sustainability can be stylish, fun, and deeply personal.</p>
+                                    
+                                    <br>
+                                    <br>
+                                    <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift moodboard - comparison.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-b884bf5c-b4f1-9a01-cbd2-950fc17e77a9-edfc6cf5" />
+                            
+
+                            </div>
+                            
+                            <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/Upshift moodboard.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-b884bf5c-b4f1-9a01-cbd2-950fc17e77a9-edfc6cf5" />
+                            
+                        </div>
+
+                        <div class="w-layout-grid-2">
+                            <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift mascot.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-b884bf5c-b4f1-9a01-cbd2-950fc17e77a9-edfc6cf5" />
+                            <div class="styled-rich-text w-richtext">
+                                <h4>The Mascot</h4>
+                                    <p>Inspired by Duolingo’s engaging mascot, 
+                                        I created Gaia in Figma to make sustainability feel 
+                                        interactive and fun. Named after the Greek goddess of Earth, 
+                                        she serves as a friendly guide, reinforcing eco-conscious choices.</p>
+                            </div>
+                        </div>
+
+                    
+                        
+                    </div>
+                    
+                </div>
+
+                 
+               
+                <br>
+                <br>
+                <br>
+
+
+
+                <!-- Task Flows -->
+                <div class="mw-650">
+                    <div class="caption all-caps">Ideation</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>Task Flows</h3>
+                        <p>With my visual direction in place, I mapped out 4 taskflows to begin designing a seamless and engaging user journey. Every step designed with clarity and fun in mind—guided by Gaia, of course!</p>
+                    </div>
+                    
+                </div>
+                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift task flow 1.png" loading="lazy" alt="" class="cs-image" />
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Paper Prototypes -->
+                <div class="mw-650">
+                    <div class="caption all-caps">Ideation</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>Paper Prototyping</h3>
+                        <p>I created a quick paper prototype to gather early feedback from three participants, and their experiences brought several key issues to light. Rachel</p>
+                       
+
+                        <div class="w-layout-grid">
+                            <div class="styled-rich-text w-richtext">
+                                <ul class="insights-list">
+                                    <li>
+                                      <span class="insight-title">Styling Tips Visibility</span>: Rachel initially missed the styling tips feature, underscoring the need for more prominent placement.
+                                      <span class="user-quote">“I didn’t notice the styling tips until much later—it needs to stand out more.”</span>
+                                    </li>
+                                    <li>
+                                      <span class="insight-title">Loyalty Points Labeling</span>: Blake had trouble locating loyalty points, confused by the term "Sustainability Points."
+                                      <span class="user-quote">“I wasn’t sure if Sustainability Points were the same as loyalty points.”</span>
+                                    </li>
+                                    <li>
+                                      <span class="insight-title">Profile Placement</span>: Valentine’s journey went smoothly but recommended moving the profile section to a more noticeable area for easy access.
+                                    </li>
+                                  </ul>
+                            </div>
+
+                            <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/2- paper prototype upshift.png" loading="lazy" sizes="100vw" alt="fave" id="w-node-b884bf5c-b4f1-9a01-cbd2-950fc17e77a9-edfc6cf5" />
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/1- paper prototype upshift .png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
+                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/2- paper prototype upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />    -->
+                
+               
+                <br>
+                <br>
+                <br>
+                <br>
+               
+
+
+
+
+
+
+            </div>
+            <div id="ideation" class="cs-offset-section">
+                <div class="mw-650">
+                    <div class="caption all-caps">Ideation</div>
+                    <div class="styled-rich-text w-richtext">
+                        <h3>Testing and Design Iterations</h3>
                         <p>To bring about more completeness to my designs yet leaving scope for change and adjustments given the incipient stage, I roughly sketched screen designs. I very visibly changed the layout of the screen with the socials at the bottom, the icon and the navbar on top.</p>
                     </div>
-                </div><img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/1- screen design upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/12- screen design upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
+                </div>
+                <!-- <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/22- screen design upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
                 <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/22- screen design upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/22- screen design upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
-                <!-- <div class="divider"></div> -->
+                 -->
             </div>
-            <div id="sysdsgn" class="cs-offset-section">
+            
+            
+            <div id="design" class="cs-offset-section">
                 <div class="mw-650">
-                    <div class="caption all-caps">System Design</div>
+                    <div class="caption all-caps">Design</div>
                     <div class="styled-rich-text w-richtext">
-                       <p>The biggest concern after my preliminary research from the start was the<strong> absence of a relevant color swatch</strong>. After researching their contemporaries and refining my ideas. I came up with the following <strong>components</strong> </p>
-                        <div class="caption">
-                            <a href="https://www.figma.com/file/L0ucqyQdii1y4aPf5560WK/A6?type=design&node-id=0%3A1&mode=design&t=iYLzm0trLOjmUUX1-1" target="_blank"> 
-                                <u>Link to the Design System</u> </a>
-                        </div>
-                    </div>
-                </div><img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/system design upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
-                    
-                    
-            </div>
-            <div id="paper" class="cs-offset-section">
-                <div class="mw-650">
-                    <div class="caption all-caps">Paper Prototype</div>
-                    <div class="styled-rich-text w-richtext">
-                        <p> I conducted my paper prototyping with the students that I tutor, namely, Rachel Ren, Blake and Valentine Schneider. I gave each of them  a chance to separately perform each task without looking at others perform it to get independent insights. </p>
-                        <div class="caption">
-                            <a href="https://www.figma.com/file/L0ucqyQdii1y4aPf5560WK/A6?type=design&node-id=0%3A1&mode=design&t=iYLzm0trLOjmUUX1-1" target="_blank"> <u>Link to the Paper Protypes</u> </a>
-                        </div>
+                        <h3>Design System</h3>
+                        <p> 
+                            The design system was the blueprint for my consistency. 
+                            It defined core elements like color, typography, and layout, ensuring everything I created is cohesive and accessible.  
+                            Adding auto layout and reusable components really paid off when I revisited the design a year 
+                            later, making the process more efficient and flexible. It also ensured my designs work seamlessly, reflecting my 
+                            commitment to quality.
+                        
+                        
+                        </p>                    
+                        
                     </div>
                 </div>
-                
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/1- paper prototype upshift .png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/2- paper prototype upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />   
-                <br> 
-                <div class="mw-650">
-                    <div class="styled-rich-text w-richtext">
-                        <p>The insight are as below -</p>
-                        <ul>
-                            <li>Rachel initially missed the styling tips feature while browsing the website, indicating a need for better visibility and attention-grabbing design.</li>
-                            <li>Blake encountered confusion when trying to locate loyalty points, exacerbated by the sidebar label "Sustainability points" instead of "Loyalty Points," highlighting the importance of clear labeling and navigation.</li>
-                            <li>Valentine's experience was relatively smooth, but they suggested moving the profile section to a more prominent location for easier access.</li>
-                          </ul>
-                    </div>
-                </div>       
+                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift design system.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />           
             </div>
-            <div id="wireframe" class="cs-offset-section">
-                <div class="mw-650">
-                    <div class="caption all-caps">Wireframes</div>
-                    <div class="styled-rich-text w-richtext">
-                        <p> With relevant Insights I proceeded to create my Wireframes and appropriately annotated every elements for future reference to back my design decisions up.</p>
-                        <p>This included the basic spatial decisons and final screen structure.</p>
-                        <div class="caption">
-                            <a href="https://www.figma.com/file/X8l31tqtusNGSjODXIQ5Wv/A8?type=design&node-id=0%3A1&mode=design&t=yjMc6yml6Dj20o2w-1" target="_blank"> <u>Link to the Wireframes</u> </a>
-                        </div>
-                    </div>
-                </div><img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/1- wireframe upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/2- wireframe upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/3- wireframe upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/4- wireframe upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />           
-            </div>
-            <div id="eval" class="cs-offset-section">
+            <!-- <div id="eval" class="cs-offset-section">
                 <div class="mw-650">
                     <div class="caption all-caps">Heuristic Evaluation</div>
                     <div class="styled-rich-text w-richtext">
@@ -423,53 +730,81 @@
                         </div>
                     </div>  
                 </div>        
-            </div>
-            <div id="final" class="cs-offset-section">
+            </div> -->
+            <div id="design" class="cs-offset-section">
                 <div class="mw-650">
-                    <div class="caption all-caps">Final Mockups</div>
+                    <div class="caption all-caps">Design</div>
                     <div class="styled-rich-text w-richtext">
+                        <h3>Final Prototypes</h3>
                         <p>The culmination of my design journey lies in the latest mockups, born from a series of refinements initiated from a dull, monochromatic website. Now, it boasts a vibrant pastel color scheme, reflecting the playful essence of Upshift Swap Shop. Additionally, various features have been integrated to enhance online engagement, including personalized gift options and a loyalty points system, among others.</p>
-                        <div class="caption">
+                        <!-- <div class="caption">
                             <a href="https://www.figma.com/file/FO6j53wctlwBoMdDa8PJY5/THE-IT-FILE?type=design&node-id=0%3A1&mode=design&t=0uM2NdZ0BmppCUXD-1" target="_blank"> <u>Final Mockups</u> </a>
-                        </div>
+                        </div> -->
                     </div>
-                </div>
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/1 - final mockup upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />     
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/2 - final mockup upshift.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"alt="" class="cs-image" />   
-                <div class = "center-text">
-                    <div class="mw-650">
-                        <div class="caption">
-                            <p><strong>A few screens from my final prototype</strong></p>
-                        </div>
-                    </div>  
-                </div>    
+                </div>   
             </div>
 
-            <div id="learning" class ="cs-offset-section">
+            <div id="reflection" class ="cs-offset-section">
                 <div class="mw-650">
-                    <div class="caption all-caps">Learnings</div>
+                    <div class="caption all-caps">Reflection</div>
                     <div class="styled-rich-text w-richtext">
-                        <ul>
-                            <li><strong>Be open to change, even at later stages</strong><br>
-                                It took a long while to be able to change my designs after sticking to a couple layout decisions for weeks. As I focused on consistency and making my screen designs look more homely/familiar. I took major shifts in my prototype design towards the end.
-                            </li>
-                            <li><strong>Visual Design and Branding</strong><br>
-                                I learnt to explore principles of visual design, including color theory, typography, and imagery selection and to develop a cohesive visual identity that reflects the thrift store's brand values and resonates with its target audience.
-                            </li>
-                            <li>
-                                <strong>Having a solid problem statement</strong><br>
-                                I learned how crucial an effective problem statement is just to create value and not wander off in the process of designing. After 3-4 weeks of drafting my initial problem statement was I able to stike my final one.
-                            </li>
+                        <h3>What I Learnt and a little about the timeline!</h3>
+                        <p>
+                            It’s been a year since the initial kickoff of the project in Jan 2024.
+                             After a three-month sprint that produced the first case study, 
+                             feedback from a mentor and fellow designers led me to revisit the project in January 2025. 
+                             In this refreshed phase, I:
 
-                        </ul>
+                             <ul class="insights-list">
+                                <li>
+                                    Revisited my research and deepened my understanding by 
+                                    reading new academic papers, which provided fresh insights and helped shape a more informed approach.
+                        
+                                </li>
+                                <li>
+                                    Refined visual explorations and added new features
+                                </li>
+                                <li>
+                                    Shifted towards a more sustainability focused direction for the app  </li>
+                              </ul>
+
+                          
+                        </p>
+                        <p>Beyond refining the project’s direction, I discovered the immense value of iterative design and continuous feedback.
+                             Engaging with academic literature not only enriched my insights but also reinforced the importance of clear communication, 
+                             intuitive labeling, and engaging features—all crucial elements in creating a more impactful and sustainable product.</p>
                     </div>
                           
             </div>
-            <div id="future" class ="cs-offset-section">
+            <div id="reflection" class ="cs-offset-section">
                 <div class="mw-650">
-                    <div class="caption all-caps">Future</div>
+                    <div class="caption all-caps">reflection</div>
                     <div class="styled-rich-text w-richtext">
-                        <p>In future, I would like to incoporate more features to increase the aspect of social interaction for users and to promote sustainability by gamification.</p>
+                        <h3>What's next?</h3>
+                        <p>
+                            
+                            Coming back to this project really helped me grow as a designer. 
+                            I got a deeper sense of how design and product strategy work together, 
+                            and each round of iteration has taught me something new about the user’s needs. 
+                            I'm looking forward to how the next challenges in this space will push my design thinking even further.
+                            
+                         </p>
+                        <ul class="insights-list">
+                            <li>
+                              <span class="insight-title">Refine and Implement Impact Metrics</span>: 
+                              Add metrics that showcase the impact of each purchase, such as the amount of water saved or trees preserved, to help users see the tangible results of their actions.
+                            </li>
+                            <li>
+                              <span class="insight-title">Make the platform more social</span>: 
+                              Enhance social features by allowing users to share their sustainability achievements on social media, view collective impact, and participate in challenges or community boards.
+                            
+                            </li>
+                            <li>
+                              <span class="insight-title">Focus on User Retention</span>: 
+                              Analyze retention patterns and address friction points. Implement features like gamification and progress tracking to motivate users to complete lessons and stay engaged.
+                            </li>
+                          </ul>
+                        
                     </div>      
             </div>
      </div>

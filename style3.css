@@ -62,38 +62,45 @@ section{
 nav {
     display: flex;
     width: 100%;
+    opacity: 1;
     position: fixed; 
-    top: 0;
     z-index: 1000; /* Ensure it's on top */
-    backdrop-filter: blur(20px); 
-    transition: background-color 0.3s ease-in-out;
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    backdrop-filter: blur(5px); 
+  
     font-size: 15px;
-    background: transparent; 
+   
+    background-color: rgba(0, 0, 0, 0);
+    /* box-shadow: 0 2px 20px 0 rgba(126, 126, 126, 0.1); */
+    -webkit-backdrop-filter: blur(5px);
+
+
+    /* background: transparent; Optional: Add a solid background */
 }
 
 .nav-style {
+    padding: 0.5rem 0 0 0.3rem;
     color: #ffffffce; /* Text color */
     text-decoration: none; /* Remove underline */
-    font-size: 1.3rem; /* Font size */
-    font-weight: 100;
+    font-size: 1.5rem; /* Font size */
+    font-weight: 200;
     
 }
   
 .nav-style:hover {
-   color: #ae93e9; /* Text color on hover */
+   color: #f8f8f8; /* Text color on hover */
+   text-shadow: 0 0 10px #e4d9ff, 0 0 20px #e4d9ff, 0 0 30px #e4d9ff;
    
 }
-  
+
 nav .nav-section {
-    padding: 5px 20px;
+    padding: 1rem  1.8rem;
     display: flex;
     gap: 1rem;
-    border-bottom: 1px solid rgba(39, 39, 39, 0.3);
+    /* border-bottom: 1px solid rgba(39, 39, 39, 0.3); */
     align-items: center;
     justify-content: center;
     width: 100%;
-    z-index: 1000; /* Or a specific width if necessary */
+    z-index: 1000;
 }
 
 #nav-mobile-section {
@@ -139,6 +146,7 @@ nav .nav-section {
 #nav-logo-section {
     flex-basis: calc(100% / 3);
     justify-content: flex-start;
+    
 }
 
 #nav-logo-section > a > i {
@@ -155,9 +163,10 @@ nav .nav-section {
 }
 
 nav.scrolled {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Keep it darker on scroll */
 }
 
+ 
 .logo{
     font-size: 1.5rem ;
     color: var(--text-color);
@@ -165,18 +174,23 @@ nav.scrolled {
     cursor: default;
 }
 
-.navigation-bar a{
-    font-size: 1rem;
-    color: var(--text-color);
-    margin-left: 4rem;
-    transition: .3s;
-    font-weight: 400;
+.resume-btn {
+    all: unset;
+    width: 100px;
+    background-color: #ae93e900;
+    color: white;
+    border: 3px solid #ae93e984;
+    padding: 5px 7px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+}
+.resume-btn:hover {
+    background-color: #ae93e9a0;
 }
 
-.navigation-bar a:hover,
-.navigation-bar a.active {
-    color: var(--main-color);
-}
 
 #menu-icon {
     font-size: 2.25rem ;
@@ -459,8 +473,8 @@ span{
     flex-direction: column;
     align-items: center;
     padding-top: 104px;
-    display: flex
-;
+    display: flex;
+    height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -475,24 +489,61 @@ span{
 
 .section-banner.recwell {
     background-image: radial-gradient(circle farthest-side at 50% 0, #67010175, #0000);
-    padding-top: 104px;
+    padding-top: 70px;
 }
 
 .section-banner.wdnr {
     background-image: radial-gradient(circle farthest-side at 50% 0, #00573b61, #0000);
-    padding-top: 104px;
+    padding-top: 70px;
 }
 
 .section-banner.schneider {
     background-image: radial-gradient(circle farthest-side at 50% 0, #87361093, #0000);
-    padding-top: 104px;
+    padding-top: 70px;
 }
 
 .section-banner.upshift {
-    background-image: radial-gradient(circle farthest-side at 50% 0, #8b010180, #0000);
-    padding-top: 104px;
+    background-image: radial-gradient(circle farthest-side at 50% 0, #c0dca47e, #0000);
+    padding-top: 70px;
 }
 
+
+.label-hero {
+    font-size: 1.2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.title-hero {
+    font-size: 4rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.meta-hero {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.tag-hero {
+    background-color: #dddddd27;
+    color: #cacaca;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.read-time-hero{
+    font-size: 14px;
+    color: #666;
+}
 
 @media screen and (max-width: 991px) {
     .container-banner {
@@ -500,16 +551,104 @@ span{
     }
 }
 
+
+
 .container-banner {
     z-index: 3;
-    grid-row-gap: 32px;
-    flex-direction: column;
-    align-items: stretch;
-    width: 882px;
-    display: flex
-;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: 0.6fr 1fr;
+    gap: 8px; /* Adjust spacing between sections */
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
     position: relative;
 }
+
+
+.section-hero-1 {
+    padding: 2rem 7rem 2rem 9rem;
+    /* width: 100%;
+    height: 100%; */
+}
+.section-hero-2 {
+    /* width: 100%; */
+    padding: 6rem  9rem 1rem 3rem;
+    /* height: 100%; */
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: auto;
+    /* padding: 20px; */
+}
+
+.info-column {
+    text-align: left;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.info-content {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 350;
+    line-height: 150%;
+}
+
+.section-hero-3{
+    padding: 1.5rem 0 0 4rem;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.section-hero-4 {
+    padding:  3rem 7rem 3rem 3rem;
+}
+
+
+.content-container {
+    max-width: 600px;
+    margin: auto;
+}
+.process-highlight {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.main-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.divider {
+    border-bottom: 1px solid #444;
+    margin: 2rem 5rem 1rem 0;
+}
+.challenge-title, .opportunity-title {
+    font-size: 18px;
+    font-weight: 350;
+    color: white;
+    margin-top: 2rem;
+}
+.challenge-text, .opportunity-text {
+    font-size: 16px;
+    color: #c0c0c0;
+    line-height: 140%;
+    margin: 5px 0;
+}
+
+
 
 @media screen and (max-width: 479px) {
     .project-title-hero-wrapper {
@@ -770,6 +909,7 @@ element.style {
     max-width: 100vw;
     height: 40vh;
     min-height: 380px;
+    position: inherit;
 }
 
 /* .panel-1 {

@@ -1,80 +1,94 @@
-// // script.js
-// const scene = new THREE.Scene();
-// const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-// const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('backgroundCanvas'), alpha: true });
-// renderer.setSize(window.innerWidth, window.innerHeight);
+//resume button
 
-// // Shader for the grainy hue-shifting background
-// const fragmentShader = `
-//   uniform float u_time;
-//   uniform vec2 u_resolution;
-//   uniform vec2 u_mouse;
+function openResume() {
+    window.open('your-resume.pdf', '_blank');
+}
 
-//   float random(vec2 uv) {
-//     return fract(sin(dot(uv, vec2(12.9898, 78.233))) * 43758.5453123);
-//   }
+let index = 0,
+interval = 1000;
 
-//   void main() {
-//     vec2 uv = gl_FragCoord.xy / u_resolution;
+const rand = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const animate = star => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+
+//   star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
+}
+
+for(const star of document.getElementsByClassName("magic-star")) {
+  setTimeout(() => {
+    animate(star);
     
-//     // Centered grainy dot effect
-//     float distToCenter = length(uv - vec2(0.5));
-//     float radius = smoothstep(0.5, 0.3, distToCenter - u_time * 0.1); // Expanding radius
+    setInterval(() => animate(star), 1000);
+  }, index++ * (interval / 3))
+}
 
-//     // Grain and color
-//     float grain = random(uv * u_time) * 0.2;
-//     vec3 color = vec3(0.5 + 0.5 * cos(u_time + uv.xyx + vec3(0, 2, 4)));
+/* -- Glow effect -- */
 
-//     gl_FragColor = vec4(color * radius + grain, 1.0);
-//   }
-// `;
+const blob = document.getElementById("blob");
 
-// // Define geometry and material using the shader
-// const geometry = new THREE.PlaneGeometry(2, 2);
-// const material = new THREE.ShaderMaterial({
-//   uniforms: {
-//     u_time: { value: 0.0 },
-//     u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-//     u_mouse: { value: new THREE.Vector2(0.5, 0.5) }
-//   },
-//   fragmentShader: fragmentShader
+window.onpointermove = event => {
+    const { pageX, pageY } = event; // Use `pageX` and `pageY` to include scrolling offsets
+
+    // Get document dimensions
+    const maxX = document.documentElement.scrollWidth - blob.offsetWidth;
+    const maxY = document.documentElement.scrollHeight - blob.offsetHeight;
+
+    // Ensure the blob stays within bounds
+    const xPosition = Math.min(Math.max(0, pageX), maxX);
+    const yPosition = Math.min(Math.max(0, pageY), maxY);
+
+    // Apply movement
+    blob.style.position = "absolute"; // Absolute so it moves with the document
+    blob.style.left = `${xPosition}px`;
+    blob.style.top = `${yPosition}px`;
+
+    // Smooth animation
+    blob.animate({
+        left: `${xPosition}px`,
+        top: `${yPosition}px`
+    }, {
+        duration: 300, // Adjust speed for smooth tracking
+        fill: "forwards"
+    });
+};
+
+  
+
+
+// $("#KoiStart").on("loadeddata", function() {
+//     document.querySelector(".header-text").style.WebkitAnimationPlayState = "running";
+//     /*$("#KoiStart").bind("ended", function() {
+//     	$("#KoiCycle").css("visibility","visible");
+//         $("#KoiCycle").play();
+//     });*/
+
 // });
 
-// const plane = new THREE.Mesh(geometry, material);
-// scene.add(plane);
+// //$("#KoiStart").defaultPlaybackRate = 0.5;
+function updateBlurSize() {
+    const blur = document.getElementById("blur");
+    blur.style.height = `${document.documentElement.scrollHeight}px`; // Full document height
+}
 
-// camera.position.z = 1;
+window.addEventListener("load", updateBlurSize);
+window.addEventListener("resize", updateBlurSize);
+window.addEventListener("scroll", updateBlurSize);
 
-// function animate() {
-//   material.uniforms.u_time.value += 0.05; // Time-based animation for hue change
-//   renderer.render(scene, camera);
-//   requestAnimationFrame(animate);
-// }
+const connectSection = document.querySelector('.connect-section');
+const connectText = document.querySelector('.connect-text');
 
-// animate();
-
-// // Handle window resize
-// window.addEventListener('resize', () => {
-//   renderer.setSize(window.innerWidth, window.innerHeight);
-//   material.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
-// });
-
-
-
-//old
-
-
-$("#KoiStart").on("loadeddata", function() {
-    document.querySelector(".header-text").style.WebkitAnimationPlayState = "running";
-    /*$("#KoiStart").bind("ended", function() {
-    	$("#KoiCycle").css("visibility","visible");
-        $("#KoiCycle").play();
-    });*/
-
+connectSection.addEventListener('mouseenter', () => {
+  connectText.textContent = "pearl05bharti@gmail.com";  // Replace with your email
 });
 
-//$("#KoiStart").defaultPlaybackRate = 0.5;
-
+connectSection.addEventListener('mouseleave', () => {
+  connectText.textContent = "Let's keep in touch?";  // Reset back to original text
+});
 
 
 
@@ -176,31 +190,35 @@ var numProjTotal = 6;
 var projects = {
     "proj0": {
         "title": "Schneider National",
-        "projName": "Freight Search Engine Redesign",
-        "desc": "Redesigning & developing Schneider's freight search engine to streamline the search process, improve usability with multi-capacity selection, ensure above-the-fold search options, & enable mileage-based results for enhanced user experience.",
+        "projName": "Freight Search Engine",
+        "desc": "Redesigning & developing Schneider's freight search engine to improve search flexibility and usability.",
         "link": "schneider.html",
-        "picture": "https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Schneider-project/schn.png",
+        "picture": "",
+        "video": "https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Schneider-project/schneider hero video index.mp4"
     },
     "proj1": {
         "title": "Rec Well, UW-Madison ",
-        "projName": "Critical break-points redesign",
-        "desc": "User research study and initial redesign proposal for Recreation and Wellbeing at UW-Madison, focused on identifying pain points and recommending improvements in key areas of the website. Implementation planned for the next fiscal year.",
+        "projName": "Critical break-points",
+        "desc": "User research study and initial redesign proposal recommending improvements in key areas of the website. Implementation planned for the next fiscal year.",
         "link":"recwell.html",
         "picture": "recwell.png",
+        "video": ""
     },
     "proj2": {
         "title": "BoxMate",
-        "projName": "Website Revamp ",
-        "desc": "Designing an web application for a start-up to simplify and streamline the payments page and booking a storage location as well as added features based on user insights.",
+        "projName": "Campus Storage Booking ",
+        "desc": "Designing a web application for a start-up to simplify and streamline booking of storage on campus.",
         "link": "https://www.figma.com/proto/qJ39h5c6wjfvSaILhQFI69/Boxmate-Redesign?page-id=0%3A1&node-id=137-140&node-type=frame&viewport=74%2C504%2C0.03&t=oXk8W7HdXRDJU6ja-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=158%3A204",
         "picture": "assets/smarttagger-prev.jpg",
+        "video": ""
     },
     "proj3": {
         "title": "Upshift Swap Shop",
-        "projName": "eco store's design",
-        "desc": "Designing an app for Madison's sole sustainable swap shop to minimize garment waste aimed at incentivizing users with loyalty points, offer customizable and affordable gifting hampers, enable online shopping, and establishing a distinctive brand identity and voice.",
+        "projName": "Eco app for green future",
+        "desc": "Designing an app for Madison's sole sustainable swap shop aimed at minimizing garment waste and establishing a distinctive brand identity and voice.",
         "link": "Upshift.html",
-        "picture": "assets/upshift.jpg",
+        "picture": "https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift hero-index.png",
+        "video": ""
     },
     "proj4": {
         "title": "Wisconsin Department of Natural Resources",
@@ -208,6 +226,7 @@ var projects = {
         "desc": "Usability test on the Wisconsin DNR website to uncover navigation issues and suggestiions for enhancing user access to essential park and permit details.",
         "link": "WDNR.html",
         "picture": "assets/cms-prev.jpg",
+        "video": ""
     },
     "proj5": {
         "title": "Spotify",
@@ -215,38 +234,45 @@ var projects = {
         "desc": "Spotify's user research study to understand pain-points and propose potential solutions.",
         "link": "Spotify.html",
         "picture": "C:\Users\Pearl\Desktop\PEARLPORTFOLIO\assets\spothero.jpg",
+        "video": ""
     },
     
    
 }
 
 function createProj(proj) {
-    let title = projects[proj].title;
-    let projName = projects[proj].projName;
-    let desc = projects[proj].desc;
-    let link = projects[proj].link;
-    let picture = projects[proj].picture;
+    let { title, projName, desc, link, picture, video } = projects[proj];
+
+    // Check if a video is available; otherwise, use an image
+    let mediaContent = video 
+        ? `<video class='prev-video' autoplay loop muted>
+              <source src="${video}" type="video/mp4">
+              Your browser does not support the video tag.
+           </video>`
+        : `<img class='prev-img' src="${picture}" />`;
 
     var HTMLproj = `
     <div class='projItem ui two column grid' id="${proj}">
-    <div class='column studyCard'>
-        <div class='studyHeader'>${title}</div>
-        <div class='studyTitle'>${projName}</div>
-        <div class='studyDesc'>${desc}</div>
-        <a class='seeMore' href="${link}">Learn more >></a>
+        <div class='column studyCard'>
+            <div class='studyHeader'>${title}</div>
+            <div class='studyTitle'>${projName}</div>
+            <div class='studyDesc'>${desc}</div>
+            <a class='seeMore' href="${link}">Learn more >></a>
+        </div>
+        <div class='column media-box'>
+            <a href="${link}">
+                ${mediaContent}
+            </a>
+            <a class='proj-arrow' href="${link}">
+                <img class="navigationArrow" src="assets/arrow-right_2@3x.png">
+            </a>
+        </div>
     </div>
-   <div class='column image-box'>
-        <a href="${link}">
-        <img class='prev-img' src="${picture}"/></a><a class='proj-arrow' href="${link}">
-        <img class="navigationArrow" src="assets/arrow-right_2@3x.png">
-        </a>
+    `;
 
-   </div>
-</div>
-    `
-    var landingStudies = document.querySelector("#landingStudies");
-    landingStudies.innerHTML += HTMLproj;
+    document.querySelector("#landingStudies").innerHTML += HTMLproj;
 }
+
 
 function deleteProj(proj) {
     $("#" + proj).remove();
@@ -279,14 +305,14 @@ var moreProjects = document.querySelector("#moreProjects");
 moreProjects.addEventListener('click', showHide);
 
 // Select elements
-const connectSection = document.querySelector('.footer-header');
-const connectText = document.querySelector('.connect-text');
+// const connectSection = document.querySelector('.footer-header');
+// const connectText = document.querySelector('.connect-text');
 
-// Add hover event listeners
-connectSection.addEventListener('mouseover', () => {
-    connectText.textContent = "example@example.com"; // Replace with your email
-});
+// // Add hover event listeners
+// connectSection.addEventListener('mouseover', () => {
+//     connectText.textContent = "example@example.com"; // Replace with your email
+// });
 
-connectSection.addEventListener('mouseout', () => {
-    connectText.textContent = "Let's connect?";
-});
+// connectSection.addEventListener('mouseout', () => {
+//     connectText.textContent = "Let's connect?";
+// });
