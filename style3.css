@@ -67,7 +67,7 @@ nav {
     z-index: 1000; /* Ensure it's on top */
     backdrop-filter: blur(5px); 
   
-    font-size: 15px;
+    /* font-size: 15px; */
    
     background-color: rgba(0, 0, 0, 0);
     /* box-shadow: 0 2px 20px 0 rgba(126, 126, 126, 0.1); */
@@ -75,10 +75,11 @@ nav {
 
 
     /* background: transparent; Optional: Add a solid background */
+    padding-bottom: 1.3rem;
 }
 
 .nav-style {
-    padding: 0.5rem 0 0 0.3rem;
+    /* padding: 0.5rem 0 0 0.3rem; */
     color: #ffffffce; /* Text color */
     text-decoration: none; /* Remove underline */
     font-size: 1.5rem; /* Font size */
@@ -109,24 +110,8 @@ nav .nav-section {
     z-index: 2;
 }
 
-#nav-toggle-button { 
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    /* border-left: 1px solid var(--border-color); */
-    color: white;
-    cursor: pointer;
-    display: none;
-    gap: 0.8rem;
-    height: 100%;
-    justify-content: center;
-    outline: none;
-    padding: 0rem 3rem;
-    position: relative;
-    z-index: 3;
-}
 
-#nav-toggle-button:hover,
+/* #nav-toggle-button:hover,
 #nav-toggle-button:hover > span {
     color: var(--highlight-color);
 }
@@ -136,17 +121,19 @@ nav .nav-section {
     display: inline-block;
     height: 1rem;
     line-height: 1rem;
-}
+} */
 
 #nav-social-section,
 #nav-contact-section {
     flex-grow: 1;
+    padding: 1.3rem 0 0 0.5rem;
+
 }
 
 #nav-logo-section {
     flex-basis: calc(100% / 3);
     justify-content: flex-start;
-    
+    padding: 1.25rem 0 0 2.55rem;
 }
 
 #nav-logo-section > a > i {
@@ -156,6 +143,7 @@ nav .nav-section {
 #nav-link-section {
     flex-basis: 50%;
     gap: 50px; 
+    padding: 1.2rem 0 0 1.55rem;
 }
 
 #nav-social-section {
@@ -182,6 +170,7 @@ nav.scrolled {
     border: 3px solid #ae93e984;
     padding: 5px 7px;
     font-size: 14px;
+    padding-bottom: 1rem;
     text-align: center;
     cursor: pointer;
     border-radius: 15px;
