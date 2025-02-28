@@ -201,7 +201,7 @@ var projects = {
         "projName": "Critical break-points",
         "desc": "User research study and initial redesign proposal recommending improvements in key areas of the website. Implementation planned for the next fiscal year.",
         "link": "recwell.html",
-        "picture": "recwell.png",
+        "picture": "https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Recwell-project/recwell-hero-index.png",
         "video": ""
     },
     "proj2": {
@@ -217,7 +217,7 @@ var projects = {
         "projName": "Campus Storage Booking ",
         "desc": "Designing a web application for a start-up to simplify and streamline booking of storage on campus.",
         "link": "https://www.figma.com/proto/qJ39h5c6wjfvSaILhQFI69/Boxmate-Redesign?page-id=0%3A1&node-id=137-140&node-type=frame&viewport=74%2C504%2C0.03&t=oXk8W7HdXRDJU6ja-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=158%3A204",
-        "picture": "assets/smarttagger-prev.jpg",
+        "picture": "https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Boxmate-Project/Boxmate-hero-index.png",
         "video": ""
     },
     "proj4": {

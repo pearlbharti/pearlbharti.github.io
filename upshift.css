@@ -2560,6 +2560,8 @@ textarea.w-select {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
+    justify-content: center;
+    align-items: center;
     display: grid
 }
 
