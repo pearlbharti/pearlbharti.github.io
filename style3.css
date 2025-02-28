@@ -498,9 +498,10 @@ span{
 
 
 .label-hero {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #ffffff;
     letter-spacing: 1px;
+    padding-bottom: 2rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
     font-weight: 400;

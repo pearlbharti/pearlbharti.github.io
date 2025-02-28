@@ -205,19 +205,19 @@ var projects = {
         "video": ""
     },
     "proj2": {
-        "title": "BoxMate",
-        "projName": "Campus Storage Booking ",
-        "desc": "Designing a web application for a start-up to simplify and streamline booking of storage on campus.",
-        "link": "https://www.figma.com/proto/qJ39h5c6wjfvSaILhQFI69/Boxmate-Redesign?page-id=0%3A1&node-id=137-140&node-type=frame&viewport=74%2C504%2C0.03&t=oXk8W7HdXRDJU6ja-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=158%3A204",
-        "picture": "assets/smarttagger-prev.jpg",
-        "video": ""
-    },
-    "proj3": {
         "title": "Upshift Swap Shop",
         "projName": "Eco app for green future",
         "desc": "Designing an app for Madison's sole sustainable swap shop aimed at minimizing garment waste and establishing a distinctive brand identity and voice.",
         "link": "Upshift.html",
         "picture": "https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Upshift-Project/upshift hero-index.png",
+        "video": ""
+    },
+    "proj3": {
+        "title": "BoxMate",
+        "projName": "Campus Storage Booking ",
+        "desc": "Designing a web application for a start-up to simplify and streamline booking of storage on campus.",
+        "link": "https://www.figma.com/proto/qJ39h5c6wjfvSaILhQFI69/Boxmate-Redesign?page-id=0%3A1&node-id=137-140&node-type=frame&viewport=74%2C504%2C0.03&t=oXk8W7HdXRDJU6ja-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=158%3A204",
+        "picture": "assets/smarttagger-prev.jpg",
         "video": ""
     },
     "proj4": {
