@@ -5,26 +5,26 @@ function openResume() {
 }
 
 let index = 0,
-interval = 1000;
+    interval = 1000;
 
-const rand = (min, max) => 
-  Math.floor(Math.random() * (max - min + 1)) + min;
+const rand = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1)) + min;
 
 const animate = star => {
-  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
-  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+    star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+    star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
 
-//   star.style.animation = "none";
-  star.offsetHeight;
-  star.style.animation = "";
+    //   star.style.animation = "none";
+    star.offsetHeight;
+    star.style.animation = "";
 }
 
-for(const star of document.getElementsByClassName("magic-star")) {
-  setTimeout(() => {
-    animate(star);
-    
-    setInterval(() => animate(star), 1000);
-  }, index++ * (interval / 3))
+for (const star of document.getElementsByClassName("magic-star")) {
+    setTimeout(() => {
+        animate(star);
+
+        setInterval(() => animate(star), 1000);
+    }, index++ * (interval / 3))
 }
 
 /* -- Glow effect -- */
@@ -57,7 +57,7 @@ window.onpointermove = event => {
     });
 };
 
-  
+
 
 
 // $("#KoiStart").on("loadeddata", function() {
@@ -83,11 +83,11 @@ const connectSection = document.querySelector('.connect-section');
 const connectText = document.querySelector('.connect-text');
 
 connectSection.addEventListener('mouseenter', () => {
-  connectText.textContent = "pearl05bharti@gmail.com";  // Replace with your email
+    connectText.textContent = "pearl05bharti@gmail.com";  // Replace with your email
 });
 
 connectSection.addEventListener('mouseleave', () => {
-  connectText.textContent = "Let's keep in touch?";  // Reset back to original text
+    connectText.textContent = "Let's keep in touch?";  // Reset back to original text
 });
 
 
@@ -143,16 +143,16 @@ function smoothScroll(hash) {
     $(window).unbind('scroll');
     $('html, body').animate({
         scrollTop: $(hash).offset().top
-    }, 800, function() {
+    }, 800, function () {
         window.location.hash = hash;
     });
     setTimeout(scrollBind, 800);
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
     // Add smooth scrolling to all links
     if (window.location.href !== "index.html" || window.location.href !== "/") {
-        $(".NI").on('click', function(event) {
+        $(".NI").on('click', function (event) {
             if (this.hash !== "") {
                 // Prevent default anchor click behavior
                 event.preventDefault();
@@ -164,15 +164,15 @@ $(document).ready(function() {
             } // End if
         });
 
-        selectedhome.on('click', function(event) {
+        selectedhome.on('click', function (event) {
             homeActive();
         });
 
-        selectedcase.on('click', function(event) {
+        selectedcase.on('click', function (event) {
             caseActive();
         });
 
-        selectedcontact.on('click', function(event) {
+        selectedcontact.on('click', function (event) {
             contactActive();
         });
 
@@ -200,7 +200,7 @@ var projects = {
         "title": "Rec Well, UW-Madison ",
         "projName": "Critical break-points",
         "desc": "User research study and initial redesign proposal recommending improvements in key areas of the website. Implementation planned for the next fiscal year.",
-        "link":"recwell.html",
+        "link": "recwell.html",
         "picture": "recwell.png",
         "video": ""
     },
@@ -236,15 +236,15 @@ var projects = {
         "picture": "C:\Users\Pearl\Desktop\PEARLPORTFOLIO\assets\spothero.jpg",
         "video": ""
     },
-    
-   
+
+
 }
 
 function createProj(proj) {
     let { title, projName, desc, link, picture, video } = projects[proj];
 
     // Check if a video is available; otherwise, use an image
-    let mediaContent = video 
+    let mediaContent = video
         ? `<video class='prev-video' autoplay loop muted>
               <source src="${video}" type="video/mp4">
               Your browser does not support the video tag.
@@ -259,13 +259,16 @@ function createProj(proj) {
             <div class='studyDesc'>${desc}</div>
             <a class='seeMore' href="${link}">Learn more >></a>
         </div>
-        <div class='column media-box'>
+        <div class='column'>
+
+            <div class='media-box'> 
             <a href="${link}">
                 ${mediaContent}
             </a>
             <a class='proj-arrow' href="${link}">
                 <img class="navigationArrow" src="assets/arrow-right_2@3x.png">
             </a>
+            </div>
         </div>
     </div>
     `;
