@@ -4,9 +4,9 @@
 }
 
 :root {  
-  --purple: rgb(123, 31, 162);
-  --violet: rgb(103, 58, 183);
-  --pink: rgb(244, 143, 177);
+  --purple: rgb(71, 170, 127);
+  --violet: rgb(158, 183, 58);
+  --pink: rgb(87, 172, 97);
   --color-bg1: rgb(56, 56, 56);
   --color-bg2: rgb(0, 0, 0);
   --color1: 50, 50, 50;   /* Dark Gray */
@@ -23,12 +23,13 @@ body {
     background-color: #000000;
     font-family: 'europa', sans-serif;
     color: white;
-    background-image: url(https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Recwell-project/noise.png); 
-    background-size: 850px;
     background-repeat: repeat;
     letter-spacing: 0.1px;
     position: relative;
 }
+
+
+
 
 
 @keyframes background-pan {
@@ -190,14 +191,40 @@ button:focus {
     height: 100vh;
 }
 
+.header-content .bg-video {
+    position: absolute; /* Makes video a background for .header-content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage */
+    z-index: -1; /* Moves video behind content */
+    opacity: 0.7;
+    filter: blur(4px); /* Adjust the blur strength */
+
+}
+
 .header-content {
+    
     position: relative;
     text-align: center;
+    z-index: 1;
+    padding-bottom: 25rem;
     padding-top: 35vh;
-    justify-content: center; /* Centers horizontally *
+    justify-content: center;
+    overflow: hidden;
 
     /* background-image: url("assets\noise.png"); */
 }
+
+.project-fade {
+    z-index: 4;
+    background-image: linear-gradient(to bottom, transparent, #000000);
+    height: 240px;
+    position: absolute;
+    inset: auto 0% 0%;
+}
+
 
 
 
@@ -224,9 +251,9 @@ button:focus {
 }
 
 .ui.header.jumbo h1 {
-    padding-top: 15rem;
     padding-bottom: 7rem;
     color: white;
+    padding-top: 7rem;
     font-size: 32px;
     letter-spacing: 1px;
     font-family: le-monde-livre-classic-byol, serif;
@@ -462,7 +489,7 @@ nav.scrolled {
     text-align: left;
 } */ 
 
-.med-jumbo {
+/* .med-jumbo {
     font-size: 80px !important;
 }
 
@@ -474,14 +501,14 @@ nav.scrolled {
 #about-panels {
 
     width: 100wh;
-    height: 500px;
+    height: 100vh;
     min-height: 380px;
     position: relative;
 }
 
 .panel {
     width: 100%;
-    /* height: 100%; */
+    height: 100%; 
     z-index: 2;
     background-color: rgba(15, 15, 15, 1);
     float: left;
@@ -494,7 +521,7 @@ nav.scrolled {
     background-color: rgba(255, 255, 255, 0.1); /* Faint white line */
     margin: 0 2rem; 
     
-}
+} */
   
   /* Connect Section Styling */
 .connect-section-wrapper {
@@ -581,16 +608,6 @@ font-weight: bold;
 .grid {
     margin-bottom: 124px;
 }
-
-/*Set the spacing between the three columns
-    Using "margin" will break semantic's UI grid layout, 
-    could lead to last column going to a different row.
-
-    The odd looking selector is just copy-pasted from
-    "inspect element" to be just as specific as semantic's 
-    selector in order to over-ride it.
-*/
-
 .ui.grid>.column:not(.row),
 .ui.grid>.row>.column {
     /* padding: 3rem; */
@@ -653,59 +670,50 @@ button {
     font-weight: 300;
 }
 
-.card .yellow {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 16px;
-}
 
-.card p {
-    margin-top: 16px;
-}
-
-.ui.container.footer {
+/* .ui.container.footer {
     /*margin-top:50px;*/
-    z-index: 2;
+    /* z-index: 2;
     background-color: rgba(15, 15, 15, 1);
     width: 100%;
     /* padding: 16px 32px; */
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     text-align: right;
-    position: relative; /* Ensure it's not interfering with #blur */
-}
+    position: relative; Ensure it's not interfering with #blur
+} */ 
 
-.ui.container.footer p {
-    margin: 0; /* Remove default margin */
+/* .ui.container.footer p {
+    margin: 0; 
     font-size: 12px;
-}
-
+} */
+/* 
 .ui.container.footer .icons {
-    display: flex; /* Arrange icons in a row */
-    gap: 10px; /* Add space between icons */
+    display: flex; 
+    gap: 10px;
 }
 
 .ui.container.footer .icons a {
-    color: white; /* White icon color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust icon size */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-}
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    transition: transform 0.3s ease; 
+} */
 
-.footerIcon {
+/* .footerIcon {
     width: 16px;
     height: 16px;
     margin-left: 24px;
     color: #D9D9D9;
     font-size: 20px;
-}
-
+} */
+/* 
 .footerIcon.invertIcon {
-    /* background-color: #ffc901; */
-    color: #D9D9D9;
-}
 
-.footerIcon:hover {
+    color: #D9D9D9;
+} */
+
+/* .footerIcon:hover {
     color: #ffffff;
 }
 
@@ -713,12 +721,12 @@ button {
     display: flex;
     padding: 5rem 0 5rem 20rem; 
     justify-content: space-between;
-    /* height:100%; */
+    
     width: 100%;
-    /* padding: 20rem; */
-}
+   
+} */
 
-.footer-menu-section {
+/* .footer-menu-section {
     flex: 1;
 }
 
@@ -750,7 +758,7 @@ button {
 
 .footer-list a:hover {
     color: rgb(255, 255, 255);
-}
+} */
 
 html, body {
     font-family: 'Dongle', sans-serif;
@@ -823,9 +831,257 @@ html, body {
       transform: translateX(-50%) translateY(-10%);
     }
   }
+   */
+
+
+
+
+.carousel-wrapper1 {
+    padding: 10rem;
+    min-height: 200px;
+    color: white;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 10%, black 80%);
+}
+
+#menu-index {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center;     /* Optionally align vertically if needed */
+    gap: 1rem;               /* Spacing between buttons */
+    padding: 1rem;
+}
+
+.video-container {
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow */
+    border-radius: 12px;
+    
+}
+
+/* Make sure the video resizes properly */
+.video {
+    border-radius: 50px;
+    object-fit: contain; /* Ensures the entire video is visible without cropping */
+}
+
+/* Outermost carousel container (optional if you just want a single card) */
+.carousel-container {
+    display: flex;   
+    height: 100vh;
+    width: 100vw;            /* Centers the card horizontally */
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+  
+ 
+  /* The card wrapper */
+.project-container {
+    display: flex;
+    align-items: center;
+    background:linear-gradient(135deg, #888, #444);
+    background-image: url(https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Recwell-project/noise.png);
+    background-repeat: repeat;  /* Ensures the image tiles */
+    background-size: auto;  /* Ensure the image maintains its original size */
+    background-position: top left;
+    border-radius: 12px;
+    padding: 0 0 0 2rem; 
+    max-width: 100vw;
+    width: 80%;
+    height: 70vh;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+    gap: 2rem;
+    position: relative; 
+}
+
+.project-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-repeat: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(100px); /* Adjust blur level here */
+    opacity: 0.2; /* Adjust opacity here */
+    z-index: -1; /* Position it behind the content */
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    background-color: #3f3f3f79; /* Light gray */
+    color: #ffffff; /* Dark text */
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+  }
+  
+
+.project-content {
+    margin: 2rem 0;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out;
+}
+
+.project-container:hover .project-content {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Different colors for different projects */
+.project-schneider:hover {
+    background-color: #87361030; /* Reddish */
+}
+
+.project-recwell:hover {
+    background-color: #6c170836; /* Light blue */
+}
+
+.project-upshift:hover {
+    background-color: #4caf4f2c; /* Green */
+}
+
+.project-boxmate:hover {
+    background-color: #8810ac29; /* Yellow */
+}
+
+.project-wdnr:hover {
+    background-color: #0468222f; /* Yellow */
+}
+.project-spotify:hover {
+    background-color: #27d93c1e; /* Yellow */
+}
+
   
   
-.gradient-bg {
+.project-image {
+    /* flex: 1; */
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 37rem;
+}
+
+.project-image img, .project-image .video-container {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    /* z-index: 1; */
+}
+
+  /* Right side: text + CTA */
+  .project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* Vertically center text */
+  }
+  
+  .project-title {
+    
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 56px;
+    text-align: left;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    text-align: left;
+    font-family: Dongle, sans-serif;
+    color: white;
+
+  }
+
+  .project-logo {
+    display: flex;
+    justify-content: left; /* Centers the logo horizontally */
+    align-items:center; /* Centers the logo vertically if needed */
+    width: 15%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+       overflow: hidden; /* Prevents the image from overflowing */
+}
+
+.logo {
+    max-width: 100%; /* Ensures the logo stays within the div */
+    max-height: 100%; /* Ensures it doesn’t overflow vertically */
+    object-fit: contain; /* Ensures the full logo is visible */
+}
+
+  
+  .project-description {
+    margin-bottom: 20px;
+    margin-right: 2rem;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: Dongle, sans-serif;
+    color: white;
+  }
+  
+  /* CTA button */
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effect on the button */
+  .cta-button:hover {
+    background-color: #5a5a5a;
+    transform: scale(1.05);
+  }
+  
+  /* Call-to-Action Button */
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;             /* Space for an optional icon if you want */
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #747bff, #4bd3ff); /* Eye-catching gradient */
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Button hover effect */
+  .cta-button:hover {
+    background: linear-gradient(135deg, #666cff, #45c8ff);
+    transform: scale(1.05);
+  }
+  
+  
+/* .gradient-bg {
 width: 100%;
 height: 100%;
 position: relative;
@@ -843,820 +1099,3 @@ svg {
 }
 
 
-.gradients-container {
-    filter: url(#goo) blur(40px) ;
-    width: 100%;
-    height: 100%;
-}
-
-.g1 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: center center;
-    animation: moveVertical 30s ease infinite;
-
-    opacity: 1;
-}
-
-.g2 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 400px);
-    animation: moveInCircle 20s reverse infinite;
-
-    opacity: 1;
-}
-
-.g3 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2 + 200px);
-    left: calc(50% - var(--circle-size) / 2 - 500px);
-
-    transform-origin: calc(50% + 400px);
-    animation: moveInCircle 40s linear infinite;
-
-    opacity: 1;
-}
-
-.g4 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 200px);
-    animation: moveHorizontal 40s ease infinite;
-
-    opacity: 0.7;
-}
-
-.g5 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: calc(var(--circle-size) * 2);
-    height: calc(var(--circle-size) * 2);
-    top: calc(50% - var(--circle-size));
-    left: calc(50% - var(--circle-size));
-
-    transform-origin: calc(50% - 800px) calc(50% + 200px);
-    animation: moveInCircle 20s ease infinite;
-
-    opacity: 1;
-}
-
-.interactive {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: 100%;
-    height: 100%;
-    top: -50%;
-    left: -50%;
-
-    opacity: 0.7;
-}
-}
-
-#case-studies {
-    padding-top: 170px;
-    margin-bottom: 250px;
-    position: relative;
-}
-
-/* 
-.media-box {
-    background: #c8101000;
-    padding: 48px;
-    width: 100rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-} */
-
-.media-box {
-    position: relative;
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center if needed */
-    background-color: rgb(0, 0, 0); /* Solid white frame */
-    overflow: hidden;
-    padding-top: 4.5rem; /* Wider frame */
-    box-sizing: border-box;
-    border-radius: 12px; /* Optional rounded corners */
-    max-width: 100%; /* Prevent from blowing up */
-    min-height: 200px; /* Adjust as needed */
-}
-
-.prev-img,
-.prev-video {
-    display: block;
-    max-width: 100%; /* Image won't overflow the container */
-    max-height: 100%; /* Optional if you want to restrict height too */
-    height: 20rem; /* Maintain aspect ratio */
-}
-
-/* Optional hover effect if you want the TV screen to slightly zoom */
-.media-box:hover .prev-img,
-.media-box:hover .prev-video {
-    transform: none;
-}
-
-.overlay-text {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 5px 10px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.overlay-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
-    width: 30px;
-    height: 30px;
-    opacity: 0.8;
-}
-
-/* Contact Page */
-
-.allLinks {
-    margin-left: 16px;
-    margin-top: 32px;
-    display: block;
-}
-
-.smallIcon {
-    width: 24px;
-    height: 24px;
-    margin-right: 16px;
-    margin-bottom: 20px;
-    background-color: white;
-    display: inline-block;
-    border-radius: 50%;
-    overflow: auto;
-}
-
-.contact-text {
-    display: inline;
-    vertical-align: top;
-    line-height: 32px;
-    font-size: 16px;
-    color: white;
-}
-
-.ui.container.contact {
-    min-height: calc(100vh - 99px);
-}
-
-.contacticon {
-    color: black;
-    font-size: 16px;
-    margin-top: 4px;
-    width: 24px;
-    text-align: center;
-}
-
-.contactLink {
-    width: fit-content;
-}
-
-.contactLink:hover>.contact-text {
-    color: #ffffff;
-}
-
-.contactLink:hover>.smallIcon {
-    background-color: #ffffff;
-}
-
-.contactLink:hover>.contacticon {
-    color: #ffffff;
-}
-
-/* Case Study Page */
-
-.studyCard {
-    margin-top: 60px;
-    margin-bottom: 120px;
-}
-
-#case-space {
-    height: 120px;
-}
-
-.studyHeader {
-    font-weight: 700;
-    font-size: 24px;
-    text-align: left;
-    margin-bottom: 60px;
-}
-
-.studyTitle {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 56px;
-    text-align: left;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 24px;
-}
-
-.studyDesc {
-    margin-bottom: 40px;
-    margin-right: 2rem;
-    line-height: 30px;
-    font-size: 16px;
-    font-weight: 200;
-}
-
-.seeMore {
-    color: #ae93e9;
-    font-weight: bold;
-    transition: all 0.20s ease-in-out;
-}
-
-.seeMore:hover {
-    color: #ab8eeb;
-    margin-left: 10px;
-    -webkit-transition: all 0.20s ease-in-out;
-    transition-timing-function: ease-in-out;
-    transition: all 0.20s ease-in-out;
-}
-
-
-.prev-img {
-    border-radius: 10px;
-    /* box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.5); */
-    transition: all 0.20s ease-in-out;
-}
-
-.prev-img:hover {
-    -webkit-transition: all 0.20s ease-in-out;
-    transition-timing-function: ease-in-out;
-    transform: scale(1.05); /* Adjust scale value for more/less zoom */
-    /* transition: all 0.20s ease-in-out; */
-    /* margin-top: 60px; */
-    /* box-shadow: 0px 0px 20px rgba(137, 137, 137, 0.393), 
-                0px 0px 40px rgba(96, 96, 96, 0.5); */
-}
-
-.navigationArrow {
-    background-color: #ffffff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    padding: 18px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.proj-arrow {
-    position: absolute;
-    top: 144px;
-    left: 1px;
-    background-color: #ab8eeb5d;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-}
-
-.image-box {
-    position: relative;
-}
-
-#moreProjects {
-    border: none;
-    font-weight: 700;
-    color: #ffffff;
-    float: left;
-    margin-left: 24px;
-    background-color: #353535;
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.6);
-    position: relative;
-}
-
-#moreProjects:hover {
-    background-color: #ae93e9;
-    color: black;
-    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2), 0px 4px 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
-}
-
-/* Project Details */
-
-.projectDetails {
-    margin-top: 50px;
-}
-
-.projectDetails .leftPanel {
-    float: left;
-    width: 20%;
-}
-
-.projectDetails .leftPanel .title {
-    color: #50C878;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.projectDetails .leftPanel .item {
-    font-size: 16px;
-    margin-top: 4px;
-    margin-bottom: 40px;
-    line-height: 28px;
-}
-
-.projectDetails .description {
-    font-size: 16px;
-    margin-left: 20%;
-    width: 60%;
-}
-
-.description {
-    line-height: 30px;
-    font-weight: 300;
-}
-
-.navigationArrow.back {
-    float: left;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
-.linkToNextProject {
-    margin-top: 120px;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.linkToNextProject .nextProject {
-    font-family: le-monde-livre-classic-byol, serif;
-    font-weight: bold;
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-.linkToNextProject .projectName {
-    color: #50C878;
-    font-size: 52px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-}
-
-.linkToNextProject .next {
-    background-color: #ffffff;
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-    width: 64px;
-    height: 64px;
-    padding: 1fac5px;
-}
-
-.white {
-    background-color: white;
-}
-
-.grey {
-    background-color: #F7F7F7;
-}
-
-.section {
-    padding-top: 96px;
-    padding-bottom: 32px;
-    width: 100%;
-}
-
-.large-img {
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-}
-
-.section-width {
-    padding-left: 20%;
-    padding-right: 20%;
-    width: 100%;
-    overflow: auto;
-}
-
-.caption {
-    margin-top: 14px;
-    font-size: 16px;
-    font-family: le-monde-livre-classic-byol, serif;
-    font-weight: 400;
-    color: #595959;
-    text-align: center;
-    margin-bottom: 64px !important;
-}
-
-.major-title {
-    font-size: 38px;
-    font-family: le-monde-livre-classic-byol, serif;
-    font-weight: 200;
-    margin-bottom: 32px;
-    color: black;
-}
-
-.section-img {
-    width: 100%;
-}
-
-.section-text {
-    font-size: 18px;
-    line-height: 30px;
-    width: 100%;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 64px !important;
-}
-
-.column-left {
-    display: inline-block;
-    margin-right: 32px;
-    width: calc(50% - 32px);
-    overflow: auto;
-    float: left;
-}
-
-.column-right {
-    display: inline-block;
-    margin-left: 32px;
-    width: calc(50% - 32px);
-    overflow: auto;
-    float: left;
-}
-
-.section-list {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 300;
-    color: black;
-    margin-left: 5%;
-}
-
-.section-title {
-    font-size: 24px;
-    font-family: le-monde-livre-classic-byol, serif;
-    font-weight: 200;
-    margin-bottom: 32px;
-    color: black;
-}
-
-.ui.container.top.project {
-    padding-right: 8%;
-    padding-left: 8%;
-}
-
-@media only screen and (min-width: 2000px) {
-    .ui.container.top {
-        padding-left: 20%;
-        padding-right: 20%;
-    }
-    .ui.header.headertext h1 {
-        font-size: 96px;
-    }
-    .subheader {
-        font-size: 24px;
-    }
-    #about-panels {
-        background-color: rgba(0, 0, 0, 0.3);
-        padding-left: 12%;
-        padding-right: 12%;
-        height: 30vh;
-        min-height: 300px;
-    }
-}
-
-@media only screen and (max-width: 1200px) and (min-width: 800px) {
-    .column>.studyCard {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    .ui.container.top {
-        padding-right: 5% !important;
-        padding-left: 5% !important;
-    }
-    .ui.container.top.project {
-        height: 800px;
-    }
-    .projectDetails .description {
-        font-size: 16px;
-        margin-left: 24%;
-        width: 64%;
-    }
-    .studyTitle {
-        letter-spacing: 12px;
-        text-align: left;
-    }
-    .studyHeader {
-        text-align: left;
-    }
-    .proj-arrow {
-        display: none;
-    }
-    .studyCard {
-        margin-right: 24px;
-    }
-    .column.image-box- {
-        padding-right: 3rem !important;
-        padding-left: 0rem !important;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    .prev-img {
-        width: 100%;
-        margin-left: 0%;
-        margin-top: 23%;
-    }
-    .landingScrolled .ui.three.column.grid {
-        margin: 0;
-    }
-    .ui.grid>.five.wide.column {
-        display: none !important;
-    }
-    .ui.grid>.one.wide.column {
-        display: none !important;
-    }
-    .ui.grid>.ten.wide.column {
-        width: 100% !important;
-        padding: 1rem !important;
-    }
-    .panel-1,
-    .panel-2 {
-        width: 50%;
-    }
-    #about-panels {
-        max-height: 25vh;
-        min-height: 330px;
-    }
-    .panel-3 {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .ui.column.grid>.column {
-        width: 100% !important;
-    }
-    .landingScrolled .ui.three.column.grid {
-        margin: 0;
-    }
-    body {
-        position: relative;
-    }
-    #aboutMe {
-        width: 100%;
-    }
-    #court {
-        width: 30%;
-    }
-    .ui.header.jumbo h1 {
-        color: white;
-        font-size: 48px;
-    }
-    .ui.header.project h1 {
-        font-size: 48px;
-    }
-    .subheader {
-        font-size: 20px;
-        line-height: 32px !important;
-    }
-    .card {
-        font-size: 16px;
-    }
-    .ui.container.landing {
-        height: 650px;
-    }
-    .landing {
-        background-position: bottom;
-        background-size: 150%
-    }
-    .contact {
-        background-position: 80% 100%;
-        background-size: 150%;
-    }
-    .section-width {
-        padding-right: 5%;
-        padding-left: 5%;
-    }
-    .column-left,
-    .column-right {
-        margin-right: 0px;
-        margin-left: 0px;
-        width: 100%;
-    }
-    .large-img {
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    .leftPanel {
-        width: 100% !important;
-        display: block;
-    }
-    .description {
-        margin-left: 0% !important;
-        width: 100% !important;
-        display: block;
-    }
-    .ui.grid>* {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .project {
-        overflow: auto;
-    }
-    .section {
-        padding-top: 48px;
-    }
-    .caption {
-        margin-bottom: 32px !important;
-    }
-    .projectDetails {
-        margin-bottom: 64px;
-    }
-    .section-title {
-        font-size: 24px;
-    }
-    .major-title {
-        font-size: 32px;
-    }
-    .full-height {
-        height: auto;
-    }
-    .studyTitle {
-        font-size: 32px;
-        letter-spacing: 5px;
-        text-align: left;
-    }
-    .ui.column.grid>[class*="five wide"].column,
-    .ui.grid>.column.row>[class*="five wide"].column,
-    .ui.grid>.row>[class*="five wide"].column,
-    .ui.grid>[class*="five wide"].column {
-        display: none;
-    }
-    .ui.column.grid>[class*="one wide"].column,
-    .ui.grid>.column.row>[class*="one wide"].column,
-    .ui.grid>.row>[class*="one wide"].column,
-    .ui.grid>[class*="one wide"].column {
-        display: none;
-    }
-    .ui.column.grid>[class*="ten wide"].column,
-    .ui.grid>.column.row>[class*="ten wide"].column,
-    .ui.grid>.row>[class*="ten wide"].column,
-    .ui.grid>[class*="ten wide"].column {
-        width: 100% !important;
-    }
-    .ui.grid>.column:not(.row),
-    .ui.grid>.row>.column {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .studyHeader {
-        text-align: left;
-    }
-    .studyCard {
-        margin-bottom: 0px;
-        width: 96%;
-    }
-    .proj-arrow {
-        display: none;
-    }
-    .prev-img {
-        width: 96%;
-        margin-top: 0px;
-    }
-    .studyDesc {
-        font-size: 16px;
-    }
-    .ui.grid {
-        margin-left: 0px !important;
-    }
-    .projectName {
-        font-size: 30px !important;
-    }
-    .nextProject {
-        font-size: 24px;
-    }
-    .ui.container.top.landing {
-        width: 100%;
-        margin-left: 0% !important;
-        margin-right: 0% !important;
-    }
-    .ui.container.top.contact {
-        width: 100%;
-        min-height: 100vh !important;
-        margin-left: 0% !important;
-        margin-right: 0% !important;
-    }
-    .ui.container.landingScrolled {
-        width: 84%;
-        margin-left: 8% !important;
-        margin-right: 8% !important;
-    }
-    .ui.container.studies {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-    }
-    .ui.container.project {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-    }
-    .ui.container.footer {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-        width: 100% !important;
-    }
-    .allLinks {
-        margin-left: 0px;
-        margin-top: 32px;
-    }
-    .contact-text {
-        font-size: 18px;
-    }
-    .med-jumbo {
-        font-size: 48px !important;
-    }
-    .ui.container.contact+.ui.container.footer {
-        position: default;
-        bottom: initial;
-    }
-}
-
-@media only screen and (max-width: 800px) and (min-width: 320px) {
-    .panel-1,
-    .panel-2,
-    .panel-3 {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .ui.container.landing {
-        height: 120vh;
-    }
-    .studyHeader {
-        line-height: 32px;
-    }
-    .ui.container.contact {
-        min-height: 100vh;
-        height: 140vh;
-    }
-    .smallIcon {
-        height: 28px;
-        width: 28px;
-        margin-right: 16px;
-    }
-    .contacticon {
-        font-size: 16px;
-        width: 28px;
-        margin-top: 6px;
-    }
-    .contact-text {
-        font-size: 15px;
-        line-height: 28px;
-    }
-    .panel-1 {
-        width: 100%;
-    }
-    .panel-2 {
-        width: 100%;
-    }
-    .prev-img:hover {
-        box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.5);
-        margin-top: 60px;
-    }
-}

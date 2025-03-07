@@ -2509,7 +2509,10 @@ textarea.w-select {
     display: block;            /* Forces quote onto a new line */
     margin-top: 0.5rem;        /* Space above quote */
     font-style: italic;        /* Italic styling for quotes */
-    color: #D0FF78;               /* Adjust color as needed */
+    color: #D0FF78; 
+    font-weight: 400;
+    font-size: 2rem;     
+    padding-bottom: 2rem;         /* Adjust color as needed */
   }
   
 
@@ -2563,33 +2566,6 @@ textarea.w-select {
     justify-content: center;
     align-items: center;
     display: grid
-}
-
-.cs-image-new {
-    width: 90%; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 700px; /* Optional: Limit max size */
-    display: block; /* Ensures centering works */
-    margin: 24px auto; /* Centers horizontally */
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.cs-image-2{
-    margin-top: 5rem;
-    width: 100%; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 1000px; /* Optional: Limit max size */
-    display: block; /* Ensures centering works */
-    overflow: hidden;
-}
-
-
-.cs-caption {
-    text-align: center; /* Centers the caption */
-    font-size: 15px;
-    color: #666;
-    margin-top: 8px; /* Creates space between the image and caption */
 }
 
 /* .w-layout-grid-2 {
@@ -3612,9 +3588,8 @@ figcaption {
     margin-top: 10px;
 }
 
-
-
 .container-card-secondary {
+    padding: 3rem 0 3rem 0 ;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -3664,6 +3639,16 @@ figcaption {
     color: #b0b0b0;
     line-height: 150%;
 }
+
+.card-secondary h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #D0FF78;
+    font-weight: 400;
+}
+
+
+
 
 
 .dialog-container {
