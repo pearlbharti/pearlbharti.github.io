@@ -21,10 +21,15 @@
     <!-- <div id="blob"></div> -->
     <!-- <div id="blur"></div> -->
     <!-- Navigation Bar -->
+     
     <nav data-toggled="false" data-transitionable="false">
         <div id="nav-logo-section" class="nav-section">
             <a href="#">
-                <!-- SVG Logo -->
+                <svg width="24" height="30.5" viewBox="0 0 48 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="35.5" cy="58.5" r="2.5" fill="#D9D9D9"/>
+                    <path d="M23.5039 3.15353C34.3713 1.77892 46.9561 9.82562 44.7448 19.6485C42.8219 28.1901 23.5039 30.187 23.5039 30.187M23.5039 3.15353C23.5039 13.7108 23.5039 30.187 23.5039 30.187M23.5039 3.15353C13.6244 2.2372 1.06372 10.0986 3.2509 19.6485C5.13537 27.8768 23.5039 30.187 23.5039 30.187M23.5039 30.187C23.5039 30.187 24.9858 54.0132 23.5039 57.2205C22.0219 60.4278 3.71252 53.2646 3.2509 44.391C2.77298 35.2043 23.5039 30.187 23.5039 30.187Z" stroke="white" stroke-width="5"/>
+                    <path d="M23.5039 3.15353C34.3713 1.77892 46.9561 9.82562 44.7448 19.6485C42.8219 28.1901 23.5039 30.187 23.5039 30.187M23.5039 3.15353C23.5039 13.7108 23.5039 30.187 23.5039 30.187M23.5039 3.15353C13.6244 2.2372 1.06372 10.0986 3.2509 19.6485C5.13537 27.8768 23.5039 30.187 23.5039 30.187M23.5039 30.187C23.5039 30.187 24.9858 54.0132 23.5039 57.2205C22.0219 60.4278 3.71252 53.2646 3.2509 44.391C2.77298 35.2043 23.5039 30.187 23.5039 30.187Z" stroke="black" stroke-opacity="0.2" stroke-width="5"/>
+                </svg>
             </a>
         </div>
         
@@ -46,73 +51,133 @@
     
     <!-- Header Section -->
     <div class="header-content">
+        <div class="blob" id="blob"></div>
+        
         <!-- <video autoplay loop muted playsinline class="bg-video">
             <source src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/Background-Animation.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video> -->
-        <h1 id="intro-text">Pearl is a <span class="magic-text">User Experience Designer</span> who loves creating inclusive, clean, and human-centered design.</h1>
-        <h2 id="intro-text-sub">A passionate professional with 3+ years' experience in user-centric product design and development.</h2>
+        <!-- <h1 id="intro-text">Pearl is a <span class="magic-text">Product Designer</span> and <span class="magic-text">Developer</span> with 3+ years of experience who loves creating inclusive, clean, and human-centered design.</h1> -->
+
+
+        <h1 id ="intro-text">
+            Pearl is a 
+            <span class="magic">
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                </svg>
+              </span>
+              <span class="magic-text">Product Designer</span>
+            </span>
+            and
+            <span class="magic">
+                <span class="magic-star">
+                  <svg viewBox="0 0 512 512">
+                  <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                  </svg>
+                </span>
+                <span class="magic-star">
+                  <svg viewBox="0 0 512 512">
+                  <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                  </svg>
+                </span>
+                <span class="magic-star">
+                  <svg viewBox="0 0 512 512">
+                  <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                  </svg>
+                </span>
+                <span class="magic-text">Developer</span>
+              </span>
+              with 3+ years of experience who loves creating inclusive, clean, and human-centered design.
+          </h1>
+        <!-- <h2 id="intro-text-sub">A passionate professional with 3+ years' experience in user-centric product design and development.</h2> -->
     </div>
+    
     
     <!-- Case Studies Section -->
     <div id="case-studies">
-        <p>case studies</p>
-
-      <!-- <div id="menu-index">
-        <div id="nav-contact-section" class="nav-section">
-          <button class="resume-btn" onclick="openResume()">All</button>
-        </div>
-        <div id="nav-contact-section" class="nav-section">
-          <button class="resume-btn" onclick="openResume()">Design</button>
-        </div>
-        <div id="nav-contact-section" class="nav-section">
-          <button class="resume-btn" onclick="openResume()">Research</button>
-        </div>
-
-      </div> -->
-
-      
-
-
+        <h1>case studies</h1>
+    
         <div class="carousel-wrapper1">
             <div class="carousel-container">
-                <div class="project-container project-schneider">
-        
-                    <div class="project-image">
-                        
+                <!-- <div class="project-num-wrapper">
 
-                        <!-- <div class="video-container">
-                            <video class="video" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Schneider-project/schneider hero video index.mp4" autoplay loop muted playsinline></video>
-                        </div> -->
-
-                    </div>
-    
-                    <div class="project-content">
-                        <div class ="project-logo">
-                            <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/schneider_logo.png" alt="Project Logo" class="logo">
+                        <div class="w-layout-vflex project-num">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 6 44" fill="none" class="project-num-line">
+                                <path d="M4.90691 1C4.90691 6.1834 5.63531 11.4703 3.0171 16.1362C1.44122 18.9446 3.38396 21.4551 3.10709 24.4251C2.84081 27.2814 2.16143 29.6255 2.95711 32.4137C3.36191 33.8321 3.33214 35.3928 3.13709 36.8434C3.01723 37.7348 2.274 38.9713 1.45726 37.6993C0.747187 36.5935 0.67578 33.8173 2.62714 34.3057C4.99347 34.898 4.02042 41.3561 3.69203 43" 
+                                  stroke="white" stroke-linecap="round"></path>
+                              </svg>
+                              
+                            <div>
+                                1
+                            </div>
+                            <div>
+                                /
+                            </div>
+                            <div>
+                                6
+                            </div>
                         </div>
-                        <div class="project-title">Freight Search Engine</div>
-                        <p class="project-description">Redesigning & developing Schneider's freight search engine to improve search flexibility and usability.</p>
-                        <!-- <a href="schneider.html" class="cta-button">Learn More</a> -->
-                        <div class="tags">
-                            <span class="tag">SaaS</span>
-                            <span class="tag">B2B</span>
-                            <span class="tag">Mobile App</span>
-                            <span class="tag">End-to-end</span>
-                            <span class="tag">Desktop</span>
-                          </div>
-                          
+                 
+                </div> -->
+
+                
+                    <div class="project-container project-schneider" id="tiltCard" data-url="schneider.html" style="cursor: pointer;">
+                        <div class="project-image-schneider">
+
+                            
+
+                            <div class="video-container">
+                                <video class="video-style" autoplay loop muted>
+                                    <source src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Schneider-project/schneider hero video index.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+
+                        </div>
+                        <div class="top-right-text">APPRENTICESHIP</div>
+        
+                        <div class="project-content">
+                            
+                            <div class ="project-logo">
+                                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/schneider_logo.png" alt="Project Logo" class="logo">
+                            </div>
+                            <div class="project-title">Freight Search Engine</div>
+                            <p class="project-description">Redesigning & developing Schneider's freight search engine to improve search flexibility and usability.</p>
+                            <!-- <a href="schneider.html" class="cta-button">Learn More</a> -->
+                            <div class="tags">
+                                <span class="tag">SaaS</span>
+                                <span class="tag">B2B</span>
+                                <span class="tag">Mobile App</span>
+                                <span class="tag">End-to-end</span>
+                                <span class="tag">Desktop</span>
+                            </div>
+                            
+                        </div>
                     </div>
-                    
-                </div>
+                
             </div>
 
             <div class="carousel-container">
-              <div class="project-container project-recwell">
+              <div class="project-container project-recwell" id="tiltCard" data-url="recwell.html" style="cursor: pointer;">
                   <div class="project-image">
-                      <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/Recwell-project/recwell-hero-index.png" alt="Project Preview">
+                      <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/recwell index hero index.png" alt="Project Preview">
                   </div>
+                  <div class="top-right-text">SUMMER INTERNSHIP '24</div>
                   <div class="project-content">
+                    
                     <div class ="project-logo">
                         <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/recwell logo.png" alt="Project Logo" class="logo">
                     </div>
@@ -129,11 +194,13 @@
             </div>
 
             <div class="carousel-container">
-              <div class="project-container project-upshift">
+              <div class="project-container project-upshift" id="tiltCard" data-url="upshift.html" style="cursor: pointer;">
                   <div class="project-image">
-                      <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/upshift index.png" alt="Project Preview">
+                      <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/upshift index hero.png" alt="Project Preview">
                   </div>
+                  <div class="top-right-text">IDEATION & DESIGN</div>
                   <div class="project-content">
+                    <div class="top-right-text"></div>
                     <div class ="project-logo">
                         <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/upshift logo.png" alt="Project Logo" class="logo">
                     </div>
@@ -150,20 +217,22 @@
             </div>
 
             <div class="carousel-container">
-              <div class="project-container project-boxmate">
+              <div class="project-container project-boxmate" id="tiltCard" data-url="boxmate.html" style="cursor: pointer;">
                   <div class="project-image">
                       <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/boxmate hero index.png" alt="Project Preview">
                   </div>
+                  <div class="top-right-text">FREELANCE</div>
                   <div class="project-content">
+                    
                     <div class ="project-logo">
                         <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/boxmate logo.png" alt="Project Logo" class="logo">
                     </div>
                       <div class="project-title">Campus Storage Booking</div>
                       <p class="project-description">Designing a web application for a start-up to simplify and streamline booking of storage on campus.</p>
                       <div class="tags">
-                        <span class="tag">Product Design</span>
-                        <span class="tag">Mobile App</span>
-                        <span class="tag">End-to-end</span>
+                        <span class="tag">Product</span>
+                        <span class="tag">Desktop</span>
+                        <span class="tag">Design Strategy</span>
                       </div>
                       
                   </div>
@@ -171,11 +240,13 @@
             </div>
 
             <div class="carousel-container">
-              <div class="project-container project-wdnr">
+              <div class="project-container project-wdnr" id="tiltCard" data-url="wdnr.html" style="cursor: pointer;">
                   <div class="project-image">
-                      <img src="project-image-1.jpg" alt="Project Preview">
+                      <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/wdnr index.png" alt="Project Preview">
                   </div>
+                  <div class="top-right-text">EVALUATIVE RESEARCH</div>
                   <div class="project-content">
+                    
                     <div class ="project-logo">
                         <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/wdnr logo.png" alt="Project Logo" class="logo">
                     </div>
@@ -192,24 +263,26 @@
             </div>
 
             <div class="carousel-container">
-      <div class="project-container project-spotify">
-          <div class="project-image">
-              <img src="project-image-1.jpg" alt="Project Preview">
-          </div>
-          <div class="project-content">
-            <div class ="project-logo">
-                <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/spotify logo.png" alt="Project Logo" class="logo">
-            </div>
-              <div class="project-title">User Research</div>
-              <p class="project-description">Spotify's user research study to understand pain-points and propose potential solutions.</p>
-              <div class="tags">
-                <span class="tag">Product Design</span>
-                <span class="tag">Mobile App</span>
-                <span class="tag">End-to-end</span>
-              </div>
+             <div class="project-container project-spotify" id="tiltCard"data-url="spotify.html" style="cursor: pointer;">
+                <div class="project-image">
+              <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/spotify index.png" alt="Project Preview">
+                </div>
+            <div class="top-right-text">GENERATIVE RESEARCH</div>
+             <div class="project-content">
+            
+                <div class ="project-logo">
+                    <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/spotify logo.png" alt="Project Logo" class="logo">
+                </div>
+                <div class="project-title">User Research</div>
+                <p class="project-description">Spotify's user research study to understand pain-points and propose potential solutions.</p>
+                <div class="tags">
+                    <span class="tag">Product Design</span>
+                    <span class="tag">Mobile App</span>
+                    <span class="tag">End-to-end</span>
+                </div>
               
-          </div>
-      </div>
+            </div>
+             </div>
             </div>
         </div>
     </div>
@@ -254,6 +327,6 @@
     
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js" async defer></script>
-    <script src="assets/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
