@@ -1,0 +1,1096 @@
+@font-face {
+    font-family: 'Caslon335 Bold';
+    src: url("/assets/caslon335-bold.ttf");
+}
+
+
+body {
+    background-color: rgb(15, 13, 13);
+    min-height: 100vh; /* Change from height to min-height */
+    margin: 0;
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden;
+  }
+
+/* Hover Indicator (Circle + Arrow) */
+.hover-indicator {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(21, 21, 21, 0.886); /* Circle background */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    pointer-events: none; /* Prevents blocking interactions */
+    transform: translate(-5%, -45%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease-in-out; /* Smooth fade-in */
+
+}
+
+/* Show the hover indicator when active */
+.hover-active .hover-indicator {
+    opacity: 1; /* Make it visible */
+}
+
+
+/* Noise Overlay */
+.noise-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png');
+    background-size: 150px; /* Matches Framer's 149.76px */
+    background-repeat: repeat;
+    opacity: 0.1; /* Matches the opacity from the reference */
+    pointer-events: none; /* Ensures it doesn't interfere with interactions */
+    z-index: -1;
+}
+
+
+.home-container {
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    position: relative;
+}
+
+
+
+/*  */
+
+/* introductory text */
+
+
+.introduction-frame{
+    position: relative;
+    width: 80vw; /* Adjust as needed */
+    height: auto;
+    max-width: 600px; /* Adjust for frame size */
+    margin: auto;
+}
+
+.introduction-frame img {
+    width: 55% ;
+    height: auto;
+    display: block;
+}
+
+  
+.intro-text {
+    color: white;
+    font-family: le-monde-livre-classic-byol, serif;
+    font-size: clamp(2.5rem, 3vw, 3rem);
+    /* font-weight: 600; */
+    margin: 0px;
+    justify-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust for contrast */
+    font-size: 1.5rem; /* Adjust as needed */
+    width: 70%;
+    height: 80%;
+
+
+
+}
+
+  
+.intro-text > .magic {
+    display: inline-block;
+    position: relative;
+    /* font-weight: 600; */
+}
+  
+.intro-text > .magic > .magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    /* animation: scale 700ms ease forwards; */
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+    /* font-family: le-monde-livre-classic-byol, serif; */
+}
+  
+.intro-text > .magic > .magic-star > svg {
+    /* animation: rotate 1000ms linear infinite; */
+    display: block;
+    opacity: 0.7;
+}
+  
+.intro-text > .magic > .magic-star > svg > path {
+    fill: var(--violet);
+}
+  
+.intro-text > .magic > .magic-text {
+    font-family: le-monde-livre-classic-byol, serif;
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    font-weight: 600;
+    font-size: clamp(3.7rem, 4.5vw, 3.7rem);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+  
+.blob {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.468) 30%, rgba(255,255,255,0.3) 65%, rgba(255,255,255,0.4) 70%, rgba(255,255,255,0.3) 75%, rgba(255,255,255,0) 100%);
+    filter: blur(80px);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    animation: pulse 3s ease-in-out infinite, rotateBlob 2s linear infinite, morphBlob 5s ease-in-out infinite, spinBlob 4s linear infinite, spiralStrokeBlob 5s linear infinite;
+    transition: transform 0.2s ease-out;
+    z-index: -1; /* Pces it behind text */
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+}
+
+@keyframes rotateBlob {
+    0% {
+        box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 100px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes morphBlob {
+    0% {
+        border-radius: 50% 50% 50% 50%;
+    }
+    25% {
+        border-radius: 95% 15% 100% 20%;
+    }
+    50% {
+        border-radius: 10% 100% 15% 95%;
+    }
+    75% {
+        border-radius: 120% 5% 130% 0%;
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+    }
+}
+
+@keyframes spinBlob {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spiralStrokeBlob {
+    0% {
+        box-shadow: 0 0 100px rgba(255,255,255,0.6), 20px 20px 110px black, -20px -20px 100px rgba(174,147,233,0.6), 25px -25px 105px rgba(94,96,206,0.6), -25px 25px 100px rgba(147,233,174,0.6);
+    }
+    25% {
+        box-shadow: -20px 20px 110px black, 40px -40px 120px rgba(255,255,255,0.6), -40px 40px 110px rgba(174,147,233,0.7), 45px -45px 115px rgba(94,96,206,0.6), 40px 40px 110px rgba(147,233,174,0.6);
+    }
+    50% {
+        box-shadow: -40px -40px 120px rgba(255,255,255,0.6), 60px 60px 130px black, -60px -60px 120px rgba(174,147,233,0.8), 65px -65px 125px rgba(94,96,206,0.6), -60px 60px 120px rgba(147,233,174,0.6);
+    }
+    75% {
+        box-shadow: 60px -60px 130px black, -80px 80px 140px rgba(255,255,255,0.6), 80px -80px 130px rgba(174,147,233,0.7), 85px -85px 135px rgba(94,96,206,0.6), 80px -80px 130px rgba(147,233,174,0.6);
+    }
+    100% {
+        box-shadow: 0 0 100px rgba(255,255,255,0.6), 20px 20px 110px black, -20px -20px 100px rgba(174,147,233,0.6), 25px -25px 105px rgba(94,96,206,0.6), -25px 25px 100px rgba(147,233,174,0.6);
+    }
+}
+
+button:focus {
+    outline: 0;
+}
+
+.link-white {
+    color: white;
+}
+
+
+.center {
+    text-align: center !important;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+/* introductory text finished */
+
+/* frames */
+.frames {
+    position: relative;
+    width: 100vw; /* Adjust based on actual image sizes */
+    height: 100vh; /* Adjust based on actual image sizes */
+    margin: auto;
+  }
+  
+  .frames div {
+    position: absolute;
+  }
+  
+  .text img {
+    width: 41rem; /* Adjust based on image size */
+    height: auto;
+  }
+
+/* Bucky */
+
+.circle {
+    right: 11%;
+    top: 21%;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+}
+  
+  .bottom-image-bucky{
+    width: 12rem; 
+    height: auto;
+  }
+
+  .top-image-bucky {
+    position: absolute;
+    bottom: 18%;
+    right: 28%;
+    width: 5rem;
+    opacity: 0.8;
+}
+
+
+  
+  .square img {
+    width: 20rem; /* Adjust based on image size */
+    height: auto;
+  }
+  
+  /* Positioning */
+  .text {
+    left: 9%;
+    top: 15%;
+  }
+
+/* cats */
+.oval {
+    right: 35%;
+    position: relative; 
+    bottom: 18%;
+}
+
+.bottom-image-cats{
+    
+    width: 11rem; /* Optional: Match the size of the bottom image */
+}
+.top-image-cats{
+    position: absolute;
+    bottom: 3%; /* Adjust as needed */
+    right: 11%; /* Adjust as needed */
+    width: 9rem; /* Optional: Match the size of the bottom image */
+    opacity: 0.8; /* Optional: Make it slightly transparent */
+}
+
+/* designed for */
+  
+.rectangle {
+    right: 35.5%;
+    position: relative; 
+    top: 19%;
+}
+ 
+
+.bottom-image-designfor {
+    width: 10.5rem; /* Adjust based on image size */
+    height: auto;
+}
+
+.top-image-schneider{
+    position: absolute;
+    bottom: 66%; /* Adjust as needed */
+    right: 11%; /* Adjust as needed */
+    width: 4.5rem; /* Optional: Match the size of the bottom image */
+    opacity: 1;
+
+}
+
+.top-image-recwell{
+    position: absolute;
+    bottom: 24%; /* Adjust as needed */
+    right: 16%; /* Adjust as needed */
+    width: 3rem; /* Optional: Match the size of the bottom image */
+    opacity: 1;
+
+}
+
+.top-image-uwmad {
+    position: absolute;
+    bottom: 55%;
+    right: 50%;
+    width: 4.5rem;
+    opacity: 1;
+}
+
+.top-image-boxmate{
+    position: absolute;
+    bottom: 23%; /* Adjust as needed */
+    right: 51%; /* Adjust as needed */
+    width: 3.5rem; /* Optional: Match the size of the bottom image */
+    opacity: 1;
+}
+
+/* Tools */
+.square {
+    right: 12%;
+    bottom: 21%;
+}
+  
+  
+/* frames finished */
+
+
+
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    bottom: 3%;
+  }
+
+  .table-top {
+    width: 90%;
+    height: 0.7rem;
+    background-color: #3f3f3f79;
+    /* background: 
+        var(--over, )
+        url(https://assets.codepen.io/2017/wood_door.jpg) 50%/ cover
+        rgb(27, 15, 0);
+    background-blend-mode: overlay; */
+    margin-bottom: 3px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    box-shadow: 0px 6px 12px rgba(39, 39, 39, 0.237);
+    position: relative;
+  }
+
+  .portfolio-icon{
+    width:1.8rem;
+    height: auto;
+    position:absolute;
+    left:47%;
+    bottom: 93%;
+    filter: drop-shadow(0 0 10px rgba(203, 203, 203, 0.8));
+
+  }
+
+  .portfolio-bottom-icon{
+    width:2.4rem;
+    height: auto;
+    position:relative;
+    filter: drop-shadow(0 0 10px rgba(203, 203, 203, 0.648));
+
+  }
+
+
+  
+
+  .compartment {
+    width: 30%;
+    height: 15px;
+    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    position: relative;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .compartment:hover {
+    transform: translateY(5%);
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3);
+  }
+
+  .handle {
+    width: 20px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .knob {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hover-text {
+    position: fixed;
+    background-color: rgba(50, 50, 50, 0.478);
+    color: rgba(255, 255, 255, 0.659);
+    padding: 0.5rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border: 0.1rem solid #f8f8f86a;
+    opacity: 0;
+    font-weight: lighter;
+    font-family: le-monde-livre-classic-byol, serif;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+.vase-image {
+    position: absolute;
+    left: 3%;
+    bottom: -0.6rem;
+    
+}
+
+.vase-image  img{
+    width: 12rem;
+    height: auto;
+}
+
+/* work */
+
+.books-work {
+    position: absolute;
+    right: 16%;
+    bottom: 0rem;
+    cursor: pointer;
+}
+
+.books-work img {
+    width: 7rem;
+    height: auto;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transform-origin: bottom center; /* Ensures natural movement */
+}
+
+
+.books-work:hover img {
+    transform: rotateX(15deg) translateY(-5px); /* Step 1: Small tilt */
+    animation: lift-book 0.4s ease-in-out 0.2s forwards; /* Step 2: Full lift */
+}
+
+@keyframes lift-book {
+    0% { transform: rotateX(15deg) translateY(-5px); } /* Small tilt */
+    100% { transform: rotateX(0deg) translateY(-25px); } /* Fully lifted */
+}
+
+.work-tooltip {
+    display: none;
+    position: absolute;
+    top: 93%; /* Positioned below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(30, 30, 30, 0.807);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    white-space: nowrap;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+
+.books-work:hover .work-tooltip {
+    display: block;
+}
+
+
+/* About */
+
+
+.photoframe-about {
+    position: absolute;
+    right: 20.5%;
+    bottom: 0.55rem;
+    cursor: pointer;
+}
+
+.photoframe-about img {
+    width: 5rem;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: bottom center; /* Ensures the bottom stays fixed */
+}
+
+/* Tilted side-to-side movement */
+.photoframe-about:hover img {
+    animation: tilt-vibrate 0.2s infinite alternate ease-in-out;
+}
+
+@keyframes tilt-vibrate {
+    0% { transform: rotate(-3deg); } /* Only rotating, not shifting */
+    100% { transform: rotate(3deg); }
+}
+
+/* Tooltip (dialog box) styles */
+.hover-dialog {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positioned below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(30, 30, 30, 0.807);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    white-space: nowrap;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+/* Show tooltip on hover */
+.photoframe-about:hover .hover-dialog {
+    display: block;
+}
+
+
+.block-linkedin {
+    position: absolute;
+    right: 13%;
+    bottom: 3.5rem;
+    display: inline-block;
+}
+
+.block-linkedin::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0076b587; /* LinkedIn Blue */
+    border-radius: 8px; /* Soft rounded corners for smooth effect */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1; /* Places behind the image */
+}
+
+.block-linkedin:hover::before {
+    opacity: 1; /* Soft glow appears on hover */
+}
+
+.block-linkedin img {
+    width: 2.6rem;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1; /* Ensures image stays on top */
+    border-radius: 8px; /* Ensures the background color aligns smoothly */
+}
+
+.block-medium {
+    position: absolute;
+    right: 11%;
+    bottom: 1rem;
+    display: inline-block;
+}
+
+.block-medium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1A8917; /* Medium’s dark green */
+    border-radius: 8px; /* Soft rounded edges */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1; /* Ensures it stays behind the image */
+}
+
+.block-medium:hover::before {
+    opacity: 1; /* Background glow effect appears on hover */
+}
+
+.block-medium img {
+    width: 2.6rem;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1; /* Ensures the image stays on top */
+    border-radius: 8px; /* Matches the glow effect */
+}
+
+
+
+
+  .block-mail {
+    position: absolute;
+    right: 14.5%;
+    bottom: 1rem;
+    display: inline-block;
+}
+
+.block-mail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 98%;
+    background-color: #d1483699; /* Gmail Red */
+    border-radius: 6px; /* Soft rounded corners */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1; /* Places behind the image */
+    
+}
+
+.block-mail:hover::before {
+    opacity: 1; /* Soft background glow appears on hover */
+}
+
+.block-mail img {
+    width: 2.6rem;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1; /* Keeps the image on top */
+    border-radius: 8px; /* Ensures smooth alignment */
+}
+
+
+  /* case studies */
+
+
+  #menu-index {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center;     /* Optionally align vertically if needed */
+    gap: 1rem;               /* Spacing between buttons */
+    padding: 1rem;
+}
+
+.video-container {
+    width: 50rem;
+    padding: 3rem 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Keeps the video inside the container */
+    object-fit: contain; /* Keeps full video visible */
+    border-radius: 12px;
+}
+
+/* Ensures video resizes properly */
+
+
+.project-image-schneider {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 37rem;
+}
+
+
+
+
+.video-style {
+    border: 0.5rem solid rgb(81, 81, 81);
+    width: 100%;
+    height: 100%;
+    border-radius: 12px; /* Matches container */
+}
+
+
+/* Outermost carousel container (optional if you just want a single card) */
+.carousel-container {
+    display: flex;   
+    height: 100vh;
+    width: 100vw;            /* Centers the card horizontally */
+    justify-content: center;
+    /* background: radial-gradient(circle, rgba(50, 50, 50, 0.9) 10%, black 90%); */
+    align-items: center;
+    
+    
+  }
+
+
+.carousel-wrapper1 {
+    /* background: radial-gradient(circle, rgba(50, 50, 50, 0.9) 10%, black 90%);  */
+}
+
+
+.project-num-wrapper {
+    flex-flow: column;
+    flex:0.2;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 6.5rem;
+    min-height: 1rem;
+    font-family: Emilys, sans-serif;
+    font-size: 1.25rem;
+    display: flex
+;
+}
+
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.project-num-line {
+    opacity: .5;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+
+.project-num {
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.w-layout-vflex {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+}
+
+.top-right-text {
+    position: absolute;
+    right: 10px;
+    font-size: 1rem;  /* You can adjust this size */
+    font-weight: lighter;
+    color: #b0b0b0; /* Change text color as needed */
+    padding: 1rem 1rem 0 0;
+}
+ 
+  /* The card wrapper */
+.project-container {
+    flex: 0.8;
+    display: flex;
+    /* align-items: center; */
+    background-color:black;
+    z-index: 2;
+    
+    
+    border-radius: 12px;
+    padding: 0 0 0 2rem; 
+    max-width: 100vw;
+    width: 80%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+
+    height: 70vh;
+    /* filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.879)); */
+    gap: 2rem;
+    position: relative; 
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+    will-change: transform, box-shadow;
+}
+
+/* .project-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-repeat: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(20px); 
+    opacity: 0.2;
+    z-index: -1; 
+} */
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+.tag {
+    background-color: #3f3f3f79; /* Light gray */
+    color: #ffffff; /* Dark text */
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+.project-container:hover{
+    /* filter: drop-shadow(0px 10px 30px rgba(24, 24, 24, 0.8)); */
+}
+
+
+/* Different colors for different projects */
+.project-schneider:hover {
+    background-color: #87361030; /* Reddish */
+}
+
+.project-recwell:hover {
+    background-color: #6c170836; /* Light blue */
+}
+
+.project-upshift:hover {
+    background-color: #4caf4f2c; /* Green */
+}
+
+.project-boxmate:hover {
+    background-color: #8810ac29; /* Yellow */
+}
+
+.project-wdnr:hover {
+    background-color: #0468222f; /* Yellow */
+}
+.project-spotify:hover {
+    background-color: #27d93c1e; /* Yellow */
+}
+
+#case-studies {
+    top:5rem;
+    position:relative ;
+}
+
+
+
+#case-studies h1 {
+    color: white;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-family: le-monde-livre-classic-byol, serif;
+    font-weight: 600;
+    /* background: radial-gradient(circle, rgba(50, 50, 50, 0.9) 10%, black 90%); */
+    text-align: center;
+    /* margin-left: 100px; */
+}
+
+  
+
+  
+.project-image {
+    /* flex: 1; */
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 37rem;
+}
+
+
+
+  /* Right side: text + CTA */
+  .project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* Vertically center text */
+  }
+  
+  .project-title {
+    
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 56px;
+    text-align: left;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    text-align: left;
+    font-family: Dongle, sans-serif;
+    color: white;
+
+  }
+
+  .project-logo {
+    display: flex;
+    justify-content: left; /* Centers the logo horizontally */
+    align-items:center; /* Centers the logo vertically if needed */
+    width: 15%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+       overflow: hidden; /* Prevents the image from overflowing */
+}
+
+.logo {
+    max-width: 100%; /* Ensures the logo stays within the div */
+    max-height: 100%; /* Ensures it doesn’t overflow vertically */
+    object-fit: contain; /* Ensures the full logo is visible */
+}
+
+  
+  .project-description {
+    margin-bottom: 20px;
+    margin-right: 2rem;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: Dongle, sans-serif;
+    color: white;
+  }
+
+
+  /* footer */
+.footer-container {
+    position: relative;
+    width: 100vw;
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    overflow: hidden; /* Ensures no extra scrolling */
+}
+
+.video-footer-container {
+    position: absolute;
+    top: 8rem;
+    left: 35rem;
+    width: 26rem;
+    height: auto;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.video-footer-container video {
+    width: 100%;
+
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    opacity: 1; /* Optional: Adjust visibility */
+}
+
+footer {
+    position: relative;
+    width: 65vw;
+    height: 80vh;
+    max-width: 80vw;
+    background: linear-gradient(to bottom, #1a1a1a25, rgba(12, 12, 12, 0.319));
+    border-radius: 2rem;
+    padding: 20px;
+    text-align: center;
+    border: 0.2rem solid #333;
+    z-index: 1; /* Ensures it stays above the video */
+    backdrop-filter: blur(8px); /* Adds the frosty blur effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    color: #aaa;
+    padding: 4rem 5rem 0 5rem;
+    font-family: Dongle, sans-serif;
+}
+.footer-content h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #777;
+}
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-content li {
+    margin: 5px 0;
+}
+.footer-content a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1.3rem;
+    line-height: 150%;
+}
+.footer-content a:hover {
+    color: white;
+}
+.footer-bottom {
+    margin-top: 4rem;
+}
+.footer-bottom h1 {
+    all: unset;
+    padding: 1.5rem 0 0 0;
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffffd1;
+}
+.footer-bottom p {
+    font-size: 1rem;
+    color: #777;
+}

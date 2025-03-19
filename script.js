@@ -61,6 +61,25 @@ document.querySelectorAll('.project-container').forEach(card => {
 //     cursor.style.transform = 'translate(-50%, -50%) scale(1)';
 // });
 
+//table drawer hover
+document.querySelectorAll('.compartment').forEach(compartment => {
+    const text = document.createElement('div');
+    text.classList.add('hover-text');
+    text.innerText = compartment.getAttribute('data-hover-text');
+    document.body.appendChild(text);
+    
+    compartment.addEventListener('mouseenter', (e) => {
+      const rect = compartment.getBoundingClientRect();
+      text.style.left = `${rect.left + rect.width / 2}px`;
+      text.style.top = `${rect.top + rect.height + 5}px`;
+      text.style.opacity = '1';
+    });
+    
+    compartment.addEventListener('mouseleave', () => {
+      text.style.opacity = '0';
+    });
+  });
+
 //resume button
 
 function openResume() {
