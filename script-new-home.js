@@ -3,21 +3,21 @@ document.querySelectorAll('.compartment').forEach(compartment => {
     text.classList.add('hover-text');
     text.innerText = compartment.getAttribute('data-hover-text');
     document.body.appendChild(text);
-    
+
     compartment.addEventListener('mouseenter', (e) => {
-      const rect = compartment.getBoundingClientRect();
-      text.style.left = `${rect.left + rect.width / 2}px`;
-      text.style.top = `${rect.top + rect.height + 5}px`;
-      text.style.opacity = '1';
+        const rect = compartment.getBoundingClientRect();
+        text.style.left = `${rect.left + rect.width / 2}px`;
+        text.style.top = `${rect.top + rect.height + 5}px`;
+        text.style.opacity = '1';
     });
-    
+
     compartment.addEventListener('mouseleave', () => {
-      text.style.opacity = '0';
+        text.style.opacity = '0';
     });
-  });
+});
 
 
-  //footer
+//footer
 
 // Get the footer element
 const footer = document.querySelector('.footer');
@@ -60,7 +60,7 @@ hoverElements.forEach((element) => {
         document.body.classList.remove("hover-active");
     });
 });
- 
+
 
 //card redirection
 document.addEventListener("DOMContentLoaded", function () {
@@ -75,6 +75,107 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.querySelector('.photoframe-about').addEventListener('click', function() {
+document.querySelector('.photoframe-about').addEventListener('click', function () {
     window.location.href = 'about.html';
+});
+
+// Cache the table element and its initial offset
+const table = document.querySelector('.table');
+const tableInitialOffset = table.offsetTop; // original position relative to document
+
+document.addEventListener('DOMContentLoaded', function () {
+    const table = document.querySelector('.table');
+    const portfolioIcon = document.querySelector('.portfolio-icon');
+    const icons = document.querySelectorAll('.photoframe-about, .block-linkedin, .block-medium, .block-mail');
+    const frames = document.querySelector('.frames');
+
+    // Store initial values
+    const tableInitialOffset = table.offsetTop;
+    const originalTableHeight = table.offsetHeight;
+    const targetNavbarHeight = 100;
+
+    const originalLogoHeight = portfolioIcon.offsetHeight;
+    const targetLogoHeight = 70;
+
+    let originalIconHeight = 0;
+    icons.forEach(icon => {
+        originalIconHeight = icon.offsetHeight;
+    });
+    const targetIconHeight = 30;
+
+    // Define scroll thresholds (adjust these multipliers as needed)
+    const thresholdStart = tableInitialOffset - (window.innerHeight * 0.2);
+    const thresholdEnd = tableInitialOffset + (window.innerHeight * 0.01);
+
+    // Immediately set the table as fixed so it’s always out of the document flow.
+    table.style.position = 'fixed';
+    table.style.left = '0';
+    table.style.width = '100%';
+    // Initially, when scrollY is 0, the table’s top is at its original offset.
+    table.style.top = `${tableInitialOffset}px`;
+
+    // Optional: If you have a photoframe that is absolutely positioned inside the table,
+    // you can remove its absolute positioning when scrolling begins.
+    // (You may also handle this with a CSS class toggle.)
+
+    window.addEventListener('scroll', function () {
+        requestAnimationFrame(() => {
+            const scrollY = window.pageYOffset;
+            let fraction = 0;
+
+            if (scrollY < thresholdStart) {
+                // Before the transition begins, smoothly slide the table up
+                fraction = 0;
+                table.style.top = `${tableInitialOffset - scrollY}px`;
+            } else if (scrollY > thresholdEnd) {
+                // After the transition completes, ensure the table is flush at the top
+                fraction = 1;
+                table.style.top = '0px';
+            } else {
+                // In between, compute a fraction (0 to 1)
+                fraction = (scrollY - thresholdStart) / (thresholdEnd - thresholdStart);
+                // Interpolate top value: from (tableInitialOffset - thresholdStart) down to 0
+                const newTop = (1 - fraction) * (tableInitialOffset - thresholdStart);
+                table.style.top = `${newTop}px`;
+            }
+
+            // Interpolate table height
+            const newTableHeight = originalTableHeight - fraction * (originalTableHeight - targetNavbarHeight);
+            table.style.height = newTableHeight + 'px';
+
+            // Interpolate the logo size and reposition it when in navbar mode
+            const newLogoHeight = originalLogoHeight - fraction * (originalLogoHeight - targetLogoHeight);
+            portfolioIcon.style.height = newLogoHeight + 'px';
+            if (fraction > 0) {
+                portfolioIcon.style.position = 'fixed';
+                portfolioIcon.style.top = '10px';
+                portfolioIcon.style.left = '2rem';
+            } else {
+                portfolioIcon.style.position = '';
+                portfolioIcon.style.top = '';
+                portfolioIcon.style.left = '';
+            }
+
+            // Interpolate icons (including photoframe) size
+            icons.forEach(icon => {
+                const newIconHeight = originalIconHeight - fraction * (originalIconHeight - targetIconHeight);
+                icon.style.height = newIconHeight + 'px';
+                icon.style.width = 'auto';
+            });
+
+            // Fade out the frames as we transition
+            if (frames) {
+                frames.style.opacity = 1 - fraction;
+            }
+
+            // Optional: When in navbar mode, update the photoframe so it doesn’t overflow.
+            // For example, if your CSS has rules for .table.fixed-navbar .photoframe-about,
+            // you could toggle that class here:
+            if (fraction > 0) {
+                table.classList.add('fixed-navbar');
+            } else {
+                table.classList.remove('fixed-navbar');
+            }
+        });
+    });
 });
