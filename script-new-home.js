@@ -114,12 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initially, when scrollY is 0, the table’s top is at its original offset.
     table.style.top = `${tableInitialOffset}px`;
 
-    // Optional: If you have a photoframe that is absolutely positioned inside the table,
-    // you can remove its absolute positioning when scrolling begins.
-    // (You may also handle this with a CSS class toggle.)
 
     window.addEventListener('scroll', function () {
         requestAnimationFrame(() => {
+
+
             const scrollY = window.pageYOffset;
             let fraction = 0;
 
@@ -164,6 +163,32 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Fade out the frames as we transition
+
+            const logoWrapper = document.getElementById('floating-logo-wrapper');
+            const frameWrapper = document.getElementById('floating-frame-wrapper');
+
+            const logoSlot = document.getElementById('navbar-left-slot');
+            const iconSlot = document.getElementById('navbar-icon-slot');
+            const homeContainer = document.querySelector('.home-container');
+
+            if (fraction > 0.95) {
+                // Move logo and photoframe into navbar
+                if (!logoSlot.contains(logoWrapper)) {
+                    logoSlot.appendChild(logoWrapper);
+                }
+                if (!iconSlot.contains(frameWrapper)) {
+                    iconSlot.insertBefore(frameWrapper, iconSlot.firstChild);
+                }
+            } else {
+                // Move them back to original floating positions
+                if (!homeContainer.contains(logoWrapper)) {
+                    homeContainer.insertBefore(logoWrapper, homeContainer.firstChild);
+                }
+                if (!homeContainer.contains(frameWrapper)) {
+                    homeContainer.insertBefore(frameWrapper, homeContainer.firstChild.nextSibling);
+                }
+            }
+
             if (frames) {
                 frames.style.opacity = 1 - fraction;
             }
@@ -175,6 +200,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 table.classList.add('fixed-navbar');
             } else {
                 table.classList.remove('fixed-navbar');
+            }
+            const tableTop = document.querySelector('.table-top');
+
+            if (fraction > 0) {
+                tableTop.classList.add('navbar-style');
+            } else {
+                tableTop.classList.remove('navbar-style');
             }
         });
     });

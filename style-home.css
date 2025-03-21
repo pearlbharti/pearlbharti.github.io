@@ -427,7 +427,7 @@ button:focus {
     padding: 4px;
     box-shadow: 0px 6px 12px rgba(39, 39, 39, 0.237);
     position: relative;
-    transition: top 1s ease, height 1s ease, width 1s ease, padding 0.5s ease, opacity 0.5s ease;
+    transition:  background-color 0.3s ease, border-bottom 0.3s ease, top 1s ease, height 1s ease, width 1s ease, padding 0.5s ease, opacity 0.5s ease;
 
   }
 
@@ -572,7 +572,7 @@ button:focus {
 .photoframe-about {
     position: absolute;
     right: 20.5%;
-    bottom: 4.45rem;
+    bottom: 5.5rem;
     cursor: pointer;
 }
 
@@ -1119,6 +1119,30 @@ footer {
     z-index: 1000;
 }
 
+.table.navbar-active .table-top {
+    background-color: transparent !important; /* Remove colored bar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin line instead */
+    box-shadow: none; /* Remove depth */
+    padding: 0 2rem;
+    height: 70px;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease, height 0.3s ease, padding 0.3s ease;
+}
+
+.table-top.navbar-style {
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    padding: 0 2rem;
+    height: 70px;
+    transition: all 0.3s ease;
+}
+
+
+.table-top.navbar-style img {
+    transform: scale(0.6);
+    transition: transform 0.3s ease;
+}
+
 .logo-navbar {
     /* These rules can be applied by the JS inline or via class.
        If you choose to use the class, add it when fraction > 0 in JS. */
@@ -1135,7 +1159,7 @@ footer {
 .table.navbar-active .block-linkedin,
 .table.navbar-active .block-medium,
 .table.navbar-active .block-mail {
-    height: 30px;  /* Smaller size */
+    height: 10px;  /* Smaller size */
     transition: all 0.3s ease;
     margin: 0 10px; /* Adjust spacing as needed */
 }
@@ -1182,7 +1206,7 @@ footer {
     align-items: center;
     width: 100%;
     padding: 0 2rem;
-    height: auto;
+    height: 4rem;
 }
 
 .table.fixed-navbar .photoframe-about,
@@ -1216,4 +1240,40 @@ footer {
   right: auto;
   bottom: auto;
   transition: all 0.3s ease;
+  width:1rem;
+}
+
+.table.fixed-navbar .vase-image {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* .photoframe-about,
+.block-linkedin,
+.block-medium,
+.block-mail {
+  transition: height 0.3s ease, width 0.3s ease;
+} */
+
+#floating-logo-wrapper,
+#floating-frame-wrapper {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+#floating-logo-wrapper {
+  left: 47%;
+  bottom: 93%;
+}
+
+#floating-frame-wrapper {
+  right: 20.5%;
+  bottom: 5.5rem;
+}
+
+.table-top #floating-logo-wrapper,
+.table-top #floating-frame-wrapper {
+  position: static;
 }
