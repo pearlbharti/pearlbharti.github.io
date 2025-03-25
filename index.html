@@ -7,7 +7,7 @@
   <link rel="icon" sizes="512x512" type="image/png" href="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/tabicon.png">
 
 
-  <link rel="stylesheet" href="style-home.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.typekit.net/qcq6kox.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
@@ -21,21 +21,45 @@
 
 
   <div class="home-container">
+    <div id="floating-logo-wrapper">
+      <img src="assets/favicon.svg" alt="portfolio logo" class="portfolio-icon">
+    </div>
+
+    <div id="floating-frame-wrapper">
+      <div class="photoframe-about">
+        <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/about fin.png" alt="a photoframe">
+        <div class="hover-dialog">About</div>
+      </div>
+    </div>
     <!-- logo -->
-    <img src="assets\favicon.svg" alt="portfolio logo" class="portfolio-icon">
+    <!-- <img src="assets\favicon.svg" alt="portfolio logo" class="portfolio-icon"> -->
     <!-- <div class="sunray"></div>  
     <div class="radial-light"></div>  -->
 
 
     <div class="frames">
+      <div class="status">
+        <span class="dot"></span>
+        <span>Actively Looking For Full Time Opportunities</span>
+    </div>
       <div class="text">
         <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/frame large main.png">
-        
+          <p class="name">PEARL</p><p class="description">
+          <p class="traits">DESIGNER + DEVELOPER</p>
+          <p class="description"><strong>3+ years</strong> of experience crafting <em>inclusive</em>, <em>clean</em>, and <em>human-centered</em> products and experiences.</p>      
 
       </div>
+
       <div class="oval">
         <img class="bottom-image-cats" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/frame-5.png">
         <img class="top-image-cats" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/cats.png">
+
+        <div class="hover-cats">
+          <span class="text-cats">I have fostered and owned 18+ cats!</span>
+          <img class="arrow-cats" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/arrow.png" alt="Arrow">
+      </div>
+
+        
         
       </div>
       <div class="rectangle">
@@ -44,6 +68,11 @@
         <img class="top-image-recwell" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/recwell logo.png"> 
         <img class="top-image-boxmate" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/boxmate logo.png"> 
         <img class="top-image-uwmad" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/uwlogo.png"> 
+
+        <div class="hover-companies">
+          <span class="text-companies">Previously designed for</span>
+          <img class="arrow-companies" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/arrow.png" alt="Arrow">
+      </div>
         
         
       </div>
@@ -57,78 +86,42 @@
         <img class="top-image-claude" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/claude.png"> 
         <img class="top-image-notion" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/Notion.png"> 
         <img class="top-image-framer" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/FRAMER.png"> 
+        <div class="hover-tools">
+          <img class="arrow-tools" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/arrow.png" alt="Arrow">
+          <span class="text-tools">A peek into my toolkit!</span>
+         
+        </div>
+        
 
        
       </div>
       <div class="circle">
         <img class="bottom-image-bucky"src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/frame-3.png">
         <img class="top-image-bucky" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/bucky.png"> 
+
+        <div class="hover-bucky">
+          <span class="text-bucky">Pursuing Master's at UW-Madison.<br> On, Winconsin!</span>
+          <img class="arrow-bucky" src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/arrow.png" alt="Arrow">
+         
+        </div>
         
       </div>
     </div>
 
-  
 
-    <!-- <div class="introduction-frame">
- 
-      <div class="intro-text">
-          Pearl is a 
-          <span class="magic">
-            <span class="magic-star">
-              <svg viewBox="0 0 512 512">
-              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-              </svg>
-            </span>
-            <span class="magic-star">
-              <svg viewBox="0 0 512 512">
-              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-              </svg>
-            </span>
-            <span class="magic-star">
-              <svg viewBox="0 0 512 512">
-              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-              </svg>
-            </span>
-            <span class="magic-text">Product Designer</span>
-          </span>
-          and
-          <span class="magic">
-              <span class="magic-star">
-                <svg viewBox="0 0 512 512">
-                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-                </svg>
-              </span>
-              <span class="magic-star">
-                <svg viewBox="0 0 512 512">
-                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-                </svg>
-              </span>
-              <span class="magic-star">
-                <svg viewBox="0 0 512 512">
-                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-                </svg>
-              </span>
-              <span class="magic-text">Developer</span>
-            </span>
-            with 3+ years of experience who loves creating inclusive, clean, and human-centered design.
-
-      </div>
-      
-    </div> -->
-
-    
        
     <div class="table">
       <div class="table-top">
+        <div id="navbar-left-slot"></div>
         <div class="vase-image">
           <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/snowdrops index.png" 
                alt="Vase with Flowers">
         </div>
-        <div class="icon-container">
-          <div class="photoframe-about">
+        <div class="icon-container" id="navbar-icon-slot">
+          <!-- <div class="photoframe-about">
               <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/about fin.png" alt="a photoframe">
               <div class="hover-dialog">About</div>
-          </div>
+          </div> -->
           <div class="block-linkedin">
               <img src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/LINKEDIN.png" alt="block linkedin">
           </div>
@@ -173,9 +166,12 @@
       </div>
     </div> -->
   </div>
+  
 
   <!-- Case Studies Section -->
+
   <div id="case-studies">
+    
     <h1>case studies</h1>
 
     <div class="carousel-wrapper1">
@@ -352,51 +348,52 @@
          </div>
         </div>
     </div>
-</div>
-
-
-
-
-
-<div class="footer-container">
-
-  <div class="video-footer-container">
-    <video class="video-footer-background" autoplay loop muted>
-      <source src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/footer bg video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="case-studies-round"></div>
+   
   </div>
+
+
+  <div class="footer-container">
   
-  <footer>
-      <div class="footer-content">
-          <div>
-              <h3>DESIGN WORK</h3>
-              <ul>
-                  <li><a href="schneider.html">Schneider Freight Search Engine</a></li>
-                  <li><a href="recwell.html">Rec Well, UW Madison</a></li>
-                  <li><a href="Upshift.html">Upshift Swap Shop</a></li>
-                  <li><a href="boxmate.html">Boxmate</a></li>
-                  <li><a href="wdnr.html">WDNR</a></li>
-                  <li><a href="Spotify.html">Spotify</a></li>
-              </ul>
-          </div>
-          <div>
-              <h3>GET IN TOUCH</h3>
-              <ul>
-                  <li><a href="https://www.linkedin.com/in/pearl-b-a702491a9/">LinkedIn</a></li>
-                  <li><a href="tel:+16082392971">+1 608 239 2971</a></li>
-                  <li><a href="mailto:pearl05bharti@gmail.com">pearl05bharti@gmail.com</a></li>
-                  <li><a href="#">Resume</a></li>
-              </ul>
-          </div>
-      </div>
-      <div class="footer-bottom">
-        <img src="assets\favicon.svg" alt="portfolio logo" class="portfolio-bottom-icon">
-          <h1>PEARL BHARTI</h1>
-          <p>© 2025 PEARL BHARTI. Wireframed, designed, prototyped, and hand-coded with an excess of matcha, passion and cat cuddles.</p>
-      </div>
-  </footer>
-</div>
+    
+
+    <div class="video-footer-container">
+      <video class="video-footer-background" autoplay loop muted>
+        <source src="https://d14xe37va4uv2q.cloudfront.net/pearl_portfolio_assets/index/footer bg video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>DESIGN WORK</h3>
+                <ul>
+                    <li><a href="schneider.html">Schneider Freight Search</a></li>
+                    <li><a href="recwell.html">Rec Well, UW Madison</a></li>
+                    <li><a href="Upshift.html">Upshift Swap Shop</a></li>
+                    <li><a href="boxmate.html">Boxmate</a></li>
+                    <li><a href="wdnr.html">WDNR</a></li>
+                    <li><a href="Spotify.html">Spotify</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>GET IN TOUCH</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/pearl-b-a702491a9/">LinkedIn</a></li>
+                    <li><a href="tel:+16082392971">+1 608 239 2971</a></li>
+                    <li><a href="mailto:pearl05bharti@gmail.com">pearl05bharti@gmail.com</a></li>
+                    <li><a href="#">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <img src="assets\favicon.svg" alt="portfolio logo" class="portfolio-bottom-icon">
+            <h1>PEARL BHARTI</h1>
+            <p>© 2025 PEARL BHARTI. Wireframed, designed, prototyped, and hand-coded with an excess of matcha, passion and cat cuddles.</p>
+        </div>
+    </footer>
+  </div>
 
 
 

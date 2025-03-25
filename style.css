@@ -3,14 +3,40 @@
     src: url("/assets/caslon335-bold.ttf");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;700&family=Montserrat:wght@400;900&family=Merriweather:ital@1&family=Raleway:wght@500&family=Permanent+Marker&display=swap');
+       
+
+
+html, body {
+    height: 100%; /* Ensure both the html and body elements take up the full height */
+    margin: 0;
+}
 
 body {
-    background-color: rgb(15, 13, 13);
-    min-height: 100vh; /* Change from height to min-height */
+    background-color: rgb(7, 6, 6);
+    min-height: 100vh; /* Use min-height for body, so it stretches fully if content is longer */
     margin: 0;
     overflow-y: auto; /* Enables vertical scrolling */
-    overflow-x: hidden;
-  }
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.noise-bg {
+    position: fixed; /* Fixes the background noise to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png');
+    background-size: 150px;
+    background-repeat: repeat;
+    opacity: 0.1;
+    pointer-events: none; /* Ensures it doesn't block interactions */
+    z-index: -1; /* Places it behind all other content */
+}
+
+
+
+
 
 /* Hover Indicator (Circle + Arrow) */
 .hover-indicator {
@@ -40,22 +66,10 @@ body {
 
 
 /* Noise Overlay */
-.noise-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png');
-    background-size: 150px; /* Matches Framer's 149.76px */
-    background-repeat: repeat;
-    opacity: 0.1; /* Matches the opacity from the reference */
-    pointer-events: none; /* Ensures it doesn't interfere with interactions */
-    z-index: -1;
-}
 
 
 .home-container {
+    background-color: radial-gradient(circle at top left, rgba(255, 255, 255, 0.15) 10%, rgb(15, 13, 13)70%);
     height:100vh;
     display: flex;
     justify-content: center;
@@ -282,20 +296,68 @@ button:focus {
   .frames div {
     position: absolute;
   }
-  
-  .text img {
-    width: 41rem; /* Adjust based on image size */
-    height: auto;
-  }
 
 
 
 /* Main Text */
 
 .text {
-    left: 28.5%;
-    top: 13%;
-  }
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+    top: 12%;
+    right: 29%;
+}
+.text img {
+    width: 41rem; /* Adjust based on image size */
+    height: auto;
+    display: block;
+}
+
+.text p {
+    position: absolute;
+     /* Ensures readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds subtle contrast */
+}
+
+.name {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    margin: 0;
+    top: 30%; /* Adjust positioning */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.traits {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    color: #747474;
+    font-weight: 700;
+    text-transform: uppercase;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 93%;
+}
+.description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: white;
+    width: 82%;
+    /* max-width: 532px; */
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
 
 /* Bucky */
 
@@ -319,6 +381,45 @@ button:focus {
     width: 5rem;
     opacity: 0.8;
 }
+
+
+.hover-bucky {
+    position: absolute;
+    top: 13%;
+    left: 102%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+    gap: 5px;
+}
+
+
+.circle:hover .hover-bucky {
+    opacity: 1;
+}
+
+.arrow-bucky {
+    width: 2.7rem;
+    transform: scaleX(-1);
+    height: auto;
+    opacity: 0.5;
+    margin-left: -2rem;
+    margin-top: -0.5rem;
+}
+.text-bucky {
+    font-size: 1.1rem;
+    width: 11rem; /* Increase width for more text per line */  
+    color: rgb(125, 125, 125);
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    word-wrap: break-word; /* Allows long words to break */
+    white-space: normal; 
+}
+
 
 /* Square - Tools */
 
@@ -390,6 +491,45 @@ button:focus {
     opacity: 1;
 }
 
+
+.hover-tools{
+    position: absolute;
+    top: 111%;
+    left: 83%;
+    transform: translateY(-43%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+    gap: 5px;
+}
+
+
+.square:hover .hover-tools {
+    opacity: 1;
+}
+
+.text-tools {
+    font-size: 1.1rem;
+    width: 11rem; /* Increase width for more text per line */  
+    color: rgb(125, 125, 125);
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    word-wrap: break-word; /* Allows long words to break */
+    white-space: normal; 
+}
+
+.arrow-tools {
+    width: 2.7rem;
+    transform:  rotate(45deg) scaleX(-1);
+    height: auto;
+    opacity: 0.5;
+    margin-left: -1rem;
+    margin-top: -0.5rem;
+}
+
   
 /* cats */
 .oval {
@@ -410,6 +550,44 @@ button:focus {
     opacity: 0.8; /* Optional: Make it slightly transparent */
 }
 
+
+.hover-cats {
+    position: absolute;
+    top: 35%;
+    right: 103%;
+    transform: translateY(-43%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+    gap: 5px;
+}
+
+
+.oval:hover .hover-cats {
+    opacity: 1;
+}
+
+.text-cats {
+    font-size: 1.1rem;
+    width: 11rem; /* Increase width for more text per line */  
+    color: rgb(125, 125, 125);
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    word-wrap: break-word; /* Allows long words to break */
+    white-space: normal; 
+}
+
+.arrow-cats {
+    width: 2.7rem;
+    height: auto;
+    opacity: 0.5;
+    margin-left: 8rem;
+    margin-top: 0rem;
+}
+
 /* designed for */
   
 .rectangle {
@@ -420,6 +598,41 @@ button:focus {
 .bottom-image-designfor {
     width: 10.5rem; /* Adjust based on image size */
     height: auto;
+}
+
+
+.hover-companies {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+    gap: 5px;
+}
+
+.rectangle:hover .hover-companies {
+    opacity: 1;
+}
+
+.text-companies {
+    font-size: 1.1rem;
+    color: rgb(125, 125, 125);
+    text-align: left;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.arrow-companies {
+    width: 2.7rem;
+    height: auto;
+    opacity: 0.5;
+    margin-left: 11rem;
+    margin-top: -0.5rem;
 }
 
 .top-image-schneider{
@@ -455,8 +668,6 @@ button:focus {
     width: 3.5rem; /* Optional: Match the size of the bottom image */
     opacity: 1;
 }
-
-
 
 
   
@@ -606,12 +817,12 @@ button:focus {
 
 /* About */
 
-
 .photoframe-about {
     position: absolute;
-    right: 14.5%;
-    bottom: 0.55rem;
+    right: 5rem;
+    bottom: -2.5rem;
     cursor: pointer;
+    z-index: 1;
 }
 
 .photoframe-about img {
@@ -723,6 +934,41 @@ button:focus {
 }
 
 
+.status {
+    display: flex;
+    top: 24%;
+    left: 40%;
+    align-items: center;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    color: gray;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    animation: beat 1.5s infinite ease-in-out;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+}
+
 
 
   .block-mail {
@@ -761,7 +1007,11 @@ button:focus {
 }
 
 
-  /* case studies */
+
+.footer-container {
+    position: relative;
+}
+
 
 
   #menu-index {
@@ -800,7 +1050,7 @@ button:focus {
 
 
 .video-style {
-    border: 0.5rem solid rgb(81, 81, 81);
+
     width: 100%;
     height: 100%;
     border-radius: 12px; /* Matches container */
@@ -880,7 +1130,7 @@ svg:not(:root) {
     display: flex;
     /* align-items: center; */
     background-color:black;
-    z-index: 2;
+    z-index: 0;
     
     
     border-radius: 12px;
@@ -961,7 +1211,38 @@ svg:not(:root) {
 #case-studies {
     top:5rem;
     position:relative ;
+    width: 100vw;
+    padding-bottom: 80px; 
 }
+
+
+.case-studies-round {
+    position: absolute;
+    bottom: 1.05rem;
+    left: 0;
+    width: 100%;
+    height: 63px;
+    background-color: rgb(7, 6, 6); /* Your custom background color */
+    border-bottom-left-radius: 12rem;
+    border-bottom-right-radius: 12rem;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.case-studies-round::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png);
+    background-size: 150px;
+    background-repeat: repeat;
+    opacity: 0.1; /* Set the opacity for just the background image */
+    z-index: -1; /* Ensures the background image stays behind the div content */
+}
+
 
 
 
@@ -1076,30 +1357,30 @@ svg:not(:root) {
 
 footer {
     position: relative;
+    top: 1.5rem;
     width: 65vw;
-    height: 80vh;
+    height: 72vh;
     max-width: 80vw;
     background: linear-gradient(to bottom, #1a1a1a25, rgba(12, 12, 12, 0.319));
     border-radius: 2rem;
     padding: 20px;
     text-align: center;
     border: 0.2rem solid #333;
-    z-index: 1; /* Ensures it stays above the video */
-    backdrop-filter: blur(8px); /* Adds the frosty blur effect */
-    -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
+    z-index: 1;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
-
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     text-align: left;
     color: #aaa;
-    padding: 4rem 5rem 0 5rem;
+    padding: 1rem 5rem 0 5rem;
     font-family: Dongle, sans-serif;
 }
 .footer-content h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #777;
 }
@@ -1113,7 +1394,7 @@ footer {
 .footer-content a {
     color: #ddd;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     line-height: 150%;
 }
 .footer-content a:hover {
@@ -1231,7 +1512,8 @@ footer {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    z-index: 2;
+    /* padding: 0 2rem; */
     /* Prevent any additional movement */
     transition: none;
 }

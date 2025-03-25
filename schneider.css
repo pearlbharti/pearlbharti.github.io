@@ -33,7 +33,7 @@
     position: absolute; /* Position video outside the container */
     top: 0; /* Adjust positioning if needed */
     left: 0; /* Adjust positioning if needed */
-    border: 5px solid gray; /* Gray border */
+    /* border: 5px solid gray;  */
     border-radius: 15px;     /* Rounded corners */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
     width: 100%; /* Make the video bigger than the container */
@@ -1037,8 +1037,41 @@ body {
 
 img {
     max-width: 100%;
-    display: block
+    display: block;
+    padding: 2rem 0 2rem 0;
 }
+
+
+
+.annotated-problem, .annotated-problem * {
+    all: initial;
+    box-sizing: border-box;
+  }
+  
+  /* Allow annotated-problem to expand */
+  .annotated-problem {
+    padding: 0 5rem 0 5rem;
+    display: flex;
+    width: 100vw;
+    position: relative; /* Ensure it's positioned in context */
+    
+  }
+  
+  /* Columns */
+  .problemcolumn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+  }
+  
+  /* Images */
+  .problemcolumn img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
 strong {
     font-weight: 600
@@ -1909,7 +1942,7 @@ figcaption {
     grid-template-columns: repeat(3, 1fr);
     gap: 8rem;
     margin: auto;
-    padding: 15rem 15rem 0 15rem ;
+    padding: 0rem 15rem 0 15rem;
 }
 
 .grid-item-center {
@@ -1924,9 +1957,11 @@ figcaption {
 
 .brand-logo {
     display: block;
-    max-width: 120px;
-    margin-bottom: 15px;
-}
+    width: 27rem;
+    height: 15rem;
+    margin: 0 auto 15px auto; /* top, horizontal (auto), bottom */
+  }
+  
 
 
 .container-card-secondary {
@@ -4199,6 +4234,8 @@ blockquote::after {
         width: 250px;
         height: 250px
     }
+
+
     .topic-cover-image {
         height: 240px
     }
