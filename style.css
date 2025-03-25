@@ -686,7 +686,7 @@ button:focus {
   }
 
   .table-top {
-    width: 70%;
+    width: 80%;
     height: 0.7rem;
     background-color: #3f3f3f79;
     /* background: 
@@ -771,12 +771,13 @@ button:focus {
 .books-work {
     position: absolute;
     right: 16%;
-    bottom: 0rem;
+    bottom: -2.5rem;
     cursor: pointer;
+    z-index: 1;
 }
 
 .books-work img {
-    width: 7rem;
+    width: 11rem;
     height: auto;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
     transform-origin: bottom center; /* Ensures natural movement */
@@ -819,14 +820,14 @@ button:focus {
 
 .photoframe-about {
     position: absolute;
-    right: 5rem;
-    bottom: -2.2rem;
+    right: 8.6rem;
+    bottom: -2.5rem;
     cursor: pointer;
     z-index: 1;
 }
 
 .photoframe-about img {
-    width: 5rem;
+    width: 6.5rem;
     height: auto;
     transition: transform 0.2s ease-in-out;
     transform-origin: bottom center; /* Ensures the bottom stays fixed */
@@ -1590,10 +1591,9 @@ footer {
 }
 
 #floating-frame-wrapper {
-  right: 20.5%;
-  bottom: 5.5rem;
+    right: 17.5%;
+    bottom: 5.5rem;
 }
-
 .table-top #floating-logo-wrapper,
 .table-top #floating-frame-wrapper {
   position: static;
