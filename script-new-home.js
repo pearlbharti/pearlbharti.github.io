@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const targetIconHeight = 30;
 
     // Define scroll thresholds (adjust these multipliers as needed)
-    const thresholdStart = tableInitialOffset - (window.innerHeight * 0.2);
+    const thresholdStart = tableInitialOffset - (window.innerHeight * 0.05);
     const thresholdEnd = tableInitialOffset + (window.innerHeight * 0.01);
 
     // Immediately set the table as fixed so it’s always out of the document flow.

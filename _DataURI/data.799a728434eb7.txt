@@ -1,1 +1,0 @@
-chrome-extension://cjdnfmjmdligcpfcekfmenlhiopehjkd/dist/contentScripts/generic/index.js
