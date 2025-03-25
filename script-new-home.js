@@ -16,7 +16,6 @@ document.querySelectorAll('.compartment').forEach(compartment => {
     });
 });
 
-
 //footer
 
 // Get the footer element
@@ -32,7 +31,6 @@ function checkFooterInView() {
 
 // Listen for scroll events
 window.addEventListener('scroll', checkFooterInView);
-
 
 //circle and arrow on hover
 // Create hover indicator dynamically
@@ -61,7 +59,6 @@ hoverElements.forEach((element) => {
     });
 });
 
-
 //card redirection
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".project-container").forEach((card) => {
@@ -74,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 document.querySelector('.photoframe-about').addEventListener('click', function () {
     window.location.href = 'about.html';
 });
@@ -86,8 +82,24 @@ const tableInitialOffset = table.offsetTop; // original position relative to doc
 document.addEventListener('DOMContentLoaded', function () {
     const table = document.querySelector('.table');
     const portfolioIcon = document.querySelector('.portfolio-icon');
-    const icons = document.querySelectorAll('.photoframe-about, .block-linkedin, .block-medium, .block-mail');
+    const icons = document.querySelectorAll('.block-linkedin, .block-medium, .block-mail');
     const frames = document.querySelector('.frames');
+    const photoframeAbout = document.querySelector('.photoframe-about');
+    const iconSlot = document.getElementById('navbar-icon-slot');  // Navbar icon container
+    let navbarClone = null;  // This will hold our clone when needed
+
+    // Save original computed style values of the photoframe
+    const computed = window.getComputedStyle(photoframeAbout);
+    const originalFrameStyles = {
+        left: computed.left,
+        top: computed.top,
+        right: computed.right,
+        bottom: computed.bottom,
+        position: computed.position,
+        width: computed.width,
+        height: computed.height
+    };
+    photoframeAbout.dataset.originalStyles = JSON.stringify(originalFrameStyles);
 
     // Store initial values
     const tableInitialOffset = table.offsetTop;
@@ -111,29 +123,21 @@ document.addEventListener('DOMContentLoaded', function () {
     table.style.position = 'fixed';
     table.style.left = '0';
     table.style.width = '100%';
-    // Initially, when scrollY is 0, the table’s top is at its original offset.
     table.style.top = `${tableInitialOffset}px`;
-
 
     window.addEventListener('scroll', function () {
         requestAnimationFrame(() => {
-
-
             const scrollY = window.pageYOffset;
             let fraction = 0;
 
             if (scrollY < thresholdStart) {
-                // Before the transition begins, smoothly slide the table up
                 fraction = 0;
                 table.style.top = `${tableInitialOffset - scrollY}px`;
             } else if (scrollY > thresholdEnd) {
-                // After the transition completes, ensure the table is flush at the top
                 fraction = 1;
                 table.style.top = '0px';
             } else {
-                // In between, compute a fraction (0 to 1)
                 fraction = (scrollY - thresholdStart) / (thresholdEnd - thresholdStart);
-                // Interpolate top value: from (tableInitialOffset - thresholdStart) down to 0
                 const newTop = (1 - fraction) * (tableInitialOffset - thresholdStart);
                 table.style.top = `${newTop}px`;
             }
@@ -155,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 portfolioIcon.style.left = '';
             }
 
-            // Interpolate icons (including photoframe) size
+            // Interpolate icons (excluding photoframe) size
             icons.forEach(icon => {
                 const newIconHeight = originalIconHeight - fraction * (originalIconHeight - targetIconHeight);
                 icon.style.height = newIconHeight + 'px';
@@ -163,51 +167,68 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Fade out the frames as we transition
-
-            const logoWrapper = document.getElementById('floating-logo-wrapper');
-            const frameWrapper = document.getElementById('floating-frame-wrapper');
-
-            const logoSlot = document.getElementById('navbar-left-slot');
-            const iconSlot = document.getElementById('navbar-icon-slot');
-            const homeContainer = document.querySelector('.home-container');
-
-            if (fraction > 0.95) {
-                // Move logo and photoframe into navbar
-                if (!logoSlot.contains(logoWrapper)) {
-                    logoSlot.appendChild(logoWrapper);
-                }
-                if (!iconSlot.contains(frameWrapper)) {
-                    iconSlot.insertBefore(frameWrapper, iconSlot.firstChild);
-                }
-            } else {
-                // Move them back to original floating positions
-                if (!homeContainer.contains(logoWrapper)) {
-                    homeContainer.insertBefore(logoWrapper, homeContainer.firstChild);
-                }
-                if (!homeContainer.contains(frameWrapper)) {
-                    homeContainer.insertBefore(frameWrapper, homeContainer.firstChild.nextSibling);
-                }
-            }
-
             if (frames) {
                 frames.style.opacity = 1 - fraction;
             }
 
-            // Optional: When in navbar mode, update the photoframe so it doesn’t overflow.
-            // For example, if your CSS has rules for .table.fixed-navbar .photoframe-about,
-            // you could toggle that class here:
+            // Toggle navbar classes
+            const tableTop = document.querySelector('.table-top');
             if (fraction > 0) {
                 table.classList.add('fixed-navbar');
-            } else {
-                table.classList.remove('fixed-navbar');
-            }
-            const tableTop = document.querySelector('.table-top');
-
-            if (fraction > 0) {
                 tableTop.classList.add('navbar-style');
             } else {
+                table.classList.remove('fixed-navbar');
                 tableTop.classList.remove('navbar-style');
             }
+
+            // ----- NEW CLONE-BASED PHOTOFRAME TOGGLING -----
+            // Change condition from fraction > 0.95 to fraction > 0 so that
+            // the clone appears immediately when the navbar is active.
+            if (fraction > 0) {
+                if (!navbarClone) {
+                    // Create a clone of photoframeAbout
+                    navbarClone = photoframeAbout.cloneNode(true);
+                    // In the clone, hide the image and hover-dialog
+                    const cloneImg = navbarClone.querySelector('img');
+                    const cloneHover = navbarClone.querySelector('.hover-dialog');
+                    if (cloneImg) { cloneImg.style.display = 'none'; }
+                    if (cloneHover) { cloneHover.style.display = 'none'; }
+                    // Add the "About" text if not already present
+                    if (!navbarClone.querySelector('.photoframe-text')) {
+                        const textSpan = document.createElement('span');
+                        textSpan.className = 'photoframe-text';
+                        textSpan.textContent = 'About';
+                        textSpan.style.fontFamily = "'Permanent Marker', cursive";
+                        textSpan.style.fontSize = "1.5rem";
+                        textSpan.style.color = "white";
+                        textSpan.style.position = "absolute";
+                        textSpan.style.top = "50%";
+                        textSpan.style.left = "50%";
+                        textSpan.style.transform = "translate(-50%, -50%)";
+                        navbarClone.appendChild(textSpan);
+                    }
+                    // Insert the clone into the navbar icon container
+                    iconSlot.insertBefore(navbarClone, iconSlot.firstChild);
+                    // Immediately hide the original photoframe
+                    photoframeAbout.style.display = 'none';
+                }
+            } else {
+                if (navbarClone) {
+                    navbarClone.remove();
+                    navbarClone = null;
+                    photoframeAbout.style.display = '';
+                    // Restore original inline styles (if needed)
+                    const originalFrameStyles = JSON.parse(photoframeAbout.dataset.originalStyles);
+                    photoframeAbout.style.left = originalFrameStyles.left;
+                    photoframeAbout.style.top = originalFrameStyles.top;
+                    photoframeAbout.style.right = originalFrameStyles.right;
+                    photoframeAbout.style.bottom = originalFrameStyles.bottom;
+                    photoframeAbout.style.position = originalFrameStyles.position;
+                    photoframeAbout.style.width = originalFrameStyles.width;
+                    photoframeAbout.style.height = originalFrameStyles.height;
+                }
+            }
+            // ----- END CLONE-BASED TOGGLING -----
         });
     });
 });
