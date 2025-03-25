@@ -1438,6 +1438,7 @@ footer {
     padding: 0 2rem;
     transition: height 0.3s ease, padding 0.3s ease;
     z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .table.navbar-active .table-top {
@@ -1450,8 +1451,9 @@ footer {
 }
 
 .table-top.navbar-style {
-    background-color: transparent !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* background-color: transparent !important; */
+    background: rgba(0, 0, 0, 0.8);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
     box-shadow: none;
     padding: 0 2rem;
     height: 70px;
@@ -1557,13 +1559,13 @@ footer {
     width: 100%;
 }
 
-.table.fixed-navbar .photoframe-about {
-  position: relative; /* or relative */
+/* .table.fixed-navbar .photoframe-about {
+  position: relative;
   right: auto;
   bottom: auto;
   transition: all 0.3s ease;
   width: auto;
-}
+} */
 
 .table.fixed-navbar .vase-image {
   opacity: 0;
@@ -1597,4 +1599,35 @@ footer {
 .table-top #floating-logo-wrapper,
 .table-top #floating-frame-wrapper {
   position: static;
+}
+
+.photoframe-about.in-navbar {
+  position: fixed !important;
+  top: 10px;       /* Adjust as needed for your navbar */
+  right: 2rem;     /* Adjust as needed for your layout */
+  z-index: 1100;
+}
+
+.books-work.in-navbar {
+  position: fixed !important;
+  top: 10px;       /* Adjust as needed */
+  right: 10rem;    /* Adjust so that it appears beside the About clone */
+  z-index: 1100;
+}
+
+
+.table.fixed-navbar .photoframe-about {
+  position: relative; /* Clone will be positioned relative to the navbar container */
+  right: auto;
+  bottom: auto;
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+.table.fixed-navbar .books-work {
+  position: relative;
+  /* right: auto; */
+  bottom: auto;
+  transition: all 0.3s ease;
+  width: auto;
 }
