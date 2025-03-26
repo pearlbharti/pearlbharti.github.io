@@ -312,7 +312,7 @@ button:focus {
     right: 29%;
 }
 .text img {
-    width: 41rem; /* Adjust based on image size */
+    width: 38rem; /* Adjust based on image size */
     height: auto;
     display: block;
 }
@@ -686,7 +686,7 @@ button:focus {
   }
 
   .table-top {
-    width: 80%;
+    width: 70%;
     height: 0.7rem;
     background-color: #3f3f3f79;
     /* background: 
@@ -756,11 +756,9 @@ button:focus {
 
 .vase-image {
     position: absolute;
-    left: -5%;
+    left: 9%;
     bottom: -0.6rem;
-    
 }
-
 .vase-image  img{
     width: 12rem;
     height: auto;
@@ -777,22 +775,24 @@ button:focus {
 }
 
 .books-work img {
-    width: 11rem;
+    width: 8.5rem;
     height: auto;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
     transform-origin: bottom center; /* Ensures natural movement */
+    animation: none;
 }
 
 
 .books-work:hover img {
-    transform: rotateX(15deg) translateY(-5px); /* Step 1: Small tilt */
-    animation: lift-book 0.4s ease-in-out 0.2s forwards; /* Step 2: Full lift */
+    animation: lift-pop 0.4s ease-in-out;
 }
 
-@keyframes lift-book {
-    0% { transform: rotateX(15deg) translateY(-5px); } /* Small tilt */
-    100% { transform: rotateX(0deg) translateY(-25px); } /* Fully lifted */
+@keyframes lift-pop {
+    0%   { transform: rotateX(10deg) translateY(0); }
+    40%  { transform: rotateX(5deg) translateY(-10px); }  /* Quick lift */
+    100% { transform: rotateX(0deg) translateY(0); }      /* Drop down */
 }
+
 
 .work-tooltip {
     display: none;
@@ -827,7 +827,7 @@ button:focus {
 }
 
 .photoframe-about img {
-    width: 6.5rem;
+    width: 5.5rem;
     height: auto;
     transition: transform 0.2s ease-in-out;
     transform-origin: bottom center; /* Ensures the bottom stays fixed */
@@ -844,7 +844,7 @@ button:focus {
 }
 
 /* Tooltip (dialog box) styles */
-.hover-dialog {
+.hover-dialog{
     display: none;
     position: absolute;
     top: 100%; /* Positioned below the image */
@@ -864,11 +864,14 @@ button:focus {
 .photoframe-about:hover .hover-dialog {
     display: block;
 }
+.books-work:hover .hover-dialog {
+    display: block;
+}
 
 
 .block-linkedin {
     position: absolute;
-    right: 6.5%;
+    right: 4.5%;
     bottom: 3.5rem;
     display: inline-block;
 }
@@ -902,7 +905,7 @@ button:focus {
 
 .block-medium {
     position: absolute;
-    right: 8.5%;
+    right: 6.2%;
     bottom: 1rem;
     display: inline-block;
 }
@@ -974,7 +977,7 @@ button:focus {
 
   .block-mail {
     position: absolute;
-    right: 4.5%;
+    right: 2%;
     bottom: 1rem;
     display: inline-block;
 }
@@ -1593,7 +1596,7 @@ footer {
 }
 
 #floating-frame-wrapper {
-    right: 17.5%;
+    right: 24.5%;
     bottom: 5.5rem;
 }
 .table-top #floating-logo-wrapper,
