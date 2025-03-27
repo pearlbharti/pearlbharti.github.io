@@ -152,8 +152,9 @@ document.addEventListener('DOMContentLoaded', function () {
             portfolioIcon.style.height = newLogoHeight + 'px';
             if (fraction > 0) {
                 portfolioIcon.style.position = 'fixed';
-                portfolioIcon.style.top = '10px';
+                portfolioIcon.style.top = '-2px';
                 portfolioIcon.style.left = '2rem';
+                portfolioIcon.style.zIndex = '3'
             } else {
                 portfolioIcon.style.position = '';
                 portfolioIcon.style.top = '';

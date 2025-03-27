@@ -29,6 +29,24 @@
     z-index: 1000;
 }
 
+.affinitymap-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #f3601c;
+    background-color: transparent;
+    border: 2px solid #f3601c;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .affinitymap-button:hover {
+    background-color: #f3601c;
+    color: white;
+  }
+  
+
 .video-style {
     position: absolute; /* Position video outside the container */
     top: 0; /* Adjust positioning if needed */
