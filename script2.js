@@ -2,7 +2,34 @@
 function viewAffinitymap() {
     window.open("https://www.figma.com/board/Wmec7cYhw2OX5zgUpCUfsb/Schneider-Affinity-Map-brainstorming?node-id=0-1&t=MVUoMDoi65VOKaJC-1", "_blank"); // Replace with your actual Figma link
   }
+
+
+//dropdown menu
+document.querySelector('.books').addEventListener('click', function() {
+    this.classList.toggle('active');
+  });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
   
+    window.addEventListener('scroll', function() {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+      if (currentScroll > lastScrollTop) {
+        // Scrolling down, hide the navbar
+        navbar.style.top = "-80px"; // Adjust this based on the navbar height
+      } else {
+        // Scrolling up, show the navbar
+        navbar.style.top = "20px"; // Reset navbar position
+      }
+  
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+    });
+});
+  
+
 
 //statement carousel 
 let textIndex = 0;

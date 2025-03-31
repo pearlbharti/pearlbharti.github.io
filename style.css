@@ -1634,3 +1634,36 @@ footer {
   transition: all 0.3s ease;
   width: auto;
 }
+
+/* Scrollbar */
+
+/* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #000; /* deep black track */
+  }
+  
+  /* Scrollbar Thumb */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(145deg, #444, #222); /* subtle metal gradient */
+    border-radius: 10px;
+    border: 1px solid #2e2e2e; /* matching dark border */
+    box-shadow:
+      inset 0 1px 2px rgba(255, 255, 255, 0.15),  /* light sheen at top */
+      inset 0 -1px 1px rgba(0, 0, 0, 0.4),        /* depth at bottom */
+      0 0 2px rgba(255, 255, 255, 0.05);          /* ambient glow */
+    transition: all 0.3s ease;
+  }
+  
+  /* On Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(145deg, #666, #333);
+    box-shadow:
+      inset 0 1px 2px rgba(255, 255, 255, 0.2),
+      inset 0 -1px 2px rgba(0, 0, 0, 0.6),
+      0 0 3px rgba(255, 255, 255, 0.08);
+  }
+  
