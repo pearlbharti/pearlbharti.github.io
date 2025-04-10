@@ -4,6 +4,19 @@ function viewAffinitymap() {
   }
 
 
+ //spotify competitor toggle
+ function switchPanel(evt, targetId) {
+    const allTabs = document.querySelectorAll('.platform-tab-button');
+    const allPanels = document.querySelectorAll('.platform-panel-section');
+
+    allTabs.forEach(tab => tab.classList.remove('is-tab-active'));
+    allPanels.forEach(panel => panel.classList.remove('is-panel-active'));
+
+    evt.currentTarget.classList.add('is-tab-active');
+    document.getElementById(targetId).classList.add('is-panel-active');
+  } 
+
+
 //dropdown menu
 document.querySelector('.books').addEventListener('click', function() {
     this.classList.toggle('active');

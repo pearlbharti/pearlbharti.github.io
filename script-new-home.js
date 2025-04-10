@@ -251,13 +251,18 @@ document.querySelector('.photoframe-about').addEventListener('click', function (
 //     });
 // });
 
+document.querySelector('.books').addEventListener('click', function() {
+    this.classList.toggle('active');
+  });
+
+
 window.addEventListener('scroll', function () {
     const tableTop = document.querySelector('.table-top');
     const photoframe = document.querySelector('.photoframe-about');
     const books = document.querySelector('.books-work');
 
-    const shrinkThreshold = 420;
-    const maxShrinkScroll = 490;
+    const shrinkThreshold = 350;
+    const maxShrinkScroll = 550;
 
     if (window.pageYOffset > shrinkThreshold) {
         let fraction = Math.min((window.pageYOffset - shrinkThreshold) / (maxShrinkScroll - shrinkThreshold), 1);
@@ -270,14 +275,14 @@ window.addEventListener('scroll', function () {
     }
 
     const navbar = document.getElementById('navbar');
-    const navbarThreshold = 500;
+    const navbarThreshold = 600;
     if (window.pageYOffset > navbarThreshold) {
         navbar.classList.add('visible');
     } else {
         navbar.classList.remove('visible');
     }
 
-    const fadeThreshold = 650;
+    const fadeThreshold = 800;
     const fadeOut = window.pageYOffset > fadeThreshold;
 
     const photoframeThreshold = 300;

@@ -12,8 +12,10 @@ html, body {
     margin: 0;
 }
 
+
+
 body {
-    background-color: rgb(7, 6, 6);
+    background-color:rgb(26, 24, 24);
     min-height: 100vh; /* Use min-height for body, so it stretches fully if content is longer */
     margin: 0;
     overflow-y: auto; /* Enables vertical scrolling */
@@ -308,8 +310,8 @@ button:focus {
     align-items: center;
     text-align: center;
     width: fit-content;
-    top: 12%;
-    right: 29%;
+    top: 14%;
+    right: 32%;
 }
 .text img {
     width: 38rem; /* Adjust based on image size */
@@ -362,12 +364,11 @@ button:focus {
 /* Bucky */
 
 .circle {
-    right: 7%;
-    top: 37%;
+    right: 12%;
+    top: 32%;
     display: inline-block;
     transform: translate(-50%, -50%);
 }
-
   
   .bottom-image-bucky{
     width: 12rem; 
@@ -425,12 +426,10 @@ button:focus {
 
 
 
-
 .square {
-    right: 11.5%;
-    bottom: 25%;
+    right: 15.5%;
+    bottom: 30%;
 }
-
 .bottom-image-tools {
     width: 15rem;
     height: 10rem;
@@ -535,7 +534,7 @@ button:focus {
 .oval {
     right: 73%;
     position: relative;
-    bottom: 16%;
+    bottom: 20%;
 }
 
 .bottom-image-cats{
@@ -589,10 +588,9 @@ button:focus {
 }
 
 /* designed for */
-  
 .rectangle {
     right: 73.5%;
-    top: 20%;
+    top: 18%;
 }
 
 .bottom-image-designfor {
@@ -754,9 +752,9 @@ button:focus {
     pointer-events: none;
   }
 
-.vase-image {
+  .vase-image {
     position: absolute;
-    left: 9%;
+    left: 3%;
     bottom: -0.6rem;
 }
 .vase-image  img{
@@ -768,8 +766,8 @@ button:focus {
 
 .books-work {
     position: absolute;
-    right: 16%;
-    bottom: -2.5rem;
+    right: 10%;
+    bottom: 0.5rem;
     cursor: pointer;
     z-index: 1;
 }
@@ -820,8 +818,8 @@ button:focus {
 
 .photoframe-about {
     position: absolute;
-    right: 8.6rem;
-    bottom: -2.5rem;
+    right: 15.6rem;
+    bottom: 0.5rem;
     cursor: pointer;
     z-index: 1;
 }
@@ -939,15 +937,15 @@ button:focus {
 
 
 .status {
-    display: flex;
-    top: 24%;
-    left: 40%;
+    display: flex
+;
+    top: 22%;
+    left: 37%;
     align-items: center;
     font-size: 1rem;
     font-family: Arial, sans-serif;
     color: gray;
 }
-
 .dot {
     width: 10px;
     height: 10px;
@@ -1428,7 +1426,7 @@ footer {
 /* --- New Navbar Styles --- */
 
 /* When .table becomes the navbar */
-/* .table.navbar-active {
+/* .tabler-active {
     position: fixed;
     top: 0;
     left: 0;
@@ -1691,14 +1689,14 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 1.5rem;
+  padding: 1.1rem 1.5rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   border-radius: 5rem;
   max-width: 700px;
   margin: 0 auto;
   position: fixed;
   top: 20px;
-  left: 0;
+  left: -5px;
   right: 0;
   z-index: 2000;
   opacity: 0;
@@ -1711,17 +1709,17 @@ footer {
 }
 
 .navbar-left .logo {
-  width: 2.3rem;
-  height: auto;
-  margin-left: 1rem;
+    width: 1.5rem;
+    height: auto;
+    margin-left: 0rem;
 }
 
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .icon-group {
@@ -1747,12 +1745,12 @@ footer {
 .dropdown {
   display: none;
   position: absolute;
-  top: 140%;
+  top: 150%;
   left: 0;
   background: rgb(20, 20, 20);
   padding: 12px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.123);
   z-index: 1000;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
@@ -1765,7 +1763,7 @@ footer {
   text-decoration: none;
   display: block;
   padding: 12px 20px;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   overflow: hidden;
