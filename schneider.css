@@ -32,6 +32,8 @@
 .affinitymap-button {
     padding: 12px 24px;
     font-size: 16px;
+    display: block;
+    margin: 0 auto;
     font-family: Arial, sans-serif;
     color: #f3601c;
     background-color: transparent;
@@ -69,10 +71,7 @@ body{
     color:var(--text-color) ;
 }
 
-section{
-    min-height:100vh ;
-    padding: 10rem 9% 2rem;
-}
+
 
 .header{
     position: fixed;
@@ -146,6 +145,373 @@ span{
 }
 
 
+
+/* challenge carousel */
+.carousel-wrapper {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.luma-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #000;
+  }
+
+  .luma-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .luma-slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .luma-slide img {
+    width: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  }
+
+  .luma-dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .luma-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #888;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+
+  .luma-dot.active {
+    background-color: #633000;
+  }
+
+  .luma-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .luma-arrow {
+    background-color: #f3601c;
+    color: #ffffff;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+
+  .luma-arrow.inactive {
+    background-color: #000000;
+    color: #f3601c;
+    border: 2px solid #f3601c;
+    cursor: default;
+  }
+/* challenge carousel end   */
+
+
+/* competitor analysis */
+
+.platform-tab-selector {
+    display: flex;
+    gap: 15px;
+    border-bottom: 2px solid #333;
+    margin: 6rem 0 2rem 0;
+    flex-wrap: nowrap;
+  }
+
+  .platform-tab-button {
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #bbb;
+    border-bottom: 3px solid transparent;
+    transition: all 0.25s ease;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size:1.95rem;
+    text-align: left;
+    flex: none;
+  }
+
+  .platform-tab-button:hover {
+    color: #fff;
+  }
+
+  .platform-tab-button.is-tab-active {
+    font-weight: 600;
+    color: white;
+  }
+
+  .platform-tab-button.youtube-style.is-tab-active {
+    border-bottom: 3px solid #2609d0;
+  }
+
+  .platform-tab-button.apple-style.is-tab-active {
+    border-bottom: 3px solid #9e9e9e;
+  }
+
+  .platform-tab-button.tidal-style.is-tab-active {
+    border-bottom: 3px solid #00BFFF;
+  }
+ 
+
+  .styled-rich-text p.centered {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 6rem;       /* more space from the cards */
+    margin-bottom: 2rem;    /* space before next section */
+    font-style: italic;
+    font-weight: 600;
+    font-size: 2.2rem;      /* slightly bigger than base text */
+    color: #e4e4e4;         /* lighter, cleaner contrast */
+  }
+
+
+  .spotify-insight-container {
+    padding-top: 5rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .spotify-insight-svg-col {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .spotify-insight-svg-col svg {
+    height: 600px;
+    width: auto;
+  }
+
+  .spotify-insight-content-col {
+    width: 90%;
+    padding-left: 40px;
+  }
+
+  .spotify-insight-section {
+    margin-bottom: 60px;
+  }
+
+  .spotify-insight-heading {
+    color: #1db954;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .spotify-insight-highlight {
+    background-color: #1a1a1a;
+    padding: 16px 20px;
+    border-left: 5px solid #1db954;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+  .spotify-insight-description {
+    color: #cfcfcf;
+    font-size: 1.85rem;
+    line-height: 1.6;
+    margin-left: 5px;
+  }
+
+  .spotify-insight-quote {
+    margin-top: 10px;
+    font-style: italic;
+    color: #b3b3b3;
+    border-left: 3px solid #666;
+    padding-left: 12px;
+    margin-left: 5px;
+  }
+
+  .target-population {
+    display: flex;
+    width: 100%;
+  }
+
+  .left-column-pop {
+    flex: 0.7;
+    font-size: 2rem;
+    line-height: 300%;
+    display: flex;
+    align-items: center;
+   
+  }
+
+
+  .right-column-pop{
+    flex: 0.3;
+    display: flex;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: left;
+}
+  
+
+  .platform-panel-section {
+    display: none;
+    position: relative;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    background-color: #0a0a0a;
+    animation: fadeIn 0.3s ease;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 5rem;
+  }
+
+  .platform-panel-section.is-panel-active {
+    display: flex;
+  }
+
+  .platform-logo {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 25%;
+    height: auto;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .check-icon {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+
+  .cross-icon {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+
+  .platform-screenshot {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+
+  .youtube-panel {
+    border: 1px solid #2609d0;
+  }
+
+  .youtube-panel h2 {
+    color: #2609d0;
+    font-size: 1.8rem;
+  }
+
+  .apple-panel {
+    border: 1px solid #9e9e9e;
+  }
+
+  .apple-panel h2 {
+    color: #9e9e9e;
+    font-size: 1.8rem;
+  }
+
+  .tidal-panel {
+    border: 1px solid #00BFFF;
+  }
+
+  .tidal-panel h2 {
+    color: #00BFFF;
+    font-size: 1.8rem;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .platform-tab-selector {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 10px;
+    }
+
+    .platform-tab-button {
+      font-size: 0.9rem;
+      padding: 8px 10px;
+      text-align: left;
+      flex: none;
+    }
+
+    .platform-panel-section {
+      padding: 16px;
+    }
+
+    .platform-logo {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 60%;
+      opacity: 0.3;
+      z-index: 0;
+    }
+
+    .youtube-panel h2,
+    .apple-panel h2,
+    .tidal-panel h2 {
+      font-size: 1.4rem;
+    }
+  }
+  /* competitor analysis ends */
 .project-overview {
     font-size: 14px;
     line-height: 150%;
@@ -1141,12 +1507,8 @@ figcaption {
     border-radius: 10px;
     width: 100%;
 }
-.section {
-    width: 100%;
-    padding: 100px;
-    position: relative;
-    overflow: hidden
-}
+
+
 
 .section.mb-36 {
     padding-bottom: 36px
@@ -1917,7 +2279,7 @@ strong {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 80px
+    padding-top: 14rem;
 }
 
 .checkbox {
@@ -2695,43 +3057,6 @@ blockquote::after {
     display: inline-block
 }
 
-.service-title {
-    color: rgba(255, 255, 255, .48);
-    letter-spacing: 1px;
-    font-size: .875rem;
-    font-weight: 400
-}
-
-.card-expertise-light {
-    background-color: #ab8eeb50;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    border: 1px solid #e0e0e0;
-    border-radius: 20px;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
-    padding: 20px 20px 0;
-    transition: box-shadow .35s, transform .35s;
-    display: flex;
-    position: relative;
-    overflow: hidden
-}
-
-.card-expertise-light:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, .11)
-}
-
-.card-expertise-light.webflow {
-    justify-content: space-between
-}
-
-.product-name {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1rem
-}
 
 .cs-overview-wrapper {
     grid-column-gap: 12px;
@@ -3073,14 +3398,7 @@ blockquote::after {
         grid-auto-columns: 1fr;
         margin-top: 4rem
     }
-    .section {
-        padding-bottom: 72px;
-        padding-left: 20px;
-        padding-right: 20px
-    }
-    .section.blog-hero {
-        padding-bottom: 0
-    }
+    
     .card-cta {
         padding-left: 60px;
         padding-right: 60px
@@ -3162,9 +3480,7 @@ blockquote::after {
     .resources-grid {
         grid-template-columns: 1fr 1fr
     }
-    .section-heading-center {
-        max-width: 100%
-    }
+    
     .text-xxl-top {
         font-size: 6rem;
         line-height: 6rem
@@ -3182,10 +3498,7 @@ blockquote::after {
     .blog-page-right {
         max-width: 100%
     }
-    .section-overflow-visible {
-        padding-top: 72px;
-        padding-bottom: 72px
-    }
+   
     .tools-collection-list {
         grid-column-gap: 40px;
         grid-template-columns: 1fr 1fr
@@ -3424,11 +3737,7 @@ blockquote::after {
         margin-top: 3rem;
         display: block
     }
-    .section {
-        padding-left: 16px;
-        padding-right: 16px;
-        overflow: hidden
-    }
+
     .section.hero {
         margin-top: 0
     }
@@ -3799,11 +4108,8 @@ blockquote::after {
         grid-row-gap: 24px;
         grid-template-columns: 1fr
     }
-    .section {
-        padding-top: 100px;
-        padding-bottom: 60px;
-        overflow: hidden
-    }
+    
+
     .section.hero {
         height: auto;
         padding-top: 140px

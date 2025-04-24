@@ -3,80 +3,45 @@ function viewAffinitymap() {
     window.open("https://www.figma.com/board/Wmec7cYhw2OX5zgUpCUfsb/Schneider-Affinity-Map-brainstorming?node-id=0-1&t=MVUoMDoi65VOKaJC-1", "_blank"); // Replace with your actual Figma link
   }
 
-  const nav = document.getElementById('progress-nav-container');
-  const dropdown = document.getElementById('progress-dropdown-menu');
-  const toggle = document.getElementById('progress-toggle-button');
-  const label = document.getElementById('progress-label-text');
-  const number = document.getElementById('progress-number');
-  const progressRing = document.querySelector('.progress-circle .fg');
-  
-  const labelMap = {
-    "Overview": ["overview-1", "overview-2"],
-    "Objectives and Scope": ["objectives-1", "objectives-2", "objectives-3"],
-    "Research": ["research-1", "research-2", "research-3"],
-    "Synthesis": ["synthesis-1", "synthesis-2", "synthesis-3", "synthesis-4", "synthesis-5"],
-    "Recommendations": ["recommendation-1", "recommendation-2"],
-    "Reflection": ["reflection-1"]
-  };
-  
-  const labelList = Object.entries(labelMap).map(([label, ids]) => {
-    return [label, ids.map(id => document.getElementById(id))];
-  });
-  
-  const circumference = 2 * Math.PI * 13;
-  progressRing.style.strokeDasharray = circumference;
-  progressRing.style.strokeDashoffset = circumference;
-  
-  window.addEventListener('scroll', () => {
-    const heroBottom = document.getElementById('hero-section')?.getBoundingClientRect().bottom;
-    const lastSection = document.getElementById('reflection-1');
-    const lastBottom = lastSection?.getBoundingClientRect().bottom;
-  
-    // Show after hero is out of view
-    if (heroBottom !== undefined) {
-      nav.classList.toggle('hidden', heroBottom > 0);
+//schneider persona container
+
+
+//challenge carousel schneider
+const track = document.getElementById('lumaTrack');
+    const dots = document.querySelectorAll('.luma-dot');
+    const slides = document.querySelectorAll('.luma-slide');
+    const prev = document.getElementById('prevArrow');
+    const next = document.getElementById('nextArrow');
+    let current = 0;
+
+    function updateCarousel(index) {
+      const slideWidth = slides[0].clientWidth;
+      track.style.transform = `translateX(-${index * slideWidth}px)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+
+      // Arrow visual states
+      prev.classList.toggle('inactive', index === 0);
+      next.classList.toggle('inactive', index === slides.length - 1);
     }
-  
-    // Hide after reflection section ends
-    if (lastBottom !== undefined && lastBottom < window.innerHeight * 0.25) {
-      nav.classList.add('hidden');
-    } else if (lastBottom !== undefined && lastBottom >= window.innerHeight * 0.25 && heroBottom <= 0) {
-      nav.classList.remove('hidden');
+
+    function goToSlide(index) {
+      current = (index + slides.length) % slides.length;
+      updateCarousel(current);
     }
-  
-    labelList.forEach(([labelKey, sections], index) => {
-      const first = sections[0].getBoundingClientRect();
-      const last = sections[sections.length - 1].getBoundingClientRect();
-      const top = first.top;
-      const bottom = last.bottom;
-      const totalHeight = bottom - top;
-  
-      if (top < window.innerHeight * 0.75 && bottom > window.innerHeight * 0.25) {
-        const midpoint = window.innerHeight / 2;
-        const distance = midpoint - top;
-        const progress = Math.min(1, Math.max(0, distance / totalHeight));
-        progressRing.style.strokeDashoffset = circumference * (1 - progress);
-        number.textContent = index + 1;
-        label.textContent = labelKey;
-      }
+
+    next.addEventListener('click', () => {
+      if (current < slides.length - 1) goToSlide(current + 1);
     });
-  });
-  
-  toggle.addEventListener('click', () => {
-    dropdown.classList.toggle('show');
-    toggle.classList.toggle('open');
-  });
-  
-  dropdown.querySelectorAll('li').forEach(item => {
-    item.addEventListener('click', () => {
-      const firstId = labelMap[item.dataset.label]?.[0];
-      if (firstId) {
-        document.getElementById(firstId).scrollIntoView({ behavior: 'smooth' });
-      }
-      dropdown.classList.remove('show');
-      toggle.classList.remove('open');
+
+    prev.addEventListener('click', () => {
+      if (current > 0) goToSlide(current - 1);
     });
-  });
+
+    updateCarousel(current);
+
+    window.addEventListener('resize', () => updateCarousel(current));
+
 
  //spotify competitor toggle
  function switchPanel(evt, targetId) {
@@ -162,6 +127,73 @@ let textIndex = 0;
         setInterval(() => {
             textNextSlide();
         }, 3000);
+
+
+
+//text-carousel-user
+document.addEventListener('DOMContentLoaded', () => {
+    let textIndex = 0;
+    const textItems = document.querySelectorAll('.text-carousel-item-user');
+    const textDotsContainer = document.querySelector('.text-dots-user');
+    let autoSlideInterval;
+
+    // Create dot indicators
+    textItems.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('text-dot-user');
+        dot.addEventListener('click', () => {
+            showSlide(i);
+        });
+        textDotsContainer.appendChild(dot);
+    });
+
+    function showSlide(index) {
+        textItems.forEach((item, i) => {
+            item.classList.toggle('text-active-user', i === index);
+        });
+
+        const dots = document.querySelectorAll('.text-dot-user');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('text-active-user', i === index);
+        });
+
+        textIndex = index;
+    }
+
+    function prevSlide() {
+        const newIndex = (textIndex - 1 + textItems.length) % textItems.length;
+        showSlide(newIndex);
+    }
+
+    function nextSlide() {
+        const newIndex = (textIndex + 1) % textItems.length;
+        showSlide(newIndex);
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    // Pause auto-scroll on hover
+    const carousel = document.querySelector('.text-carousel-user');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoSlide);
+        carousel.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    // Initial setup
+    showSlide(textIndex);
+    startAutoSlide();
+
+    // Make functions accessible to inline onclick attributes
+    window.textPrevSlide = prevSlide;
+    window.textNextSlide = nextSlide;
+});
+
 
 //final mockup hover
 document.querySelectorAll('.video-item').forEach(video => {

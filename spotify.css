@@ -2207,7 +2207,7 @@ strong {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 80px
+    padding-top: 10rem;
 }
 
 .checkbox {
@@ -2445,7 +2445,6 @@ strong {
 .heading-left {
     max-width: 70%
 }
-
 
 
 .home-hero-gradient-centered {
@@ -2711,7 +2710,7 @@ strong {
 .fave-app-revamp-problem-grid {
     max-width: 100%;
     grid-column-gap: 35px;
-    grid-row-gap: 80px;
+    grid-row-gap: 5rem;
     grid-template-columns: 0.75fr 1.5fr;
     align-items: center;
     place-items: center; /* Centers items both horizontally & vertically */
@@ -2722,7 +2721,7 @@ strong {
 .fave-app-revamp-problem-grid-2 {
     max-width: 100%;
     grid-column-gap: 35px;
-    grid-row-gap: 80px;
+    grid-row-gap: 5rem;
     grid-template-columns: 1.5fr 0.75fr;
     align-items: center;
     margin-left: auto;
