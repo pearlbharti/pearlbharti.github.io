@@ -589,45 +589,6 @@ span{
 /* Avatar Dialog */
 
 
-.feedback-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-}
-.avatar-thinker {
-    width: 200px;
-    height: auto;
-}
-.avatar-frustrated {
-    width: 200px;
-    height: 200px;
-}
-.feedback-box {
-    background-color: #333;
-    padding: 15px;
-    border-radius: 10px;
-    max-width: 400px;
-    line-height: 1.6;
-    color: white;
-}
-.left-container {
-    justify-content: flex-start;
-}
-.left-container .feedback-box {
-    margin-left: 20px;
-    text-align: center;
-    padding: 1rem 3rem 1rem 3rem;
-}
-.right-container {
-    justify-content: flex-end;
-}
-.right-container .feedback-box {
-    margin-right: 20px;
-    text-align: center;
-    padding: 1rem 3rem 1rem 3rem;
-}
-
 
 /* text carousel user */
 
@@ -706,40 +667,6 @@ span{
 }
 
 /* Avatar Dialogs */
-.feedback-container-user {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    margin: 2rem 0;
-}
-
-.avatar-thinker,
-.avatar-frustrated {
-    width: 200px;
-    height: auto;
-}
-
-.feedback-box-user {
-    background-color: #333;
-    padding: 1.5rem 3rem;
-    border-radius: 10px;
-    max-width: 400px;
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: center;
-}
-
-.left-container-user {
-    justify-content: flex-start;
-    display: flex;
-}
-
-.right-container-user {
-    justify-content: flex-end;
-    display: flex;
-}
 
 
 
@@ -1552,19 +1479,31 @@ element.style {
 
 footer {
     position: relative;
-    top: 7.5rem;
-    width: 65vw;
-    height: 72vh;
+    top: 5.5rem;
+    width: 67vw;
+    height: 77vh;
     max-width: 80vw;
     background: linear-gradient(to bottom, #1a1a1a25, rgba(12, 12, 12, 0.319));
-    border-radius: 2rem;
-    padding: 20px;
+    border-radius: 3rem;
+    padding: 43px;
     text-align: center;
-    border: 0.2rem solid #333;
+    border: 0.35rem solid #333;
     z-index: 1;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    left: 0rem;
 }
+.portfolio-bottom-icon{
+    width:3.4rem;
+    height: auto;
+    right:"50%";
+    top: "30%";
+    position:relative;
+    filter: drop-shadow(0 0 10px rgba(203, 203, 203, 0.648));
+
+  }
+
+
 
 .footer-content {
     display: flex;
@@ -1575,7 +1514,7 @@ footer {
     font-family: Dongle, sans-serif;
 }
 .footer-content h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: #777;
 }
@@ -1589,15 +1528,24 @@ footer {
 .footer-content a {
     color: #ddd;
     text-decoration: none;
-    font-size: 1.15rem;
+    font-size: 1.9rem;
     line-height: 150%;
 }
 .footer-content a:hover {
     color: white;
 }
+
+
 .footer-bottom {
-    margin-top: 4rem;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 11rem;
+    gap: 1rem; /* optional: adds space between the icon and text */
+  }
+  
 .footer-bottom h1 {
     all: unset;
     padding: 1.5rem 0 0 0;
@@ -1607,7 +1555,7 @@ footer {
     color: #ffffffd1;
 }
 .footer-bottom p {
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: #777;
 
 }

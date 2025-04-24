@@ -8,10 +8,10 @@ function viewAffinitymap() {
 
 //challenge carousel schneider
 const track = document.getElementById('lumaTrack');
-    const dots = document.querySelectorAll('.luma-dot');
+    const bubbles = document.querySelectorAll('.luma-bubble');
     const slides = document.querySelectorAll('.luma-slide');
-    const prev = document.getElementById('prevArrow');
-    const next = document.getElementById('nextArrow');
+    const prev = document.getElementById('prevArr');
+    const next = document.getElementById('nextArr');
     let current = 0;
 
     function updateCarousel(index) {
