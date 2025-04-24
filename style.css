@@ -20,14 +20,15 @@ body {
     margin: 0;
     overflow-y: auto; /* Enables vertical scrolling */
     overflow-x: hidden; /* Prevents horizontal scrolling */
+    
 }
 
 .noise-bg {
-    position: fixed; /* Fixes the background noise to cover the viewport */
+    position: absolute; /* Fixes the background noise to cover the viewport */
     top: 0;
     left: 0;
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
     background-image: url('https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png');
     background-size: 150px;
     background-repeat: repeat;
@@ -66,7 +67,282 @@ body {
     opacity: 1; /* Make it visible */
 }
 
+/*new hero */
+.pearl-container {
+    color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    height: 100vh;
+    padding: 0 0 3rem 17rem;
+}
+  .pearl-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
+  .pearl-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .pearl-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #f5f5f5;
+  }
+
+  .pearl-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #37ac64;
+    border-radius: 50%;
+}
+
+  .pearl-title {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .pearl-subhead {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: #bbb;
+    max-width: 36rem;
+}
+
+  .pearl-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .sticky-note {
+    width: 5rem;
+
+  }
+
+  .yellow-note {
+    position: absolute;
+    display: inline-block;
+    right: 25%;
+    top: 43%;
+    width: 12rem;
+    height: auto;
+}
+  
+  .blue-note {
+    position: absolute;
+    display: inline-block;
+    right: 18%;
+    top: 32%;
+    width: 11rem;
+    height: auto;
+}
+
+.recwell {
+    position: absolute;
+    display: inline-block;
+    right: 21%;
+    top: 38%;
+    width: 2.5rem;
+    height: auto;
+    z-index: 2;
+}
+
+.boxmate {
+    position: absolute;
+    display: inline-block;
+    right: 24%;
+    top: 47%;
+    width: 3rem;
+    height: auto;
+    z-index: 2;
+}
+
+.uwmadison {
+    position: absolute;
+    display: inline-block;
+    right: 24%;
+    top: 37.5%;
+    width: 3rem;
+    height: auto;
+    z-index: 2;
+}
+
+.tape {
+    position: absolute;
+    top: 29%;
+    left: 62%;
+    z-index: 10;
+}
+
+.bucky {
+    position: absolute;
+    top: 33%;
+    left: 65%;
+    width: 30%;
+    z-index: 10;
+    width: 3.5%;
+}
+  
+.schneider {
+    position: absolute;
+    display: inline-block;
+    right: 20%;
+    top: 48%;
+    width: 3.5rem;
+    height: auto;
+    z-index: 2;
+}
+.cat {
+    position: absolute;
+    display: inline-block;
+    right: 26%;
+    top: 43%;
+    width: 11rem;
+    height: auto;
+    z-index: 2;
+}
+
+.pink-note {
+    position: absolute;
+    display: inline-block;
+    right: 28%;
+    top: 27%;
+    width: 10rem;
+    height: auto;
+}
+
+  .sticky-icons img {
+    width: 28px;
+    height: 28px;
+    margin-right: 0.5rem;
+  }
+
+  .sticky-map span {
+    display: inline-block;
+    background-color: #eee;
+    color: #222;
+    border-radius: 999px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    margin: 0.2rem;
+  }
+
+  .sticky-arrow {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .sticky-arrow small {
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+
+  /* light beams */
+  .beam-wrapper {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 2px);
+    width: 200px;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .light-beam {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: top center;
+    height: 200vh;
+    background: linear-gradient(to bottom, rgb(190 184 171 / 20%), rgba(255, 255, 255, 0));
+    filter: blur(30px);
+    opacity: 0.3;
+    animation: beamPulse 4s ease-in-out infinite alternate;
+}
+
+  @keyframes beamPulse {
+    0% {
+      opacity: 0.2;
+      filter: blur(15px);
+    }
+    100% {
+      opacity: 0.5;
+      filter: blur(30px);
+    }
+  }
+  .radial-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    filter: blur(50px);
+    z-index: 0;
+    background: radial-gradient(ellipse at top center,
+      rgba(253, 237, 184, 0.049) 0%,
+      rgba(255, 230, 150, 0.06) 30%,
+      rgba(255, 230, 150, 0.02) 60%,
+      transparent 100%
+    );
+    mask-image: conic-gradient(from -80deg at top center, transparent 160deg, black 160deg);
+    -webkit-mask-image: conic-gradient(from -80deg at top center, transparent 160deg, black 160deg);
+  }
+
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+    z-index:100;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px) scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translateY(-20px) scale(1.2);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateY(0px) scale(1);
+      opacity: 0.5;
+    }
+  }
+    /* light beams end*/
+/* new hero ends */
 /* Noise Overlay */
 
 
@@ -83,6 +359,7 @@ body {
 
 
 /*  */
+
 
 /* introductory text */
 
@@ -1224,11 +1501,11 @@ svg:not(:root) {
     left: 0;
     width: 100%;
     height: 63px;
-    background-color: rgb(7, 6, 6); /* Your custom background color */
     border-bottom-left-radius: 12rem;
     border-bottom-right-radius: 12rem;
     z-index: 0;
     overflow: hidden;
+    background-color: rgb(26, 24, 24);
 }
 
 .case-studies-round::before {
@@ -1324,12 +1601,15 @@ svg:not(:root) {
   }
 
 
+  
+
+
   /* footer */
 .footer-container {
     position: relative;
     width: 100vw;
     background: #000;
-    height: 100vh;
+    height: 115vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1587,8 +1867,8 @@ footer {
 }
 
 #floating-logo-wrapper {
-  left: 47%;
-  bottom: 93%;
+    left: 50%;
+    bottom: 91%;
 }
 
 #floating-frame-wrapper {

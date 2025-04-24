@@ -1131,7 +1131,16 @@ figcaption {
     grid-auto-columns: 1fr;
     margin-top: 48px
 }
-
+.persona-container {
+    display: grid;
+    margin: 5rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    background-color: rgba(69, 69, 69, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
 .section {
     width: 100%;
     padding: 100px;

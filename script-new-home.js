@@ -16,6 +16,56 @@ document.querySelectorAll('.compartment').forEach(compartment => {
     });
 });
 
+//bg height
+function resizeNoiseBG() {
+    const noise = document.querySelector('.noise-bg');
+    if (noise) {
+      noise.style.height = `${document.documentElement.scrollHeight}px`;
+    }
+  }
+  
+  window.addEventListener('load', resizeNoiseBG);
+  window.addEventListener('resize', resizeNoiseBG);
+  window.addEventListener('scroll', resizeNoiseBG);
+  
+//stars
+const starsContainer = document.querySelector('.stars');
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight * 0.4; // top 20% center
+    const radius = 200; // circle radius in pixels
+
+    for (let i = 0; i < 70; i++) {
+      const angle = Math.random() * 2 * Math.PI;
+      const r = Math.sqrt(Math.random()) * radius;
+      const x = centerX + r * Math.cos(angle);
+      const y = centerY + r * Math.sin(angle);
+
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = `${x}px`;
+      star.style.top = `${y}px`;
+      const edgeFade = 1 - r / radius; // closer to 0 = closer to edge
+      star.style.opacity = (edgeFade * 0.6 + 0.2).toFixed(2); // stronger base opacity
+      star.style.animationDelay = `${Math.random() * 10}s`;
+      starsContainer.appendChild(star);
+    }
+//glow beam
+const angles = [-60, -53, -46, -39, -32, -25, -18, -11, -4, 3, 10, 17, 24, 31, 38, 45, 52, 59];
+    const widths = [60, 30, 45, 40, 55, 25, 60, 35, 70, 40, 55, 30, 50, 20, 45, 35, 60, 30];
+    const opacities = [0.1, 0.15, 0.2, 0.18, 0.25, 0.22, 0.3, 0.18, 0.35, 0.2, 0.28, 0.15, 0.25, 0.12, 0.2, 0.18, 0.22, 0.2];
+
+    const wrapper = document.getElementById('beamWrapper');
+
+    angles.forEach((angle, index) => {
+      const beam = document.createElement('div');
+      beam.className = 'light-beam';
+      beam.style.transform = `rotate(${angle}deg)`;
+      beam.style.width = `${widths[index] * 1.4}px`;
+      beam.style.opacity = `${opacities[index]}`;
+      beam.style.left = `${(1 - index / (angles.length - 1)) * 100}%`;
+
+      wrapper.appendChild(beam);
+    });
 // footer
 const footer = document.querySelector('.footer');
 function checkFooterInView() {
