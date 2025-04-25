@@ -22,6 +22,40 @@
 
 }
 
+
+/* final design slideshow */
+.fade-gallery {
+    padding: 5rem 0 7rem 0;
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    max-width: 800px;
+    height: 500px; /* Adjust height as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #000; /* optional: background while images fade */
+  }
+  
+  .fade-image {
+    all: unset;
+    border-radius: 12px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(84, 84, 84, 0.688);
+    object-fit: cover; /* ensures the image covers the container */
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: 0;
+  }
+  
+  .fade-image.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+/* end */
+
+
 .video-container {
     width: 600px;
     height: 400px;  /* Adjust container height */
@@ -236,6 +270,39 @@ span{
   }
 /* challenge carousel end   */
 
+/* wireframes */
+.image-row {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end; /* aligns caption baselines */
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .image-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+    height: 100%; /* required for consistent alignment */
+  }
+  
+  .image-cell img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  
+  .caption {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #333;
+  }
+/* wireframes end   */
 
 /* competitor analysis */
 

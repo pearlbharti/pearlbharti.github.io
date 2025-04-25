@@ -796,7 +796,7 @@ body {
     grid-row-gap: 16px;
     grid-column-gap: 16px;
     grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.75fr;
     grid-auto-columns: 1fr;
     display: grid
 }
@@ -3218,7 +3218,7 @@ figcaption {
     padding: 7rem 0 7rem 0;
     grid-column-gap: 38px;
     grid-row-gap: 65x;
-    grid-template-columns: .75fr 1fr;
+    grid-template-columns: 1fr 0.75fr;
     align-items: center;
     margin-left: auto;
     margin-right: auto
@@ -3230,7 +3230,7 @@ figcaption {
     padding: 7rem 0 7rem 0;
     grid-column-gap: 40px;
     grid-row-gap: 65Px;
-    grid-template-columns: 1fr 0.75fr;
+    grid-template-columns: 0.75fr 1fr;
     align-items: center;
     margin-left: auto;
     margin-right: auto;

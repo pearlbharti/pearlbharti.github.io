@@ -5,6 +5,16 @@ function viewAffinitymap() {
 
 
 
+//slideshow schneider
+const images = document.querySelectorAll(".fade-image");
+let activeIndex = 0;
+
+setInterval(() => {
+  images[activeIndex].classList.remove("active");
+  activeIndex = (activeIndex + 1) % images.length;
+  images[activeIndex].classList.add("active");
+}, 5000); // 2s fade-out + 5s visible for each image
+
 
 //challenge carousel schneider
 const track = document.getElementById('lumaTrack');

@@ -500,16 +500,19 @@ span{
     margin-bottom: 10rem;
 }
 
-
 .video-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15rem;
+    gap: 8rem;
+    padding: 10rem 0 8rem 0;
+    align-self: end;
 }
 
 .video-item {
     height: auto;
+    align-self: end;
     filter: grayscale(100%);
+    
     transition: filter 0.3s ease-in-out;
     pointer-events: auto; /* Prevent interaction initially */
 }
