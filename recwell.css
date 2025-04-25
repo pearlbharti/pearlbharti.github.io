@@ -3225,6 +3225,62 @@ figcaption {
 }
 
 
+
+/* wireframes */
+.image-row {
+    display: flex;
+    gap: 2rem;
+    align-items: center; /* aligns caption baselines */
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .image-cell {
+    display: flex;
+    flex-direction: column;
+    flex:2;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+    height: 100%; /* required for consistent alignment */
+  }
+
+
+.image-cell:nth-child(2) {
+    flex: 1; /* This cell will take less space */
+}
+  
+  .image-cell img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  
+  .caption {
+    margin-top: 0.75rem;
+    font-size: 1.5rem;
+    color: #ababab;
+  }
+
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* optional: centers the images horizontally */
+    gap: 20px; /* optional: adds nice space between the items */
+  }
+  
+  .image-lamba {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* makes the captions align nicely under images */
+  }
+  
+/* wireframes end   */
+
+
+
 .fave-app-revamp-problem-grid-2 {
     max-width: 100%;
     padding: 7rem 0 7rem 0;
