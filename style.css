@@ -1619,8 +1619,8 @@ svg:not(:root) {
 
 .video-footer-container {
     position: absolute;
-    top: 8rem;
-    left: 35rem;
+    top: 13rem;
+    left: 34rem;
     width: 26rem;
     height: auto;
     z-index: 0;
@@ -1634,7 +1634,7 @@ svg:not(:root) {
     justify-content: center;
     align-items: center;
     object-fit: cover;
-    opacity: 1; /* Optional: Adjust visibility */
+    opacity: 0.8; /* Optional: Adjust visibility */
 }
 
 footer {
@@ -1683,7 +1683,7 @@ footer {
     color: white;
 }
 .footer-bottom {
-    margin-top: 4rem;
+    margin-top: 10rem;
 }
 .footer-bottom h1 {
     all: unset;

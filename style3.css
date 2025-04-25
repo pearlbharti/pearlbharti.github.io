@@ -870,12 +870,13 @@ span{
     line-height: 150%;
 }
 
-.section-hero-3{
-    padding: 1.5rem 0 0 4rem;
-    /* width: 100%;
-    height: 100%; */
+.section-hero-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4.5rem 0 0 4rem;
+    height: 100%;
 }
-
 .section-hero-4 {
     padding: 3rem 7rem 3rem 3rem;
     position: relative;
@@ -1480,7 +1481,8 @@ element.style {
 footer {
     position: relative;
     top: 5.5rem;
-    width: 67vw;
+    width: 67
+    vw;
     height: 77vh;
     max-width: 80vw;
     background: linear-gradient(to bottom, #1a1a1a25, rgba(12, 12, 12, 0.319));

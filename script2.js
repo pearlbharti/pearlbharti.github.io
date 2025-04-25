@@ -3,7 +3,7 @@ function viewAffinitymap() {
     window.open("https://www.figma.com/board/Wmec7cYhw2OX5zgUpCUfsb/Schneider-Affinity-Map-brainstorming?node-id=0-1&t=MVUoMDoi65VOKaJC-1", "_blank"); // Replace with your actual Figma link
   }
 
-//schneider persona container
+
 
 
 //challenge carousel schneider
