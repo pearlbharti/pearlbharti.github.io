@@ -671,7 +671,45 @@ span{
 
 /* Avatar Dialogs */
 
-
+.back-button {
+    position: fixed;
+    top: 3rem;
+    left: 2rem;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.8rem 0.7rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+    background: rgba(45, 45, 45, 0.3);
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: sans-serif;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgb(106 105 105 / 80%), 0 0 8px rgba(255, 255, 255, 0.2);
+    transition: rgba(0, 0, 0, 0.3) 0.2s, box-shadow 0.2s;
+}
+  
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.3),
+      0 0 12px rgba(0, 0, 0, 0.6);
+  }
+  
+  .back-button__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+  }
+  
+  .back-button__label {
+    line-height: 1;
+    color: #b3b3b3;
+  }
+  
 
 /* Video Container */
 .video-container-phone {
@@ -728,7 +766,7 @@ span{
     display: flex;
     height: 106vh;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 @media screen and (max-width: 479px) {
