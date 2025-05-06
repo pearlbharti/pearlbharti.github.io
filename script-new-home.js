@@ -313,9 +313,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.querySelector('.photoframe-about').addEventListener('click', function () {
-    window.location.href = 'about.html';
-});
+// document.querySelector('.photoframe-about').addEventListener('click', function () {
+//     window.location.href = 'about.html';
+// });
 
 // Cache the table element and its initial offset
 // const table = document.querySelector('.table');

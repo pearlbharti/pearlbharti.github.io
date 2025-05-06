@@ -1183,7 +1183,8 @@ svg:not(:root) {
 
 .top-right-text {
     position: absolute;
-    right: 10px;
+    right: 0.2rem;
+    top:0.2rem;
     font-size: 1rem;  /* You can adjust this size */
     font-weight: lighter;
     color: #b0b0b0; /* Change text color as needed */
